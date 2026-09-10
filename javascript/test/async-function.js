@@ -1,7 +1,7 @@
 "use strict";
 
 var jsonata = require('../src/jsonata');
-var request = require('request');
+var httpget = require('./support/httpget.cjs');
 var chai = require("chai");
 var expect = chai.expect;
 var chaiAsPromised = require("chai-as-promised");
@@ -15,18 +15,6 @@ var jsonataWithCallback = function(expr, data, bindings) {
             return;
         }
         return response;
-    });
-};
-
-var httpget = function(url) {
-    return new Promise(function(resolve, reject) {
-        request(url, function(error, response, body) {
-            if(error) {
-                reject(error);
-                return;
-            }
-            resolve(JSON.parse(body));
-        });
     });
 };
 

@@ -301,14 +301,16 @@ func (l *Lexer) scanString(quote byte, startPos int) (Token, error) {
 			return Token{}, lexError("S0104", "invalid unicode escape: too short")
 		}
 		hex := l.src[l.pos : l.pos+4]
-		r, err := strconv.ParseInt(hex, 16, 32)
+		// A Unicode escape is exactly four unsigned hexadecimal digits.
+		// ParseInt accepts a sign and would silently narrow a negative value.
+		r, err := strconv.ParseUint(hex, 16, 16)
 		if err != nil {
 			return Token{}, lexError("S0104", "invalid unicode escape: \\u"+hex)
 		}
 		l.pos += 4
 		// Handle UTF-16 surrogate pairs: high surrogate + low surrogate -> single code point.
 		if r >= 0xD800 && r <= 0xDBFF && l.pos+6 <= len(l.src) && l.src[l.pos] == '\\' && l.src[l.pos+1] == 'u' {
-			if r2, err2 := strconv.ParseInt(l.src[l.pos+2:l.pos+6], 16, 32); err2 == nil && r2 >= 0xDC00 && r2 <= 0xDFFF {
+			if r2, err2 := strconv.ParseUint(l.src[l.pos+2:l.pos+6], 16, 16); err2 == nil && r2 >= 0xDC00 && r2 <= 0xDFFF {
 				sb.WriteRune(rune(0x10000 + (r-0xD800)*0x400 + (r2 - 0xDC00)))
 				l.pos += 6
 				continue

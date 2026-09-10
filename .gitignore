@@ -1,6 +1,8 @@
 javascript/node_modules/
 javascript/coverage/
 javascript/.nyc_output/
+javascript/doc/
+.maintenance-output/
 javascript/BUILD.json
 javascript/THIRD_PARTY_NOTICES.md
 javascript/jsonata*.js

@@ -1418,7 +1418,7 @@ const functions = (() => {
      * @param {*} arg1 - the first (required) arg - the value
      * @param {*} arg2 - the second (optional) arg - the position (index or key)
      * @param {*} arg3 - the third (optional) arg - the whole structure (array or object)
-     * @returns {*[]} the argument list
+     * @returns {Array<*>} the argument list
      */
     function hofFuncArgs(func, arg1, arg2, arg3) {
         var func_args = [arg1]; // the first arg (the value) is required

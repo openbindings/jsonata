@@ -129,6 +129,8 @@ func TestLexerStrings(t *testing.T) {
 		{"invalid-unicode-short", `"\u00"`, "", true, ""},
 		{"invalid-unicode-hex", `"\uXXXX"`, "", true, ""},
 		{"invalid-unicode-nonhex", `"\u00ZZ"`, "", true, "S0104"},
+		{"invalid-unicode-positive-sign", `"\u+001"`, "", true, "S0104"},
+		{"invalid-unicode-negative-sign", `"\u-001"`, "", true, "S0104"},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {

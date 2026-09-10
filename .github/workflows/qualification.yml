@@ -1,0 +1,66 @@
+name: Runtime qualification
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  qualify:
+    name: Runtime ${{ matrix.lane }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lane: [go, javascript, shared, resource, packages, generated, dependency]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@v7
+        with:
+          go-version: '1.25.13'
+          cache-dependency-path: go/go.sum
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22.23.2'
+          cache: npm
+          cache-dependency-path: javascript/package-lock.json
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: javascript
+      - run: npm run build
+        working-directory: javascript
+      - run: node maintenance/run.mjs "$LANE"
+        env:
+          LANE: ${{ matrix.lane }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-${{ matrix.lane }}-reports
+          path: .maintenance-output/
+          include-hidden-files: true
+          if-no-files-found: error
+  static:
+    name: Raw static analysis and reviewed findings (policy pending)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@v7
+        with:
+          go-version: '1.25.13'
+          cache-dependency-path: go/go.sum
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22.23.2'
+      - run: go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.12.2
+        env:
+          GOTOOLCHAIN: go1.26.2
+      # Deliberately retains a nonzero raw-lint result. No continue-on-error or
+      # implicit required-check waiver. Reviewed dispositions have separate reports.
+      - run: node maintenance/run.mjs static
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-static-reports
+          path: .maintenance-output/
+          include-hidden-files: true
+          if-no-files-found: error

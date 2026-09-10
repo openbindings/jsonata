@@ -1,0 +1,7 @@
+{
+  "purpose": "Malformed Unicode escape regression found by unsuppressed conversion review; no new syntax or numerical policy",
+  "cases": [
+    {"id":"positive-sign", "expr":"\"\\u+001\"", "inputJSON":"null", "error":"S0104"},
+    {"id":"negative-sign", "expr":"\"\\u-001\"", "inputJSON":"null", "error":"S0104"}
+  ]
+}

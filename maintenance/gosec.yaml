@@ -1,0 +1,9 @@
+version: "2"
+linters:
+  default: none
+  enable: [gosec]
+  exclusions:
+    generated: disable
+    presets: []
+issues:
+  fix: false
