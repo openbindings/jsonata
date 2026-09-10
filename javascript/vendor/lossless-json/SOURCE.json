@@ -1,0 +1,26 @@
+{
+  "package": "lossless-json",
+  "version": "4.3.1",
+  "source": "lib/umd/lossless-json.js",
+  "sourceSHA256": "3eebf0821060a4d9910c55e6c50f11961062cc20944ee745007ea19e3cdec885",
+  "outputSHA256": "bc9d1610f71fa959d8ff04be5b8b6c75477f9b2eac12b403dfdcc18fcc877211",
+  "upstream": "https://github.com/josdejong/lossless-json",
+  "changes": [
+    [
+      "Object.prototype.hasOwnProperty.call(e,r)&&!v(o,e[r])",
+      "Object.prototype.hasOwnProperty.call(e,r)"
+    ],
+    [
+      "void 0!==n&&(e[r]=n)",
+      "void 0!==n&&(r in e?Object.defineProperty(e,r,{value:n,writable:true,enumerable:true,configurable:true}):e[r]=n)"
+    ],
+    [
+      "else e[r]=o",
+      "else r in e?Object.defineProperty(e,r,{value:o,writable:true,enumerable:true,configurable:true}):e[r]=o"
+    ],
+    [
+      "//# sourceMappingURL=lossless-json.js.map",
+      "// Source map omitted: this derivative has different offsets."
+    ]
+  ]
+}

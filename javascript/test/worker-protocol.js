@@ -9,14 +9,14 @@ const workers = require('worker_threads');
 describe('Private worker message protocol', function() {
     it('returns exact text and serializable errors, including non-Error throws', async function() {
         const entry=require.resolve('../src/json-worker');
-        const dependency=require('../src/json-executor'),original=dependency.createJSONExecutor;
+        const dependency=require('../src/json-executor'),original=dependency.createJSONataExecutor;
         const saved={parentPort:workers.parentPort,workerData:workers.workerData,cached:require.cache[entry]};
         const parent=new EventEmitter(),received=[];
         parent.postMessage=message=>received.push(message);
         let problem;
         try {
             workers.parentPort=parent;workers.workerData={timeout:1234};
-            dependency.createJSONExecutor=options=>{
+            dependency.createJSONataExecutor=options=>{
                 assert.strictEqual(options.timeout,1234);
                 return {async evaluate(expression,input,options){
                     assert.strictEqual(expression,'$x');assert.strictEqual(input,'{}');
@@ -39,7 +39,7 @@ describe('Private worker message protocol', function() {
                 {id:4,error:{name:'Error',message:'JSONata evaluation failed',code:undefined}}
             ]);
         } finally {
-            dependency.createJSONExecutor=original;workers.parentPort=saved.parentPort;workers.workerData=saved.workerData;
+            dependency.createJSONataExecutor=original;workers.parentPort=saved.parentPort;workers.workerData=saved.workerData;
             delete require.cache[entry];if(saved.cached)require.cache[entry]=saved.cached;
         }
     });

@@ -23,12 +23,19 @@ async function main() {
     var observations=[];
     for(var i=0;i<variants.length;i++) {
         var api=require(path.join(root,variants[i]));
-        assert.deepEqual(Object.keys(api),['createJSONExecutor']);
-        var executor=api.createJSONExecutor();
+        assert.deepEqual(Object.keys(api),['createJSONataExecutor']);
+        var executor=api.createJSONataExecutor();
         for(var j=0;j<tests.length;j++)assert.deepEqual(JSON.parse(await executor.evaluate(tests[j][0],'{}')),tests[j][1]);
         assert.equal(await executor.evaluate('$','{"id":9223372036854775807}'),'{"id":9223372036854775807}');
+        assert.equal(await executor.evaluate('a = b','{"a":{"length":0},"b":[]}'),'false');
+        assert.equal(await executor.evaluate('$distinct(items)','{"items":[{"length":0},[]]}'),'[{"length":0},[]]');
+        assert.equal(await executor.evaluate('$','{"__proto__":{"x":7}}'),'{"__proto__":{"x":7}}');
+        for (var bad of ['{"id":7','{"id":7,"id":7}','{"id":7,"x":{"a":{},"a":[]}}']) {
+            var invalid=false;try{await executor.evaluate('id',bad);}catch(error){invalid=true;}
+            assert.equal(invalid,true);
+        }
         var rejected=false;try{await executor.evaluate('{"bad":function(){1}}','{}');}catch(error){rejected=true;}
-        assert.equal(rejected,true);observations.push({entry:variants[i],cases:tests.length+2});
+        assert.equal(rejected,true);observations.push({entry:variants[i],cases:tests.length+8});
     }
     if(Number(process.versions.node.split('.')[0])>=18) {
         var pool=require(path.join(root,'node-executor.js')).createNodeExecutor({workers:1,timeout:10000});

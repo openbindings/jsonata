@@ -1,5 +1,7 @@
 import type { JSONExecutor, JSONExecutorOptions } from './json-executor';
 export interface NodeExecutorOptions extends JSONExecutorOptions {
+  /** Wall deadline in milliseconds, from 1 through 2147483647. */
+  readonly timeout?: number;
   readonly workers?: number;
   /** Total active plus queued evaluations, not a payload-byte allowance. */
   readonly maxPending?: number;

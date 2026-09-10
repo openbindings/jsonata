@@ -143,6 +143,9 @@ const utils = (() => {
             return true;
         }
         if(typeof lhs === 'object' && typeof rhs === 'object' && lhs !== null && rhs !== null) {
+            if(Array.isArray(lhs) !== Array.isArray(rhs)) {
+                return false;
+            }
             if(Array.isArray(lhs) && Array.isArray(rhs)) {
                 // both arrays (or sequences)
                 // must be the same length

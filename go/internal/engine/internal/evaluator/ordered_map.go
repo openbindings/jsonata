@@ -233,6 +233,9 @@ func decodeObject(dec *json.Decoder, source []byte) (*OrderedMap, error) {
 			return nil, err
 		}
 		key := keyTok.(string)
+		if m.Has(key) {
+			return nil, fmt.Errorf("JSON contains a duplicate object member at byte %d", dec.InputOffset())
+		}
 		val, err := decodeValue(dec, source)
 		if err != nil {
 			return nil, err

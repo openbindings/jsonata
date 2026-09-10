@@ -21,6 +21,7 @@ node maintenance/run.mjs packages
 node maintenance/run.mjs generated
 node maintenance/run.mjs dependency
 node maintenance/run.mjs static
+node maintenance/run.mjs reviewed-static
 ```
 
 Each invocation writes its own `.maintenance-output/<lane>-…` directory, with
@@ -35,10 +36,16 @@ not prove a registry release exists. Cross-SDK, browser and CLI integration is
 separately owned by the project/consumer repositories; it must accompany adoption.
 
 The root workflow runs non-publishing lanes with read-only repository access.
-Raw static analysis intentionally remains nonzero for retained findings; the
-separate reviewed-finding reports are not clean lint. Choosing which reports
-block shared branches is an explicit maintainer/CI-policy decision, not a waiver
-implemented here. No required-check settings have been changed.
+The approved CI policy requires behavior/package/resource/generation gates,
+current dependency exposure checks and exact source-bound reviewed findings.
+`reviewed-static` succeeds only after both scans and both ledger comparisons
+succeed; its status is `PASS_REVIEWED_FINDINGS`, never a claim of clean raw lint.
+Raw reports and their nonzero exit statuses remain in the uploaded evidence.
+Changed findings or source, missing reports and scanner failures still block.
+The separate `static` command retains its original nonzero outcome for raw
+findings. `static-policy.test.mjs` guards this distinction against regression.
+Hosted branch requirements must use these approved checks; no baseline is
+refreshed automatically. Repository protection settings are managed separately.
 
 ## Current dependency and diagnostic dispositions
 
@@ -79,6 +86,22 @@ This repository owns the runtime façade, upstream-derived private backends,
 their integration patches, shared implementation contract and qualification.
 SDKs own adapters, not copied evaluator forks. One source change still needs
 two native implementations; packaging does not eliminate that semantic cost.
+
+The JSON admission correction privately derives `javascript/vendor/lossless-json`
+from the locked 4.3.1 UMD artifact. `scripts/vendor-lossless.cjs` verifies its full
+source hash and applies only all-occurrence duplicate checking, safe own-property
+assignment and removal of the stale source-map reference. It never modifies the
+installed dependency. Build and generated-source gates verify byte-for-byte replay;
+the source manifest, patch anchors and MIT notice ship in bundled notices. Native
+tests measure 100% coverage of maintained `src/`; vendored dependency code is tested
+through parser-patch, mutation and public-boundary witnesses, not included in that
+maintained-source percentage. No coverage threshold has been lowered.
+
+`boundary-cases.mjs --check` verifies the generated boundary corpus, and the shared
+lane runs its equality/admission witnesses across all three execution surfaces.
+The Go selector uses standard-library complete JSON validation and a scoped-name
+walk over the existing GJSON containers; full evaluation reuses the existing decoder.
+Selection never substitutes GJSON's native numeric approximation for a raw token.
 
 `INPUTS.json` records exact upstream base commits and dirty-candidate source
 hashes. Its audit paths are historical provenance, not build dependencies.

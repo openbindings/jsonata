@@ -49,9 +49,9 @@ later; maintenance qualification uses Go 1.25.13.
 Save this as `example.mjs` in your application and run `node example.mjs`:
 
 ```javascript
-import { createJSONExecutor } from "@openbindings/jsonata";
+import { createJSONataExecutor } from "@openbindings/jsonata";
 
-const executor = createJSONExecutor();
+const executor = createJSONataExecutor();
 const outputJSON = await executor.evaluate(
   '{"id":id,"total":price * quantity}',
   '{"id":9007199254740993,"price":0.1,"quantity":3}',
@@ -106,6 +106,11 @@ without loading the evaluator.
 Each evaluation accepts an expression, one JSON value as text, and optional
 JSON-object variable bindings. A successful result is one JSON value as text.
 This keeps the public API independent of any application's in-memory number type.
+
+Input and bindings must be complete JSON texts without duplicate object-member
+names, including equal-valued duplicates. Binding names omit the `$` prefix.
+This pre-release admission tightening replaces formerly inconsistent duplicate
+handling; it is a runtime policy, not an OpenBindings Core requirement.
 
 - Selecting, copying and rearranging values preserves their numerical values,
   admitted string code units, types, presence and array order.

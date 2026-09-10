@@ -1,0 +1,4133 @@
+{
+  "description": "Runtime admission corrections; not general Core or JSONata conformance requirements",
+  "cases": [
+    {
+      "id": "types-0-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-0-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-0-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":null,\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-0-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[null],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-1-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-1-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":false,\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-1-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[false],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-2-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-2-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":true,\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-2-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[true],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-3-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-3-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":0,\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-3-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[0],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-4-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-4-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":1,\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-4-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[1],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-5-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-5-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":\"\",\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-5-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[\"\"],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-6-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-6-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[],\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-6-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-7-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-7-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[42],\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-7-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[42]],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-8-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-8-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{},\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-8-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{}],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-9-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-9-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"length\":0},\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-9-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"length\":0}],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-10-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-10-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"0\":42,\"length\":1},\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-10-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"0\":42,\"length\":1}],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-11-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-11-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[]],\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-11-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[[[]]],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-0-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":null}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-0-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[null]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-1-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":false}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-1-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[false]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-2-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":true}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-2-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[true]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-3-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":0}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-3-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[0]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-4-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":1}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-4-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[1]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-5-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":\"\"}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-5-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[\"\"]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-6-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":[]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-6-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-7-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":[42]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-7-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[[42]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-8-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":{}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-8-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[{}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-9-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":{\"length\":0}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-9-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[{\"length\":0}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-10-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":{\"0\":42,\"length\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-10-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[{\"0\":42,\"length\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-11-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":[[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-11-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[[[]]]}",
+      "expected": {
+        "status": "json",
+        "json": "[false,true]"
+      }
+    },
+    {
+      "id": "types-12-12-false",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":{\"a\":1},\"b\":{\"a\":1}}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "types-12-12-true",
+      "expr": "[a = b, a != b]",
+      "inputJSON": "{\"a\":[{\"a\":1}],\"b\":[{\"a\":1}]}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "invalid-0-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-0-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-0-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-0-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-0-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-1-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7} garbage",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-1-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7} garbage",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-1-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7} garbage",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-1-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7} garbage",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-1-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7} garbage",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-2-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7} {\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-2-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7} {\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-2-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7} {\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-2-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7} {\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-2-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7} {\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-3-0",
+      "expr": "id",
+      "inputJSON": "garbage {\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-3-1",
+      "expr": "id = 7",
+      "inputJSON": "garbage {\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-3-2",
+      "expr": "$exists(id)",
+      "inputJSON": "garbage {\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-3-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "garbage {\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-3-4",
+      "expr": "42",
+      "inputJSON": "garbage {\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-4-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-4-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-4-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-4-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-4-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-5-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":NaN}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-5-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":NaN}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-5-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":NaN}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-5-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":NaN}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-5-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":NaN}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-6-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":Infinity}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-6-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":Infinity}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-6-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":Infinity}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-6-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":Infinity}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-6-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":Infinity}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-7-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":01}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-7-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":01}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-7-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":01}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-7-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":01}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-7-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":01}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-8-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":1.}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-8-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":1.}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-8-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":1.}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-8-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":1.}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-8-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":1.}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-9-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":1e+}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-9-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":1e+}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-9-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":1e+}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-9-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":1e+}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-9-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":1e+}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-10-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":[1,]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-10-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":[1,]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-10-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":[1,]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-10-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":[1,]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-10-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":[1,]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-11-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":\"\\q\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-11-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":\"\\q\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-11-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":\"\\q\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-11-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":\"\\q\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-11-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":\"\\q\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-12-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":\"\\u-001\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-12-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":\"\\u-001\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-12-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":\"\\u-001\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-12-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":\"\\u-001\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-12-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":\"\\u-001\"}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-13-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-13-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-13-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-13-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-13-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"id\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-14-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-14-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-14-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-14-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-14-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"id\":8}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-15-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"\\u0069d\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-15-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"\\u0069d\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-15-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"\\u0069d\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-15-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"\\u0069d\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-15-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"\\u0069d\":7}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-16-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":1,\"n\":1.0}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-16-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":1,\"n\":1.0}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-16-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":1,\"n\":1.0}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-16-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":1,\"n\":1.0}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-16-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":1,\"n\":1.0}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-17-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":{},\"n\":[]}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-17-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":{},\"n\":[]}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-17-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":{},\"n\":[]}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-17-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":{},\"n\":[]}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-17-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":{\"n\":{},\"n\":[]}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-18-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":{\"__proto__\":null,\"__proto__\":null}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-18-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":{\"__proto__\":null,\"__proto__\":null}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-18-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":{\"__proto__\":null,\"__proto__\":null}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-18-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":{\"__proto__\":null,\"__proto__\":null}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-18-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":{\"__proto__\":null,\"__proto__\":null}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-19-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":[{\"n\":1,\"n\":2}]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-19-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":[{\"n\":1,\"n\":2}]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-19-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":[{\"n\":1,\"n\":2}]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-19-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":[{\"n\":1,\"n\":2}]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-19-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":[{\"n\":1,\"n\":2}]}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-20-0",
+      "expr": "id",
+      "inputJSON": "{\"id\":7,\"x\":{\"\\ud800\":1,\"\\ud800\":2}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-20-1",
+      "expr": "id = 7",
+      "inputJSON": "{\"id\":7,\"x\":{\"\\ud800\":1,\"\\ud800\":2}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-20-2",
+      "expr": "$exists(id)",
+      "inputJSON": "{\"id\":7,\"x\":{\"\\ud800\":1,\"\\ud800\":2}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-20-3",
+      "expr": "{\"value\":id}",
+      "inputJSON": "{\"id\":7,\"x\":{\"\\ud800\":1,\"\\ud800\":2}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "invalid-20-4",
+      "expr": "42",
+      "inputJSON": "{\"id\":7,\"x\":{\"\\ud800\":1,\"\\ud800\":2}}",
+      "expected": {
+        "status": "failure"
+      }
+    },
+    {
+      "id": "bindings-0",
+      "expr": "$$",
+      "inputJSON": "{\"real\":1}",
+      "expected": {
+        "status": "failure"
+      },
+      "bindingsJSON": "{\"x\":1,\"x\":1}"
+    },
+    {
+      "id": "bindings-1",
+      "expr": "$$",
+      "inputJSON": "{\"real\":1}",
+      "expected": {
+        "status": "failure"
+      },
+      "bindingsJSON": "{\"x\":1,\"x\":2}"
+    },
+    {
+      "id": "bindings-2",
+      "expr": "$$",
+      "inputJSON": "{\"real\":1}",
+      "expected": {
+        "status": "failure"
+      },
+      "bindingsJSON": "{\"x\":{\"n\":1,\"n\":2}}"
+    },
+    {
+      "id": "bindings-3",
+      "expr": "$$",
+      "inputJSON": "{\"real\":1}",
+      "expected": {
+        "status": "failure"
+      },
+      "bindingsJSON": "{\"$\":3}"
+    },
+    {
+      "id": "bindings-4",
+      "expr": "$$",
+      "inputJSON": "{\"real\":1}",
+      "expected": {
+        "status": "failure"
+      },
+      "bindingsJSON": "{\"$x\":3}"
+    },
+    {
+      "id": "bindings-5",
+      "expr": "$$",
+      "inputJSON": "{\"real\":1}",
+      "expected": {
+        "status": "failure"
+      },
+      "bindingsJSON": "{\"\\u0024\":3}"
+    },
+    {
+      "id": "valid-0",
+      "expr": "$",
+      "inputJSON": "null",
+      "expected": {
+        "status": "json",
+        "json": "null"
+      }
+    },
+    {
+      "id": "valid-1",
+      "expr": "$",
+      "inputJSON": "false",
+      "expected": {
+        "status": "json",
+        "json": "false"
+      }
+    },
+    {
+      "id": "valid-2",
+      "expr": "$",
+      "inputJSON": "true",
+      "expected": {
+        "status": "json",
+        "json": "true"
+      }
+    },
+    {
+      "id": "valid-3",
+      "expr": "$",
+      "inputJSON": "0",
+      "expected": {
+        "status": "json",
+        "json": "0"
+      }
+    },
+    {
+      "id": "valid-4",
+      "expr": "$",
+      "inputJSON": "1.0",
+      "expected": {
+        "status": "json",
+        "json": "1.0"
+      }
+    },
+    {
+      "id": "valid-5",
+      "expr": "$",
+      "inputJSON": "9007199254740993",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740993"
+      }
+    },
+    {
+      "id": "valid-6",
+      "expr": "$",
+      "inputJSON": "1e400",
+      "expected": {
+        "status": "json",
+        "json": "1e400"
+      }
+    },
+    {
+      "id": "valid-7",
+      "expr": "$",
+      "inputJSON": "1e-400",
+      "expected": {
+        "status": "json",
+        "json": "1e-400"
+      }
+    },
+    {
+      "id": "valid-8",
+      "expr": "$",
+      "inputJSON": "\"\\ud800\"",
+      "expected": {
+        "status": "json",
+        "json": "\"\\ud800\""
+      }
+    },
+    {
+      "id": "valid-9",
+      "expr": "$",
+      "inputJSON": "[]",
+      "expected": {
+        "status": "json",
+        "json": "[]"
+      }
+    },
+    {
+      "id": "valid-10",
+      "expr": "$",
+      "inputJSON": "{}",
+      "expected": {
+        "status": "json",
+        "json": "{}"
+      }
+    },
+    {
+      "id": "valid-11",
+      "expr": "$",
+      "inputJSON": "{\"$\":7}",
+      "expected": {
+        "status": "json",
+        "json": "{\"$\":7}"
+      }
+    },
+    {
+      "id": "valid-12",
+      "expr": "$",
+      "inputJSON": "{\"__proto__\":{\"x\":7}}",
+      "expected": {
+        "status": "json",
+        "json": "{\"__proto__\":{\"x\":7}}"
+      }
+    },
+    {
+      "id": "valid-13",
+      "expr": "$",
+      "inputJSON": "[{\"a\":1},{\"a\":2}]",
+      "expected": {
+        "status": "json",
+        "json": "[{\"a\":1},{\"a\":2}]"
+      }
+    },
+    {
+      "id": "valid-14",
+      "expr": "$",
+      "inputJSON": "{\"a\":1,\"A\":2}",
+      "expected": {
+        "status": "json",
+        "json": "{\"a\":1,\"A\":2}"
+      }
+    },
+    {
+      "id": "valid-15",
+      "expr": "$",
+      "inputJSON": "{\"é\":1,\"é\":2}",
+      "expected": {
+        "status": "json",
+        "json": "{\"é\":1,\"é\":2}"
+      }
+    },
+    {
+      "id": "distinct-containers",
+      "expr": "$distinct(items)",
+      "inputJSON": "{\"items\":[{\"length\":0},[]]}",
+      "expected": {
+        "status": "json",
+        "json": "[{\"length\":0},[]]"
+      }
+    },
+    {
+      "id": "numeric-leaves",
+      "expr": "[a = b, a = c]",
+      "inputJSON": "{\"a\":9007199254740993,\"b\":9007199254740993.0,\"c\":9007199254740992}",
+      "expected": {
+        "status": "json",
+        "json": "[true,false]"
+      }
+    },
+    {
+      "id": "empty-binding-root",
+      "expr": "$$",
+      "inputJSON": "{\"real\":1}",
+      "expected": {
+        "status": "json",
+        "json": "{\"real\":1}"
+      },
+      "bindingsJSON": "{\"\":42}"
+    },
+    {
+      "id": "nested-dollar",
+      "expr": "$x",
+      "inputJSON": "null",
+      "expected": {
+        "status": "json",
+        "json": "{\"$\":7}"
+      },
+      "bindingsJSON": "{\"x\":{\"$\":7}}"
+    },
+    {
+      "id": "binding-shadow",
+      "expr": "($sum := function($v){$v};$sum($x))",
+      "inputJSON": "null",
+      "expected": {
+        "status": "json",
+        "json": "7"
+      },
+      "bindingsJSON": "{\"x\":7}"
+    }
+  ]
+}

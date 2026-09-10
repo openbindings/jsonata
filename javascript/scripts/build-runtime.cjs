@@ -9,6 +9,7 @@ const terser = require('terser');
 const acorn = require('acorn');
 const {execFileSync} = require('child_process');
 const root = path.resolve(__dirname,'..');
+require('./vendor-lossless.cjs').generate(true);
 const digest = bytes => require('crypto').createHash('sha256').update(bytes).digest('hex');
 function bundle(entry, standalone) {
     return new Promise((resolve,reject) => browserify(path.join(root,entry),{standalone}).bundle((error,value) => error ? reject(error) : resolve(value.toString())));
@@ -47,6 +48,7 @@ function bundle(entry, standalone) {
         if (!license) throw Error('Missing bundled dependency notice: '+key);
         packages.set(key,fs.readFileSync(path.join(dir,license),'utf8'));
     }
+    packages.set('lossless-json@4.3.1 (source-pinned admission correction)',fs.readFileSync(path.join(root,'vendor/lossless-json/LICENSE'),'utf8')+'\nSource and changes:\n\n'+fs.readFileSync(path.join(root,'vendor/lossless-json/SOURCE.json'),'utf8'));
     const unicodeNotice = '\n## Unicode 16.0.0 data\n\n'+fs.readFileSync(path.join(root,'unicode/LICENSE'),'utf8')+'\nSource fingerprints:\n\n'+fs.readFileSync(path.join(root,'unicode/SOURCE.json'),'utf8');
     write('THIRD_PARTY_NOTICES.md','# Bundled third-party notices\n\nGenerated from the resolved browser dependency graph.\n\n'+Array.from(packages).sort(([a],[b]) => a.localeCompare(b)).map(([name,license]) => '## '+name+'\n\n'+license+'\n').join('\n')+unicodeNotice);
     fs.writeFileSync(path.join(root,'BUILD.json'),JSON.stringify({purpose:'Private candidate build; no publication',node:process.version,artifacts:hashes},null,2)+'\n');

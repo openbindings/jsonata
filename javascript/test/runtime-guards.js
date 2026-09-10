@@ -6,7 +6,7 @@ const functions = require('../src/functions');
 const datetime = require('../src/datetime');
 const jsonata = require('../src/jsonata');
 const {optionsFor,normalizeNumericLimits} = require('../src/execution-options');
-const {createJSONExecutor,assertResult} = require('../src/json-executor');
+const {createJSONataExecutor,assertResult} = require('../src/json-executor');
 const {createNodeExecutor} = require('../src/node-executor');
 const number = numeric.fromText;
 const code = wanted => error => error.code === wanted;
@@ -23,7 +23,7 @@ describe('Resource and result-domain guards', function() {
         assert.deepStrictEqual(normalizeNumericLimits({maxDigits:1,maxExponent:100000}),{maxDigits:1,maxExponent:100000});
         for (const value of [{workers:0},{workers:33},{maxPending:0},{maxWorkerHeapMB:15},{maxWorkerHeapMB:16.5}]) assert.throws(()=>createNodeExecutor(value),TypeError);
         const worker=createNodeExecutor();await worker.close();
-        const executor=createJSONExecutor();
+        const executor=createJSONataExecutor();
         for (const bindingsJSON of ['null','[]','1','"x"','true','1e400']) await assert.rejects(executor.evaluate('$','{}',{bindingsJSON}),TypeError);
         for (const [expression,inputJSON,options] of [[null,'{}'],['$',null],['$','{}',{bindingsJSON:7}]]) await assert.rejects(executor.evaluate(expression,inputJSON,options),RangeError);
         await assert.rejects(executor.evaluate('$','{}',{signal:{aborted:true}}), e=>e.name==='AbortError');

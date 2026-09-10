@@ -1,4 +1,12 @@
-# Isolated evaluator candidate
+# Historical isolated-evaluator candidate note
+
+This note records the private backend's earlier qualification stage. It is not
+the current public API or release checklist. The backend is now maintained within
+`openbindings/jsonata`; callers use the closed façade described in
+[the Go guide](../../README.md), with the shared
+[implementation contract](../../../contract/IMPLEMENTATION.md) and
+[maintenance gates](../../../maintenance/README.md). Earlier open qualification
+items below are historical; source publication does not imply a package release.
 
 This checkout contains an unadopted, upstream-derived qualification candidate.
 It is not a published Gnata release or a claim that the upstream project owns

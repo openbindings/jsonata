@@ -42,7 +42,7 @@
      * @param {Object} options - Optional resource settings
      * @returns {Object} Closed text-evaluation interface
      */
-    function createJSONExecutor(options) {
+    function createJSONataExecutor(options) {
         const limits = optionsFor(options);
         const cache = new Map();
         return Object.freeze({
@@ -61,6 +61,7 @@
                 const input = numeric.parse(inputJSON);
                 const bindings = bindingsJSON === undefined ? undefined : numeric.parse(bindingsJSON);
                 if (bindings !== undefined && (bindings === null || typeof bindings !== 'object' || Array.isArray(bindings) || numeric.isNumeric(bindings))) throw new TypeError('JSONata bindings must be a JSON object');
+                if (bindings !== undefined && Object.keys(bindings).some(name => name[0] === '$')) throw new TypeError('JSONata binding names must omit the dollar prefix');
                 check();
                 const result = await compiled.evaluate(input, bindings, {signal});
                 check();
@@ -73,5 +74,5 @@
         });
     }
 
-    module.exports = {createJSONExecutor, optionsFor, assertResult};
+    module.exports = {createJSONataExecutor, optionsFor, assertResult};
 })();

@@ -2,10 +2,10 @@
 const assert = require('assert');
 const {spawnSync} = require('child_process');
 const {performance} = require('perf_hooks');
-const {createJSONExecutor} = require('../src/json-executor');
+const {createJSONataExecutor} = require('../src/json-executor');
 const {createNodeExecutor} = require('../src/node-executor');
 
-for (const [name, factory] of [['cooperative',createJSONExecutor], ['worker',createNodeExecutor]]) {
+for (const [name, factory] of [['cooperative',createJSONataExecutor], ['worker',createNodeExecutor]]) {
     describe('Closed JSON executor: '+name, function() {
         this.timeout(10000);
         let executor;

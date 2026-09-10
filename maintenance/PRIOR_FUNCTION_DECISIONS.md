@@ -1,4 +1,12 @@
-# Function-specific candidate decisions — implementation only
+# Historical function-specific candidate decisions — implementation only
+
+This is a preserved run-3 investigation record, not the current work queue.
+Subsequent qualification and maintainer approval settled its cost, dependency
+ownership and package-identity questions. Its bare evidence filenames refer to
+that historical investigation, not files required to build this repository.
+For the current maintained rules and executable gates, use the
+[implementation contract](../contract/IMPLEMENTATION.md) and
+[maintenance guide](README.md). Publication remains a separate procedure.
 
 This is a mutable engineering record for the isolated run-3 candidates, not a
 Core/binding change, an upstream language amendment, or release acceptance.

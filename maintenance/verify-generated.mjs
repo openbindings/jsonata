@@ -23,6 +23,7 @@ const compare=(expected,actual)=>{
  comparisons.push({file:path.relative(root,expected),sha256:sha(bytes)});
 };
 const run=(command,args,cwd)=>execFileSync(command,args,{cwd,encoding:'utf8',timeout:120000});
+run(process.execPath,['javascript/scripts/vendor-lossless.cjs','--check'],root);
 
 const js=path.join(temporary,'javascript');
 copy(path.join(root,'javascript/scripts/generate-casing.cjs'),path.join(js,'scripts/generate-casing.cjs'));

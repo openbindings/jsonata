@@ -5,7 +5,7 @@
     // number carriage uses lossless-json. Neither library's global settings change.
     const Big = require('big.js');
     const Decimal = require('decimal.js');
-    const lossless = require('lossless-json');
+    const lossless = require('../vendor/lossless-json');
     const rawJSON = require('core-js-pure/actual/json/raw-json');
     const jsonStringify = require('core-js-pure/actual/json/stringify');
     // JSON member names are data, not authority to impersonate an engine number.

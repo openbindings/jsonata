@@ -65,6 +65,11 @@ The fourth argument to `Evaluate` is optional JSON-object variable bindings.
 For example, the JSON bytes `{"limit":3}` bind `$limit`; nil means no bindings.
 Names omit the dollar sign. Functions and host objects cannot be bound.
 
+Input and bindings must be complete JSON texts without duplicate decoded member
+names in an object, including equal-valued duplicates. This pre-release admission
+tightening replaces inconsistent duplicate handling. Dollar-prefixed external
+binding names are rejected; dollar-named data fields remain ordinary data.
+
 `errors.Is(err, jsonata.ErrUndefined)` distinguishes absent results from
 successful JSON `null`. Invalid result values and exceeded budgets also fail.
 Context cancellation remains identifiable with `errors.Is(err, context.Canceled)`.
