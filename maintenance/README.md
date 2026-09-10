@@ -110,9 +110,11 @@ policy. Existing reviewed Go lint debt and JS development-tool advisories are
 not erased by relocation. A green behavior suite is not a green security,
 performance, publication or release-activation gate.
 
-The current candidate has no remote repository and npm publication is disabled.
-Activation requires reachable dependency artifacts and deliberate release
-coordination; no shared specification or release branch is changed here.
+The standalone repository is `openbindings/jsonata`; npm publication remains
+disabled in the development manifest. A source push is not a package release.
+SDK release activation requires reachable dependency artifacts and deliberate
+release coordination; no shared specification or SDK release branch is changed
+by publishing this repository's source.
 
 `node maintenance/verify-generated.mjs UNICODE_INPUT_DIRECTORY REGONAUT_MODULE_DIRECTORY`
 reproduces the JS and Go Unicode assets and instrumented regex source in fresh
