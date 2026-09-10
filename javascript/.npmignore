@@ -1,0 +1,12 @@
+*
+!*.js
+!LICENSE
+!package.json
+!README.md
+!jsonata.d.ts
+!json-executor.d.ts
+!node-executor.d.ts
+!EVALUATION-RUNTIME.md
+!BUILD.json
+!THIRD_PARTY_NOTICES.md
+polyfill.js

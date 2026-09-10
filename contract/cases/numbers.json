@@ -1,0 +1,287 @@
+{
+  "kind": "official-sdk-qualification",
+  "contract": "candidate-1",
+  "description": "Implementation-specific acceptance targets, not general OpenBindings or JSONata conformance. No evaluator is qualified by fixture validation.",
+  "cases": [
+    {
+      "id": "SDK-N01",
+      "expr": "n",
+      "inputJSON": "{\"n\":9007199254740993}",
+      "area": "carriage",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740993"
+      }
+    },
+    {
+      "id": "SDK-N02",
+      "expr": "{\"renamed\":n}",
+      "inputJSON": "{\"n\":9007199254740993}",
+      "area": "carriage",
+      "expected": {
+        "status": "json",
+        "json": "{\"renamed\":9007199254740993}"
+      }
+    },
+    {
+      "id": "SDK-N03",
+      "expr": "$ ~> |$|{\"extra\":true}|",
+      "inputJSON": "{\"n\":1.2345678901234567}",
+      "area": "carriage",
+      "expected": {
+        "status": "json",
+        "json": "{\"n\":1.2345678901234567,\"extra\":true}"
+      }
+    },
+    {
+      "id": "SDK-N04",
+      "expr": "$number(n)",
+      "inputJSON": "{\"n\":9007199254740993}",
+      "area": "construction",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740993"
+      }
+    },
+    {
+      "id": "SDK-N05",
+      "expr": "$number(\"9007199254740993\")",
+      "inputJSON": "{}",
+      "area": "construction",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740993"
+      }
+    },
+    {
+      "id": "SDK-N06",
+      "expr": "9007199254740992 = 9007199254740993",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "false"
+      }
+    },
+    {
+      "id": "SDK-N07",
+      "expr": "0.1 + 0.2",
+      "inputJSON": "{}",
+      "area": "arithmetic",
+      "expected": {
+        "status": "json",
+        "json": "0.3"
+      }
+    },
+    {
+      "id": "SDK-N08",
+      "expr": "(0.1 + 0.2) = 0.3",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "true"
+      }
+    },
+    {
+      "id": "SDK-N09",
+      "expr": "$boolean(1e-400)",
+      "inputJSON": "{}",
+      "area": "construction",
+      "expected": {
+        "status": "json",
+        "json": "true"
+      }
+    },
+    {
+      "id": "SDK-N10",
+      "expr": "$type(1e400)",
+      "inputJSON": "{}",
+      "area": "construction",
+      "expected": {
+        "status": "json",
+        "json": "\"number\""
+      }
+    },
+    {
+      "id": "SDK-N11",
+      "expr": "$eval(\"9007199254740993\")",
+      "inputJSON": "{}",
+      "area": "construction",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740993"
+      }
+    },
+    {
+      "id": "SDK-N12",
+      "expr": "$count($distinct([9007199254740992,9007199254740993]))",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "2"
+      }
+    },
+    {
+      "id": "SDK-N13",
+      "expr": "9007199254740993 in [9007199254740992]",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "false"
+      }
+    },
+    {
+      "id": "SDK-N14",
+      "expr": "{\"n\":9007199254740992}={\"n\":9007199254740993}",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "false"
+      }
+    },
+    {
+      "id": "SDK-N15",
+      "expr": "9007199254740993 + 0",
+      "inputJSON": "{}",
+      "area": "arithmetic",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740993"
+      }
+    },
+    {
+      "id": "SDK-N16",
+      "expr": "1 / 8",
+      "inputJSON": "{}",
+      "area": "arithmetic",
+      "expected": {
+        "status": "json",
+        "json": "0.125"
+      }
+    },
+    {
+      "id": "SDK-N17",
+      "expr": "1 / 3",
+      "inputJSON": "{}",
+      "area": "arithmetic",
+      "expected": {
+        "status": "json",
+        "json": "0.3333333333333333333333333333333333"
+      }
+    },
+    {
+      "id": "SDK-N18",
+      "expr": "(1 / 3) * 3",
+      "inputJSON": "{}",
+      "area": "arithmetic",
+      "expected": {
+        "status": "json",
+        "json": "0.9999999999999999999999999999999999"
+      }
+    },
+    {
+      "id": "SDK-N19",
+      "expr": "$round(2.5)",
+      "inputJSON": "{}",
+      "area": "specified-semantics",
+      "expected": {
+        "status": "json",
+        "json": "2"
+      }
+    },
+    {
+      "id": "SDK-N20",
+      "expr": "$type(n)",
+      "inputJSON": "{\"n\":9007199254740993}",
+      "area": "carriage",
+      "expected": {
+        "status": "json",
+        "json": "\"number\""
+      }
+    },
+    {
+      "id": "SDK-N21",
+      "expr": "{\"text\":s,\"array\":a,\"nil\":n}",
+      "inputJSON": "{\"s\":\"\\ud800\",\"a\":[1],\"n\":null}",
+      "area": "carriage",
+      "expected": {
+        "status": "json",
+        "json": "{\"text\":\"\\ud800\",\"array\":[1],\"nil\":null}"
+      }
+    },
+    {
+      "id": "SDK-N22",
+      "expr": "1.0 = 1e0",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "true"
+      }
+    },
+    {
+      "id": "SDK-N23",
+      "expr": "-0 = 0",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "true"
+      }
+    },
+    {
+      "id": "SDK-N24",
+      "expr": "$sum([9007199254740993,1])",
+      "inputJSON": "{}",
+      "area": "arithmetic",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740994"
+      }
+    },
+    {
+      "id": "SDK-N25",
+      "expr": "$min([9007199254740993,9007199254740992])",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740992"
+      }
+    },
+    {
+      "id": "SDK-N26",
+      "expr": "$max([9007199254740993,9007199254740992])",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "9007199254740993"
+      }
+    },
+    {
+      "id": "SDK-N27",
+      "expr": "$sort([9007199254740993,9007199254740992])",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "[9007199254740992,9007199254740993]"
+      }
+    },
+    {
+      "id": "SDK-N28",
+      "expr": "1=1.0000000000000000000000000000000001",
+      "inputJSON": "{}",
+      "area": "comparison",
+      "expected": {
+        "status": "json",
+        "json": "false"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "reason": "These private-backend compatibility witnesses exercise the undocumented $clone helper. Both closed executors already exclude that helper under StandardLibraryOnly. Keep the native witnesses unchanged, but require rejection at the public boundary. This is not a new language exclusion or numeric expectation change.",
+  "cases": [
+    {"id":"official-value-cases.json/empty-identity-clone","source":{"expr":"$clone(arr)[0] in arr","inputJSON":"{\"arr\":[[],[]]}","resultJSON":"false"},"expected":{"status":"failure","code":"T1006"}},
+    {"id":"official-value-cases.json/array-identity-clone","source":{"expr":"$clone(arr)[0] in arr","inputJSON":"{\"arr\":[[1],[1]]}","resultJSON":"false"},"expected":{"status":"failure","code":"T1006"}},
+    {"id":"official-value-cases.json/object-identity-clone","source":{"expr":"$clone(arr)[0] in arr","inputJSON":"{\"arr\":[{},{}]}","resultJSON":"false"},"expected":{"status":"failure","code":"T1006"}}
+  ]
+}

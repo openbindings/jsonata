@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "upstreamRevision": "6c7e95fdbf4405a1e741852a7cd8cd985b4305bb",
+  "classification": "Official implementation policy; NOT a Core or JSONata conformance floor.",
+  "generatorSHA256": "55a30c3fdde02485960675a6e6110c365ed412e48ec51b12c4f11a747663ea83",
+  "oracleSHA256": "cac9d7e86a30fdd8afa41ee355b32103b6605ac270a3a89d84523c86cd7062c6",
+  "cases": {
+    "comments/case003.json": {
+      "sources": {
+        "groups/comments/case003.json": "9be003de1caf105e7cff5db3c71bd36844795f56917b1ea5122d6fb852c9f82d",
+        "groups/comments/case003.jsonata": "d8d4ee316d981bd4728fa6935f298ee851d87fb0e1f7e30e368e3e299e8194a7"
+      },
+      "resultJSON": "16.0000000000000000000000000047209210546875",
+      "reason": "Official-only assigned division/root policy: exact terminating result, otherwise 34 significant digits, nearest/ties-to-even; each division is assigned before subsequent operations. Independent Fraction Newton iteration; 9 iterations."
+    },
+    "function-average/case001.json": {
+      "sources": {
+        "groups/function-average/case001.json": "63865fb6d701e93ddf103c8b3aed35958888454fbad26027dad6d6b17f12a171",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "[45.285,122.895]",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding."
+    },
+    "function-number/case008.json": {
+      "sources": {
+        "groups/function-number/case008.json": "f98774dbf5e634a84d2d0de876e0230e693e9a8aeff564bd3973d91406baca42"
+      },
+      "resultJSON": "1e501",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding."
+    },
+    "function-power/case006.json": {
+      "sources": {
+        "groups/function-power/case006.json": "763bd8024f4213d4c01b515b6b9be7401c0c7c92da3a7bec2bd82c871240a26c"
+      },
+      "resultJSON": "1e2000",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. (10^2)^1000."
+    },
+    "function-sqrt/case001.json": {
+      "sources": {
+        "groups/function-sqrt/case001.json": "602100e9f1357b6162b17286ace828def3ce33179e6f8dab3d218207c643f52c"
+      },
+      "resultJSON": "1.414213562373095048801688724209698",
+      "reason": "Official-only assigned division/root policy: exact terminating result, otherwise 34 significant digits, nearest/ties-to-even; each division is assigned before subsequent operations. libmpdec at 100/200 guard digits."
+    },
+    "function-string/case001.json": {
+      "sources": {
+        "groups/function-string/case001.json": "ae89d2c28fddaf2b9f66f6b48f311b4bd81fd17498bdf980278d12bfb4b017e3",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "\"3.142857142857142857142857142857143\"",
+      "reason": "Official-only assigned division/root policy: exact terminating result, otherwise 34 significant digits, nearest/ties-to-even; each division is assigned before subsequent operations. Explicit string renders the assigned value."
+    },
+    "function-string/case019.json": {
+      "sources": {
+        "groups/function-string/case019.json": "12f394de0faa69f1bbb9af90daf185ce069129c36ff5e420be2cfe4c49c37d47"
+      },
+      "code": "D1001",
+      "reason": "Official finite domain rejects division by zero at arithmetic, before string conversion; no Infinity intermediate."
+    },
+    "function-sum/case001.json": {
+      "sources": {
+        "groups/function-sum/case001.json": "9a3fce46e992e7612f9a485f02601f9ee0f0253b00da2a27508dd2f654113fe3",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "[90.57,245.79]",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding."
+    },
+    "literals/case008.json": {
+      "sources": {
+        "groups/literals/case008.json": "fc14314698f2faae1d9addc4357fcc60640c0ff5ab1459c628a22fe9cd09cacc"
+      },
+      "resultJSON": "1e1001",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Valid numeric grammar is not a binary64 syntax overflow."
+    },
+    "numeric-operators/case006.json": {
+      "sources": {
+        "groups/numeric-operators/case006.json": "7ae17ac2111538e0420494a66e46e6dddb6c1823d01e4796e5b81e0f007872e8",
+        "datasets/dataset0.json": "82a944b10efff13e69246a78de928459c7cbf8fcd159f73e6b7b7bf5cbae539b"
+      },
+      "resultJSON": "0.4285714285714285714285714285714286",
+      "reason": "Official-only assigned division/root policy: exact terminating result, otherwise 34 significant digits, nearest/ties-to-even; each division is assigned before subsequent operations."
+    },
+    "numeric-operators/case007.json": {
+      "sources": {
+        "groups/numeric-operators/case007.json": "af2c4a8dd6ea87639ee817efb158dca6d25b52bbc259b9da06d16a2e17171a0b",
+        "datasets/dataset0.json": "82a944b10efff13e69246a78de928459c7cbf8fcd159f73e6b7b7bf5cbae539b"
+      },
+      "resultJSON": "2.333333333333333333333333333333333",
+      "reason": "Official-only assigned division/root policy: exact terminating result, otherwise 34 significant digits, nearest/ties-to-even; each division is assigned before subsequent operations."
+    },
+    "numeric-operators/case014.json": {
+      "sources": {
+        "groups/numeric-operators/case014.json": "f1a73eb6b1a73d9f791e8dc4de7aa133f68287c053f69dc56feb1e9894134dea"
+      },
+      "resultJSON": "1e-402",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. 1 / (10^301 * 10^101)."
+    },
+    "object-constructor/case015.json": {
+      "sources": {
+        "groups/object-constructor/case015.json": "86dd8a3eb27d1866196c45383046528f6a0c1d88adaae93a16c1216cb6b176d4",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "{\"order103\":90.57,\"order104\":245.79}",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Only the two independently calculated order totals change; original structure retained."
+    },
+    "object-constructor/case016.json": {
+      "sources": {
+        "groups/object-constructor/case016.json": "6e99b93d78300c7a1e6da790ef7c9d50b872146d7af819b05e74bd0b8125cbd8",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "[{\"order103\":90.57},{\"order104\":245.79}]",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Only the two independently calculated order totals change; original structure retained."
+    },
+    "object-constructor/case019.json": {
+      "sources": {
+        "groups/object-constructor/case019.json": "44a5b01fd1ada41e3ff43052289fe2850ad900c3159a17017825a94857ee47a1",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "{\"order103\":{\"TotalPrice\":90.57,\"Items\":[\"Bowler Hat\",\"Trilby hat\"]},\"order104\":{\"TotalPrice\":245.79,\"Items\":[\"Bowler Hat\",\"Cloak\"]}}",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Only the two independently calculated order totals change; original structure retained."
+    },
+    "object-constructor/case020.json": {
+      "sources": {
+        "groups/object-constructor/case020.json": "459fb9af30012552323e9a2b7c3ddcbf9b266e03b7bd5d0fdb7c5d8e2ab10828",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "{\"Order\":[{\"ID\":\"order103\",\"Product\":[{\"Name\":\"Bowler Hat\",\"SKU\":858383,\"Details\":{\"Weight\":0.75,\"Dimensions\":\"300 x 200 x 210\"}},{\"Name\":\"Trilby hat\",\"SKU\":858236,\"Details\":{\"Weight\":0.6,\"Dimensions\":\"300 x 200 x 210\"}}],\"Total Price\":90.57},{\"ID\":\"order104\",\"Product\":[{\"Name\":\"Bowler Hat\",\"SKU\":858383,\"Details\":{\"Weight\":0.75,\"Dimensions\":\"300 x 200 x 210\"}},{\"Name\":\"Cloak\",\"SKU\":345664,\"Details\":{\"Weight\":2,\"Dimensions\":\"30 x 20 x 210\"}}],\"Total Price\":245.79}]}",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Only the two independently calculated order totals change; original structure retained."
+    },
+    "object-constructor/case021.json": {
+      "sources": {
+        "groups/object-constructor/case021.json": "a4be32a07558263f23c5dd839c3aa02701f5e44f20ea8b878f51d4349d579690",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "{\"Order\":[{\"ID\":\"order103\",\"Product\":[{\"Name\":\"Bowler Hat\",\"SKU\":858383,\"Details\":{\"Weight\":0.75,\"Dimensions\":\"300 x 200 x 210\"}},{\"Name\":\"Trilby hat\",\"SKU\":858236,\"Details\":{\"Weight\":0.6,\"Dimensions\":\"300 x 200 x 210\"}}],\"Total Price\":90.57},{\"ID\":\"order104\",\"Product\":[{\"Name\":\"Bowler Hat\",\"SKU\":858383,\"Details\":{\"Weight\":0.75,\"Dimensions\":\"300 x 200 x 210\"}},{\"Name\":\"Cloak\",\"SKU\":345664,\"Details\":{\"Weight\":2,\"Dimensions\":\"30 x 20 x 210\"}}],\"Total Price\":245.79}]}",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Only the two independently calculated order totals change; original structure retained."
+    },
+    "tail-recursion/case001.json": {
+      "sources": {
+        "groups/tail-recursion/case001.json": "f390552e51dcca0d4a06f8e985cea041d291b5c4e461ed86f3d8c2e9d2cd545c"
+      },
+      "resultJSON": "933262154439441526816992388562667004907159682643816214685929638952175999932299156089414639761565182862536979208272237582511852109168640000000000000000000000",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Independent integer 99!."
+    },
+    "tail-recursion/case004.json": {
+      "sources": {
+        "groups/tail-recursion/case004.json": "a5e26b3fc22b56bc85f40a2b24c1173ba8719ee770e2a649f7f2e9bcfae9589c"
+      },
+      "resultJSON": "57133839564458545904789328652610540031895535786011264182548375833179829124845398393126574488675311145377107878746854204162666250198684504466355949195922066574942592095735778929325357290444962472405416790722118445437122269675520000000000000000000000000000000000000",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Independent integer 150!."
+    },
+    "transform/case000.json": {
+      "sources": {
+        "groups/transform/case000.json": "c3f38300c0f716d64bd2b3b29f70a338bb53def0103c5826f7ce5bc58e8bcfa0",
+        "datasets/dataset5.json": "18c1326e4828f7a3b0515c06ae93e45dec34cb461201ad34e8882f8c24f12093"
+      },
+      "resultJSON": "{\"Order\":[{\"ID\":\"order103\",\"Product\":[{\"SKU\":858383,\"Details\":{\"Weight\":0.75,\"Dimensions\":\"300 x 200 x 210\"}},{\"SKU\":858236,\"Details\":{\"Weight\":0.6,\"Dimensions\":\"300 x 200 x 210\"}}],\"Total Price\":90.57},{\"ID\":\"order104\",\"Product\":[{\"SKU\":858383,\"Details\":{\"Weight\":0.75,\"Dimensions\":\"300 x 200 x 210\"}},{\"SKU\":345664,\"Details\":{\"Weight\":2,\"Dimensions\":\"30 x 20 x 210\"}}],\"Total Price\":245.79}]}",
+      "reason": "Official-only assigned finite decimal policy: exact supported arithmetic, without binary64 saturation or display rounding. Only the two independently calculated order totals change; original structure retained."
+    }
+  }
+}

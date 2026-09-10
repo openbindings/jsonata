@@ -1,0 +1,113 @@
+{
+  "purpose": "Object traversal with recorded array collection conventions",
+  "cases": [
+    {
+      "id": "lookup-array-values",
+      "expr": "$lookup(objects,\"a\")",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[9007199254740993,2,3]"
+    },
+    {
+      "id": "lookup-object-array",
+      "expr": "$lookup(plain,\"a\")",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[1,2]"
+    },
+    {
+      "id": "lookup-missing",
+      "expr": "$exists($lookup(objects,\"missing\"))",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "lookup-empty-values",
+      "expr": "$exists($lookup([{\"a\":[]},{\"a\":[]}],\"a\"))",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "lookup-single-array-value",
+      "expr": "$lookup([{\"a\":[7]}],\"a\")",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "7"
+    },
+    {
+      "id": "lookup-selected-nested-array",
+      "expr": "$lookup([{\"a\":[[1,2],[3]]}],\"a\")",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[[1,2],[3]]"
+    },
+    {
+      "id": "lookup-null-false",
+      "expr": "$lookup([{\"a\":null},{\"a\":false}],\"a\")",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[null,false]"
+    },
+    {
+      "id": "lookup-nested-objects",
+      "expr": "$lookup(nested,\"a\")",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "lookup-lambda",
+      "expr": "($f := function($x){$lookup($x,\"a\")}; $f(objects))",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[9007199254740993,2,3]"
+    },
+    {
+      "id": "keys-objects",
+      "expr": "$sort($keys(objects))",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[\"a\",\"b\"]"
+    },
+    {
+      "id": "keys-nested",
+      "expr": "$sort($keys(nested))",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[\"a\",\"b\"]"
+    },
+    {
+      "id": "spread-pairs",
+      "expr": "$spread([{ \"a\":1,\"b\":2},{\"a\":3}])",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[{\"a\":1},{\"b\":2},{\"a\":3}]"
+    },
+    {
+      "id": "spread-nested",
+      "expr": "$spread(nested)",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[{\"a\":1},{\"b\":2}]"
+    },
+    {
+      "id": "spread-one-pair",
+      "expr": "$spread([{ \"a\":1}])",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[{\"a\":1}]"
+    },
+    {
+      "id": "spread-preserves-property-array",
+      "expr": "$spread({\"a\":[1,2]})",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "{\"a\":[1,2]}"
+    },
+    {
+      "id": "merge-last-wins",
+      "expr": "$merge([{ \"a\":9007199254740992},{\"a\":9007199254740993}])",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "{\"a\":9007199254740993}"
+    },
+    {
+      "id": "special-member-query",
+      "expr": "$lookup([{\"__proto__\":1},{\"__proto__\":2}],\"__proto__\")",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "[1,2]"
+    },
+    {
+      "id": "keys-empty",
+      "expr": "$exists($keys([{},{}]))",
+      "inputJSON": "{\"objects\":[{\"a\":[9007199254740993,2]},{\"a\":[3]},{\"b\":0}],\"nested\":[[{\"a\":1}],{\"b\":2}],\"plain\":{\"a\":[1,2]}}",
+      "resultJSON": "false"
+    }
+  ]
+}

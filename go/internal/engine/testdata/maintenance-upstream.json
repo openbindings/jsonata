@@ -1,0 +1,14 @@
+[
+ {"id":"split-undefined-pattern","expr":"$split(\"Hello World\", nothing)","undefined":true},
+ {"id":"replace-undefined-pattern","expr":"$replace(\"Hello World\", nothing, \"Earth\")","undefined":true},
+ {"id":"split-undefined-input","expr":"$split(nothing, \" \")","undefined":true},
+ {"id":"replace-undefined-input","expr":"$replace(nothing, \"World\", \"Earth\")","undefined":true},
+ {"id":"split-ordinary","expr":"$split(\"Hello World\", \" \")","result":["Hello","World"]},
+ {"id":"replace-ordinary","expr":"$replace(\"Hello World\", \"World\", \"Earth\")","result":"Hello Earth"},
+ {"id":"contains-undefined-pattern","expr":"$contains(\"Hello World\", nothing)","undefined":true},
+ {"id":"pad-bounded","expr":"$pad(\"x\", 20000000)","error":"U_OUTPUT_LIMIT"},
+ {"id":"pad-ordinary","expr":"$pad(\"x\", 5)","result":"x    "},
+ {"id":"escaped-regex-parenthesis","expr":"$contains(\"(x\", /\\(?x/)","result":true},
+ {"id":"escaped-regex-compound","expr":"$contains(\"bar x.y eq \\\"z\\\"\", /(-foo|\\bbar\\b)\\s*\\(?\\s*x\\.y\\s+-?eq\\s+\"z\"/)","result":true},
+ {"id":"empty-tuple-group","expr":"library.loans@$L.books@$B[$L.isbn=$B.isbn].customers[$L.customer='not found']{name: $B.title[]}","dataset":"library","result":{}}
+]

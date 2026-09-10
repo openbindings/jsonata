@@ -1,0 +1,6167 @@
+{
+  "scope": "Implementation temporal regressions, not a new Core profile; explicit millisecond calendar domain",
+  "cases": [
+    {
+      "id": "iso-parse-0",
+      "expr": "$toMillis(\"-271821-04-20T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "-8640000000000000"
+    },
+    {
+      "id": "iso-format-0",
+      "expr": "$fromMillis(-8640000000000000)",
+      "inputJSON": "{}",
+      "resultJSON": "\"-271821-04-20T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-0",
+      "expr": "$toMillis($fromMillis(-8640000000000000))",
+      "inputJSON": "{}",
+      "resultJSON": "-8640000000000000"
+    },
+    {
+      "id": "iso-parse-1",
+      "expr": "$toMillis(\"-000001-01-01T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62198755200000"
+    },
+    {
+      "id": "iso-format-1",
+      "expr": "$fromMillis(-62198755200000)",
+      "inputJSON": "{}",
+      "resultJSON": "\"-000001-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-1",
+      "expr": "$toMillis($fromMillis(-62198755200000))",
+      "inputJSON": "{}",
+      "resultJSON": "-62198755200000"
+    },
+    {
+      "id": "iso-parse-2",
+      "expr": "$toMillis(\"0000-01-01T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62167219200000"
+    },
+    {
+      "id": "iso-format-2",
+      "expr": "$fromMillis(-62167219200000)",
+      "inputJSON": "{}",
+      "resultJSON": "\"0000-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-2",
+      "expr": "$toMillis($fromMillis(-62167219200000))",
+      "inputJSON": "{}",
+      "resultJSON": "-62167219200000"
+    },
+    {
+      "id": "iso-parse-3",
+      "expr": "$toMillis(\"0001-01-01T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62135596800000"
+    },
+    {
+      "id": "iso-format-3",
+      "expr": "$fromMillis(-62135596800000)",
+      "inputJSON": "{}",
+      "resultJSON": "\"0001-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-3",
+      "expr": "$toMillis($fromMillis(-62135596800000))",
+      "inputJSON": "{}",
+      "resultJSON": "-62135596800000"
+    },
+    {
+      "id": "iso-parse-4",
+      "expr": "$toMillis(\"0099-01-01T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "-59042995200000"
+    },
+    {
+      "id": "iso-format-4",
+      "expr": "$fromMillis(-59042995200000)",
+      "inputJSON": "{}",
+      "resultJSON": "\"0099-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-4",
+      "expr": "$toMillis($fromMillis(-59042995200000))",
+      "inputJSON": "{}",
+      "resultJSON": "-59042995200000"
+    },
+    {
+      "id": "iso-parse-5",
+      "expr": "$toMillis(\"0100-01-01T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "-59011459200000"
+    },
+    {
+      "id": "iso-format-5",
+      "expr": "$fromMillis(-59011459200000)",
+      "inputJSON": "{}",
+      "resultJSON": "\"0100-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-5",
+      "expr": "$toMillis($fromMillis(-59011459200000))",
+      "inputJSON": "{}",
+      "resultJSON": "-59011459200000"
+    },
+    {
+      "id": "iso-parse-6",
+      "expr": "$toMillis(\"1969-12-31T23:59:59.999Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "-1"
+    },
+    {
+      "id": "iso-format-6",
+      "expr": "$fromMillis(-1)",
+      "inputJSON": "{}",
+      "resultJSON": "\"1969-12-31T23:59:59.999Z\""
+    },
+    {
+      "id": "iso-reload-6",
+      "expr": "$toMillis($fromMillis(-1))",
+      "inputJSON": "{}",
+      "resultJSON": "-1"
+    },
+    {
+      "id": "iso-parse-7",
+      "expr": "$toMillis(\"1970-01-01T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-format-7",
+      "expr": "$fromMillis(0)",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-7",
+      "expr": "$toMillis($fromMillis(0))",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-parse-8",
+      "expr": "$toMillis(\"1970-01-01T00:00:00.001Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "iso-format-8",
+      "expr": "$fromMillis(1)",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T00:00:00.001Z\""
+    },
+    {
+      "id": "iso-reload-8",
+      "expr": "$toMillis($fromMillis(1))",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "iso-parse-9",
+      "expr": "$toMillis(\"2024-02-29T12:34:56.789Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "1709210096789"
+    },
+    {
+      "id": "iso-format-9",
+      "expr": "$fromMillis(1709210096789)",
+      "inputJSON": "{}",
+      "resultJSON": "\"2024-02-29T12:34:56.789Z\""
+    },
+    {
+      "id": "iso-reload-9",
+      "expr": "$toMillis($fromMillis(1709210096789))",
+      "inputJSON": "{}",
+      "resultJSON": "1709210096789"
+    },
+    {
+      "id": "iso-parse-10",
+      "expr": "$toMillis(\"+010000-01-01T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "253402300800000"
+    },
+    {
+      "id": "iso-format-10",
+      "expr": "$fromMillis(253402300800000)",
+      "inputJSON": "{}",
+      "resultJSON": "\"+010000-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-10",
+      "expr": "$toMillis($fromMillis(253402300800000))",
+      "inputJSON": "{}",
+      "resultJSON": "253402300800000"
+    },
+    {
+      "id": "iso-parse-11",
+      "expr": "$toMillis(\"+275760-09-13T00:00:00.000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "8640000000000000"
+    },
+    {
+      "id": "iso-format-11",
+      "expr": "$fromMillis(8640000000000000)",
+      "inputJSON": "{}",
+      "resultJSON": "\"+275760-09-13T00:00:00.000Z\""
+    },
+    {
+      "id": "iso-reload-11",
+      "expr": "$toMillis($fromMillis(8640000000000000))",
+      "inputJSON": "{}",
+      "resultJSON": "8640000000000000"
+    },
+    {
+      "id": "iso-reduced-36",
+      "expr": "$toMillis(\"1970\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-reduced-37",
+      "expr": "$toMillis(\"1970-01\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-reduced-38",
+      "expr": "$toMillis(\"1970-01-01\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-reduced-39",
+      "expr": "$toMillis(\"1970-01-01T00:00\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-reduced-40",
+      "expr": "$toMillis(\"1970-01-01T00:00:00\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-reduced-41",
+      "expr": "$toMillis(\"1970-01-01T00:00:00.0009Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-reduced-42",
+      "expr": "$toMillis(\"1970-01-01T00:00:00.0019Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "iso-reduced-43",
+      "expr": "$toMillis(\"1970-01-01T24:00:00Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "86400000"
+    },
+    {
+      "id": "iso-reduced-44",
+      "expr": "$toMillis(\"1970-01-01T24:00:00.0000Z\")",
+      "inputJSON": "{}",
+      "resultJSON": "86400000"
+    },
+    {
+      "id": "iso-reduced-45",
+      "expr": "$toMillis(\"1970-01-01T01:30:00+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-reduced-46",
+      "expr": "$toMillis(\"1970-01-01T01:30:00+01:30\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "iso-reduced-47",
+      "expr": "$toMillis(\"1970-01-01T00:00:00-01:30\")",
+      "inputJSON": "{}",
+      "resultJSON": "5400000"
+    },
+    {
+      "id": "iso-invalid-48",
+      "expr": "$toMillis(\"\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-49",
+      "expr": "$toMillis(\"bad\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-50",
+      "expr": "$toMillis(\"-000000-01-01\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-51",
+      "expr": "$toMillis(\"2024-00-01\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-52",
+      "expr": "$toMillis(\"2024-13-01\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-53",
+      "expr": "$toMillis(\"2024-01-00\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-54",
+      "expr": "$toMillis(\"2024-01-32\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-55",
+      "expr": "$toMillis(\"2024-02-30\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-56",
+      "expr": "$toMillis(\"2023-02-29\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-57",
+      "expr": "$toMillis(\"1900-02-29\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-58",
+      "expr": "$toMillis(\"2024-01-01T25:00:00Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-59",
+      "expr": "$toMillis(\"2024-01-01T00:60:00Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-60",
+      "expr": "$toMillis(\"2024-01-01T00:00:60Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-61",
+      "expr": "$toMillis(\"2024-01-01T24:01:00Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-62",
+      "expr": "$toMillis(\"2024-01-01T24:00:01Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-63",
+      "expr": "$toMillis(\"2024-01-01T24:00:00.00001Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-64",
+      "expr": "$toMillis(\"2024-01-01T00:00:00+24:00\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-65",
+      "expr": "$toMillis(\"2024-01-01T00:00:00+00:60\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-66",
+      "expr": "$toMillis(\"+999999-01-01T00:00:00Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-67",
+      "expr": "$toMillis(\"+275760-09-13T00:00:00.001Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-68",
+      "expr": "$toMillis(\"-271821-04-19T23:59:59.999Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "iso-invalid-69",
+      "expr": "$toMillis(\"2000-01-01Z\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-default-70",
+      "expr": "$fromMillis(0,missing,\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T05:30:00.000+05:30\""
+    },
+    {
+      "id": "zone-picture-71",
+      "expr": "$fromMillis(0,\"[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01].[f001][Z01:01t]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T05:30:00.000+05:30\""
+    },
+    {
+      "id": "zone-default-72",
+      "expr": "$fromMillis(0,missing,\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1969-12-31T18:30:00.000-05:30\""
+    },
+    {
+      "id": "zone-picture-73",
+      "expr": "$fromMillis(0,\"[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01].[f001][Z01:01t]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1969-12-31T18:30:00.000-05:30\""
+    },
+    {
+      "id": "zone-default-74",
+      "expr": "$fromMillis(0,missing,\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1969-12-31T23:30:00.000-00:30\""
+    },
+    {
+      "id": "zone-picture-75",
+      "expr": "$fromMillis(0,\"[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01].[f001][Z01:01t]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1969-12-31T23:30:00.000-00:30\""
+    },
+    {
+      "id": "zone-default-76",
+      "expr": "$fromMillis(0,missing,\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "zone-picture-77",
+      "expr": "$fromMillis(0,\"[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01].[f001][Z01:01t]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "zone-default-78",
+      "expr": "$fromMillis(0,missing,\"0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "zone-picture-79",
+      "expr": "$fromMillis(0,\"[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01].[f001][Z01:01t]\",\"0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T00:00:00.000Z\""
+    },
+    {
+      "id": "zone-invalid-80",
+      "expr": "$fromMillis(0,missing,\"\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-invalid-81",
+      "expr": "$fromMillis(0,missing,\"UTC\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-invalid-82",
+      "expr": "$fromMillis(0,missing,\"America/New_York\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-invalid-83",
+      "expr": "$fromMillis(0,missing,\"+2400\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-invalid-84",
+      "expr": "$fromMillis(0,missing,\"+0060\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-invalid-85",
+      "expr": "$fromMillis(0,missing,\"+05:30\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-invalid-86",
+      "expr": "$fromMillis(0,missing,\"junk\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-range-87",
+      "expr": "$fromMillis(8640000000000000,missing,\"+0100\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-range-88",
+      "expr": "$fromMillis(-8640000000000000,missing,\"-0100\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-range-89",
+      "expr": "$fromMillis(8640000000000000,\"[Y]\",\"+0100\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "zone-range-90",
+      "expr": "$fromMillis(-8640000000000000,\"[Y]\",\"-0100\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "year-one-picture",
+      "expr": "$toMillis(\"0001-01-01\",\"[Y0001]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62135596800000"
+    },
+    {
+      "id": "year-zero-picture",
+      "expr": "$toMillis(\"0000-01-01\",\"[Y0001]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62167219200000"
+    },
+    {
+      "id": "millis-timeclip-negative",
+      "expr": "$fromMillis(-1.9)",
+      "inputJSON": "{}",
+      "resultJSON": "\"1969-12-31T23:59:59.999Z\""
+    },
+    {
+      "id": "millis-timeclip-positive",
+      "expr": "$fromMillis(1.9)",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T00:00:00.001Z\""
+    },
+    {
+      "id": "year-absolute-picture",
+      "expr": "$fromMillis(-62198755200000,\"[Y0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0001\""
+    },
+    {
+      "id": "iso-upper-offset-reentry",
+      "expr": "$toMillis(\"+275760-09-13T01:00:00.000+01:00\")",
+      "inputJSON": "{}",
+      "resultJSON": "8640000000000000"
+    },
+    {
+      "id": "iso-lower-offset-reentry",
+      "expr": "$toMillis(\"-271821-04-19T23:00:00.000-01:00\")",
+      "inputJSON": "{}",
+      "resultJSON": "-8640000000000000"
+    },
+    {
+      "id": "fraction-0-98",
+      "expr": "$fromMillis(0,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0\""
+    },
+    {
+      "id": "fraction-0-99",
+      "expr": "$fromMillis(0,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0\""
+    },
+    {
+      "id": "fraction-0-100",
+      "expr": "$fromMillis(0,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"00\""
+    },
+    {
+      "id": "fraction-0-101",
+      "expr": "$fromMillis(0,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"000\""
+    },
+    {
+      "id": "fraction-0-102",
+      "expr": "$fromMillis(0,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0000\""
+    },
+    {
+      "id": "fraction-0-103",
+      "expr": "$fromMillis(0,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0\""
+    },
+    {
+      "id": "fraction-0-104",
+      "expr": "$fromMillis(0,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0\""
+    },
+    {
+      "id": "fraction-0-105",
+      "expr": "$fromMillis(0,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0000\""
+    },
+    {
+      "id": "fraction-0-106",
+      "expr": "$fromMillis(0,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0'0'0\""
+    },
+    {
+      "id": "fraction-0-107",
+      "expr": "$fromMillis(0,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٠٠٠\""
+    },
+    {
+      "id": "fraction-0-108",
+      "expr": "$fromMillis(0,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0\""
+    },
+    {
+      "id": "fraction-1-109",
+      "expr": "$fromMillis(1,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"001\""
+    },
+    {
+      "id": "fraction-1-110",
+      "expr": "$fromMillis(1,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"001\""
+    },
+    {
+      "id": "fraction-1-111",
+      "expr": "$fromMillis(1,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"00\""
+    },
+    {
+      "id": "fraction-1-112",
+      "expr": "$fromMillis(1,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"001\""
+    },
+    {
+      "id": "fraction-1-113",
+      "expr": "$fromMillis(1,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0010\""
+    },
+    {
+      "id": "fraction-1-114",
+      "expr": "$fromMillis(1,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0\""
+    },
+    {
+      "id": "fraction-1-115",
+      "expr": "$fromMillis(1,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"00\""
+    },
+    {
+      "id": "fraction-1-116",
+      "expr": "$fromMillis(1,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0010\""
+    },
+    {
+      "id": "fraction-1-117",
+      "expr": "$fromMillis(1,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0'0'1\""
+    },
+    {
+      "id": "fraction-1-118",
+      "expr": "$fromMillis(1,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٠٠١\""
+    },
+    {
+      "id": "fraction-1-119",
+      "expr": "$fromMillis(1,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"001\""
+    },
+    {
+      "id": "fraction-12-120",
+      "expr": "$fromMillis(12,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"012\""
+    },
+    {
+      "id": "fraction-12-121",
+      "expr": "$fromMillis(12,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"012\""
+    },
+    {
+      "id": "fraction-12-122",
+      "expr": "$fromMillis(12,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"01\""
+    },
+    {
+      "id": "fraction-12-123",
+      "expr": "$fromMillis(12,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"012\""
+    },
+    {
+      "id": "fraction-12-124",
+      "expr": "$fromMillis(12,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0120\""
+    },
+    {
+      "id": "fraction-12-125",
+      "expr": "$fromMillis(12,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0\""
+    },
+    {
+      "id": "fraction-12-126",
+      "expr": "$fromMillis(12,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"01\""
+    },
+    {
+      "id": "fraction-12-127",
+      "expr": "$fromMillis(12,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0120\""
+    },
+    {
+      "id": "fraction-12-128",
+      "expr": "$fromMillis(12,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0'1'2\""
+    },
+    {
+      "id": "fraction-12-129",
+      "expr": "$fromMillis(12,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٠١٢\""
+    },
+    {
+      "id": "fraction-12-130",
+      "expr": "$fromMillis(12,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"012\""
+    },
+    {
+      "id": "fraction-50-131",
+      "expr": "$fromMillis(50,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"05\""
+    },
+    {
+      "id": "fraction-50-132",
+      "expr": "$fromMillis(50,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"05\""
+    },
+    {
+      "id": "fraction-50-133",
+      "expr": "$fromMillis(50,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"05\""
+    },
+    {
+      "id": "fraction-50-134",
+      "expr": "$fromMillis(50,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"050\""
+    },
+    {
+      "id": "fraction-50-135",
+      "expr": "$fromMillis(50,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0500\""
+    },
+    {
+      "id": "fraction-50-136",
+      "expr": "$fromMillis(50,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0\""
+    },
+    {
+      "id": "fraction-50-137",
+      "expr": "$fromMillis(50,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"05\""
+    },
+    {
+      "id": "fraction-50-138",
+      "expr": "$fromMillis(50,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0500\""
+    },
+    {
+      "id": "fraction-50-139",
+      "expr": "$fromMillis(50,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0'5'0\""
+    },
+    {
+      "id": "fraction-50-140",
+      "expr": "$fromMillis(50,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٠٥٠\""
+    },
+    {
+      "id": "fraction-50-141",
+      "expr": "$fromMillis(50,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"05\""
+    },
+    {
+      "id": "fraction-100-142",
+      "expr": "$fromMillis(100,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1\""
+    },
+    {
+      "id": "fraction-100-143",
+      "expr": "$fromMillis(100,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1\""
+    },
+    {
+      "id": "fraction-100-144",
+      "expr": "$fromMillis(100,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"10\""
+    },
+    {
+      "id": "fraction-100-145",
+      "expr": "$fromMillis(100,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"100\""
+    },
+    {
+      "id": "fraction-100-146",
+      "expr": "$fromMillis(100,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1000\""
+    },
+    {
+      "id": "fraction-100-147",
+      "expr": "$fromMillis(100,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1\""
+    },
+    {
+      "id": "fraction-100-148",
+      "expr": "$fromMillis(100,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1\""
+    },
+    {
+      "id": "fraction-100-149",
+      "expr": "$fromMillis(100,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1000\""
+    },
+    {
+      "id": "fraction-100-150",
+      "expr": "$fromMillis(100,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1'0'0\""
+    },
+    {
+      "id": "fraction-100-151",
+      "expr": "$fromMillis(100,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"١٠٠\""
+    },
+    {
+      "id": "fraction-100-152",
+      "expr": "$fromMillis(100,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1\""
+    },
+    {
+      "id": "fraction-105-153",
+      "expr": "$fromMillis(105,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"105\""
+    },
+    {
+      "id": "fraction-105-154",
+      "expr": "$fromMillis(105,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"105\""
+    },
+    {
+      "id": "fraction-105-155",
+      "expr": "$fromMillis(105,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"10\""
+    },
+    {
+      "id": "fraction-105-156",
+      "expr": "$fromMillis(105,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"105\""
+    },
+    {
+      "id": "fraction-105-157",
+      "expr": "$fromMillis(105,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1050\""
+    },
+    {
+      "id": "fraction-105-158",
+      "expr": "$fromMillis(105,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1\""
+    },
+    {
+      "id": "fraction-105-159",
+      "expr": "$fromMillis(105,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"10\""
+    },
+    {
+      "id": "fraction-105-160",
+      "expr": "$fromMillis(105,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1050\""
+    },
+    {
+      "id": "fraction-105-161",
+      "expr": "$fromMillis(105,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1'0'5\""
+    },
+    {
+      "id": "fraction-105-162",
+      "expr": "$fromMillis(105,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"١٠٥\""
+    },
+    {
+      "id": "fraction-105-163",
+      "expr": "$fromMillis(105,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"105\""
+    },
+    {
+      "id": "fraction-120-164",
+      "expr": "$fromMillis(120,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"12\""
+    },
+    {
+      "id": "fraction-120-165",
+      "expr": "$fromMillis(120,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"12\""
+    },
+    {
+      "id": "fraction-120-166",
+      "expr": "$fromMillis(120,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"12\""
+    },
+    {
+      "id": "fraction-120-167",
+      "expr": "$fromMillis(120,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"120\""
+    },
+    {
+      "id": "fraction-120-168",
+      "expr": "$fromMillis(120,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1200\""
+    },
+    {
+      "id": "fraction-120-169",
+      "expr": "$fromMillis(120,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1\""
+    },
+    {
+      "id": "fraction-120-170",
+      "expr": "$fromMillis(120,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"12\""
+    },
+    {
+      "id": "fraction-120-171",
+      "expr": "$fromMillis(120,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1200\""
+    },
+    {
+      "id": "fraction-120-172",
+      "expr": "$fromMillis(120,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1'2'0\""
+    },
+    {
+      "id": "fraction-120-173",
+      "expr": "$fromMillis(120,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"١٢٠\""
+    },
+    {
+      "id": "fraction-120-174",
+      "expr": "$fromMillis(120,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"12\""
+    },
+    {
+      "id": "fraction-450-175",
+      "expr": "$fromMillis(450,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"45\""
+    },
+    {
+      "id": "fraction-450-176",
+      "expr": "$fromMillis(450,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"45\""
+    },
+    {
+      "id": "fraction-450-177",
+      "expr": "$fromMillis(450,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"45\""
+    },
+    {
+      "id": "fraction-450-178",
+      "expr": "$fromMillis(450,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"450\""
+    },
+    {
+      "id": "fraction-450-179",
+      "expr": "$fromMillis(450,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"4500\""
+    },
+    {
+      "id": "fraction-450-180",
+      "expr": "$fromMillis(450,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"4\""
+    },
+    {
+      "id": "fraction-450-181",
+      "expr": "$fromMillis(450,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"45\""
+    },
+    {
+      "id": "fraction-450-182",
+      "expr": "$fromMillis(450,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"4500\""
+    },
+    {
+      "id": "fraction-450-183",
+      "expr": "$fromMillis(450,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"4'5'0\""
+    },
+    {
+      "id": "fraction-450-184",
+      "expr": "$fromMillis(450,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٤٥٠\""
+    },
+    {
+      "id": "fraction-450-185",
+      "expr": "$fromMillis(450,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"45\""
+    },
+    {
+      "id": "fraction-789-186",
+      "expr": "$fromMillis(789,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"789\""
+    },
+    {
+      "id": "fraction-789-187",
+      "expr": "$fromMillis(789,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"789\""
+    },
+    {
+      "id": "fraction-789-188",
+      "expr": "$fromMillis(789,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"78\""
+    },
+    {
+      "id": "fraction-789-189",
+      "expr": "$fromMillis(789,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"789\""
+    },
+    {
+      "id": "fraction-789-190",
+      "expr": "$fromMillis(789,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"7890\""
+    },
+    {
+      "id": "fraction-789-191",
+      "expr": "$fromMillis(789,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"7\""
+    },
+    {
+      "id": "fraction-789-192",
+      "expr": "$fromMillis(789,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"78\""
+    },
+    {
+      "id": "fraction-789-193",
+      "expr": "$fromMillis(789,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"7890\""
+    },
+    {
+      "id": "fraction-789-194",
+      "expr": "$fromMillis(789,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"7'8'9\""
+    },
+    {
+      "id": "fraction-789-195",
+      "expr": "$fromMillis(789,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٧٨٩\""
+    },
+    {
+      "id": "fraction-789-196",
+      "expr": "$fromMillis(789,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"789\""
+    },
+    {
+      "id": "fraction-999-197",
+      "expr": "$fromMillis(999,\"[f]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"999\""
+    },
+    {
+      "id": "fraction-999-198",
+      "expr": "$fromMillis(999,\"[f1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"999\""
+    },
+    {
+      "id": "fraction-999-199",
+      "expr": "$fromMillis(999,\"[f01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"99\""
+    },
+    {
+      "id": "fraction-999-200",
+      "expr": "$fromMillis(999,\"[f001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"999\""
+    },
+    {
+      "id": "fraction-999-201",
+      "expr": "$fromMillis(999,\"[f0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"9990\""
+    },
+    {
+      "id": "fraction-999-202",
+      "expr": "$fromMillis(999,\"[f1,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"9\""
+    },
+    {
+      "id": "fraction-999-203",
+      "expr": "$fromMillis(999,\"[f1,1-2]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"99\""
+    },
+    {
+      "id": "fraction-999-204",
+      "expr": "$fromMillis(999,\"[f01,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"9990\""
+    },
+    {
+      "id": "fraction-999-205",
+      "expr": "$fromMillis(999,\"[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"9'9'9\""
+    },
+    {
+      "id": "fraction-999-206",
+      "expr": "$fromMillis(999,\"[f٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٩٩٩\""
+    },
+    {
+      "id": "fraction-999-207",
+      "expr": "$fromMillis(999,\"[fW]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"999\""
+    },
+    {
+      "id": "fraction-width-208",
+      "expr": "$fromMillis(120,\"[f1##,3]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"120\""
+    },
+    {
+      "id": "fraction-width-209",
+      "expr": "$fromMillis(120,\"[f1,*-3]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"12\""
+    },
+    {
+      "id": "fraction-width-210",
+      "expr": "$fromMillis(120,\"[fN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"12\""
+    },
+    {
+      "id": "fraction-width-211",
+      "expr": "$fromMillis(120,\"[f0'00,3]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1'2'0\""
+    },
+    {
+      "id": "picture-parse-212",
+      "expr": "$toMillis(\"1970-060\",\"[Y0001]-[d001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "5097600000"
+    },
+    {
+      "id": "picture-parse-213",
+      "expr": "$toMillis(\"2000-366\",\"[Y0001]-[d001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "978220800000"
+    },
+    {
+      "id": "picture-parse-214",
+      "expr": "$toMillis(\"0000-060\",\"[Y0001]-[d001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62162121600000"
+    },
+    {
+      "id": "picture-parse-215",
+      "expr": "$toMillis(\"1970-01-01 00:00 -00:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "picture-parse-216",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "picture-parse-217",
+      "expr": "$toMillis(\"1970-01-01 00:00 -0530\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "picture-parse-218",
+      "expr": "$toMillis(\"1970-01-01 00:00 GMT-05:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [z01:01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "picture-parse-219",
+      "expr": "$toMillis(\"1970-01-01 00:00 Z\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01t]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-parse-220",
+      "expr": "$toMillis(\"1970-01-01 12:00 am\",\"[Y0001]-[M01]-[D01] [h01]:[m01] [Pn]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-parse-221",
+      "expr": "$toMillis(\"1970-01-01 12:00 pm\",\"[Y0001]-[M01]-[D01] [h01]:[m01] [Pn]\")",
+      "inputJSON": "{}",
+      "resultJSON": "43200000"
+    },
+    {
+      "id": "picture-parse-222",
+      "expr": "$toMillis(\"1970-01-01 01:00 pm\",\"[Y0001]-[M01]-[D01] [h01]:[m01] [Pn]\")",
+      "inputJSON": "{}",
+      "resultJSON": "46800000"
+    },
+    {
+      "id": "picture-parse-223",
+      "expr": "$toMillis(\"1970-january-01\",\"[Y0001]-[MNn]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-calendar-invalid-224",
+      "expr": "$toMillis(\"2024-00-01\",\"[Y0001]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-calendar-invalid-225",
+      "expr": "$toMillis(\"2024-13-01\",\"[Y0001]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-calendar-invalid-226",
+      "expr": "$toMillis(\"2024-01-00\",\"[Y0001]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-calendar-invalid-227",
+      "expr": "$toMillis(\"2024-01-32\",\"[Y0001]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-calendar-invalid-228",
+      "expr": "$toMillis(\"2023-02-29\",\"[Y0001]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-calendar-invalid-229",
+      "expr": "$toMillis(\"2024-02-30\",\"[Y0001]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-ordinal-invalid-230",
+      "expr": "$toMillis(\"1970-000\",\"[Y0001]-[d001]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-ordinal-invalid-231",
+      "expr": "$toMillis(\"1970-366\",\"[Y0001]-[d001]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-ordinal-invalid-232",
+      "expr": "$toMillis(\"2000-367\",\"[Y0001]-[d001]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-clock-invalid-233",
+      "expr": "$toMillis(\"1970-01-01 24:00:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-clock-invalid-234",
+      "expr": "$toMillis(\"1970-01-01 23:60:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-clock-invalid-235",
+      "expr": "$toMillis(\"1970-01-01 23:59:60\",\"[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-12hour-invalid-236",
+      "expr": "$toMillis(\"1970-01-01 00:00 am\",\"[Y0001]-[M01]-[D01] [h01]:[m01] [Pn]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-12hour-invalid-237",
+      "expr": "$toMillis(\"1970-01-01 13:00 pm\",\"[Y0001]-[M01]-[D01] [h01]:[m01] [Pn]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-zone-invalid-238",
+      "expr": "$toMillis(\"1970-01-01 +24:00\",\"[Y0001]-[M01]-[D01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-zone-invalid-239",
+      "expr": "$toMillis(\"1970-01-01 +00:60\",\"[Y0001]-[M01]-[D01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-zone-invalid-240",
+      "expr": "$toMillis(\"1970-01-01 -00:60\",\"[Y0001]-[M01]-[D01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-defaults-241",
+      "expr": "$fromMillis($toMillis(\"27\",\"[D]\"),\"[Y]-[M]\")=$now(\"[Y]-[M]\")",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "picture-defaults-242",
+      "expr": "$fromMillis($toMillis(\"03-27\",\"[M01]-[D01]\"),\"[Y]\")=$now(\"[Y]\")",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "picture-defaults-243",
+      "expr": "$fromMillis($toMillis(\"30\",\"[m01]\"),\"[Y]-[M]-[D] [H]\")=$now(\"[Y]-[M]-[D] [H]\")",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "picture-internal-gap",
+      "expr": "$toMillis(\"00:01\",\"[H01]:[s01]\")",
+      "inputJSON": "{}",
+      "error": "D3136"
+    },
+    {
+      "id": "picture-outside-millisecond-domain",
+      "expr": "$toMillis(\"999999\",\"[Y1]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-year-name-fallback",
+      "expr": "$fromMillis(0,\"[YN]-[M]-[D]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-1-1\""
+    },
+    {
+      "id": "picture-year-name-parse-fallback",
+      "expr": "$toMillis(\"1970-1-1\",\"[YN]-[M]-[D]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-presentation-248",
+      "expr": "$fromMillis(0,\"[MNn,10-12]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"January   \""
+    },
+    {
+      "id": "picture-presentation-249",
+      "expr": "$fromMillis(0,\"[MN,10-12]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"JANUARY   \""
+    },
+    {
+      "id": "picture-presentation-250",
+      "expr": "$fromMillis(0,\"[Mn,10-12]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"january   \""
+    },
+    {
+      "id": "picture-presentation-251",
+      "expr": "$fromMillis(0,\"[MNn,3-3]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"Jan\""
+    },
+    {
+      "id": "picture-presentation-252",
+      "expr": "$fromMillis(0,\"[FNn,10-12]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"Thursday  \""
+    },
+    {
+      "id": "picture-presentation-253",
+      "expr": "$fromMillis(0,\"[M٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٠١\""
+    },
+    {
+      "id": "picture-presentation-254",
+      "expr": "$fromMillis(0,\"[D٠٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٠٠١\""
+    },
+    {
+      "id": "picture-presentation-255",
+      "expr": "$fromMillis(0,\"[MName]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1\""
+    },
+    {
+      "id": "picture-presentation-256",
+      "expr": "$fromMillis(0,\"[FName]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"thursday\""
+    },
+    {
+      "id": "picture-presentation-257",
+      "expr": "$fromMillis(0,\"[YName]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970\""
+    },
+    {
+      "id": "picture-era--62198755200000",
+      "expr": "$fromMillis(-62198755200000,\"[E][Y0001]-[M01]-[D01] [C]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-0001-01-01 ISO\""
+    },
+    {
+      "id": "picture-era-roundtrip--62198755200000",
+      "expr": "$toMillis($fromMillis(-62198755200000,\"[E][Y0001]-[M01]-[D01] [C]\"),\"[E][Y0001]-[M01]-[D01] [C]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62198755200000"
+    },
+    {
+      "id": "picture-era--62167219200000",
+      "expr": "$fromMillis(-62167219200000,\"[E][Y0001]-[M01]-[D01] [C]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"0000-01-01 ISO\""
+    },
+    {
+      "id": "picture-era-roundtrip--62167219200000",
+      "expr": "$toMillis($fromMillis(-62167219200000,\"[E][Y0001]-[M01]-[D01] [C]\"),\"[E][Y0001]-[M01]-[D01] [C]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62167219200000"
+    },
+    {
+      "id": "picture-era-0",
+      "expr": "$fromMillis(0,\"[E][Y0001]-[M01]-[D01] [C]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01 ISO\""
+    },
+    {
+      "id": "picture-era-roundtrip-0",
+      "expr": "$toMillis($fromMillis(0,\"[E][Y0001]-[M01]-[D01] [C]\"),\"[E][Y0001]-[M01]-[D01] [C]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-invalid-syntax-264",
+      "expr": "$fromMillis(0,\"[J]\")",
+      "inputJSON": "{}",
+      "error": "D3132"
+    },
+    {
+      "id": "picture-invalid-syntax-265",
+      "expr": "$toMillis(\"1970\",\"[J]\")",
+      "inputJSON": "{}",
+      "error": "D3132"
+    },
+    {
+      "id": "picture-invalid-syntax-266",
+      "expr": "$fromMillis(0,\"[J01]\")",
+      "inputJSON": "{}",
+      "error": "D3132"
+    },
+    {
+      "id": "picture-invalid-syntax-267",
+      "expr": "$toMillis(\"1970\",\"[J01]\")",
+      "inputJSON": "{}",
+      "error": "D3132"
+    },
+    {
+      "id": "picture-invalid-syntax-268",
+      "expr": "$fromMillis(0,\"[]\")",
+      "inputJSON": "{}",
+      "error": "D3132"
+    },
+    {
+      "id": "picture-invalid-syntax-269",
+      "expr": "$toMillis(\"1970\",\"[]\")",
+      "inputJSON": "{}",
+      "error": "D3132"
+    },
+    {
+      "id": "picture-invalid-syntax-270",
+      "expr": "$fromMillis(0,\"[Y\")",
+      "inputJSON": "{}",
+      "error": "D3135"
+    },
+    {
+      "id": "picture-invalid-syntax-271",
+      "expr": "$toMillis(\"1970\",\"[Y\")",
+      "inputJSON": "{}",
+      "error": "D3135"
+    },
+    {
+      "id": "picture-invalid-syntax-272",
+      "expr": "$fromMillis(0,\"[Y]]\")",
+      "inputJSON": "{}",
+      "error": "D3135"
+    },
+    {
+      "id": "picture-invalid-syntax-273",
+      "expr": "$toMillis(\"1970\",\"[Y]]\")",
+      "inputJSON": "{}",
+      "error": "D3135"
+    },
+    {
+      "id": "picture-nonstandard-274",
+      "expr": "$fromMillis(0,\"[X]\")",
+      "inputJSON": "{}",
+      "error": "D3132",
+      "standardOnly": true
+    },
+    {
+      "id": "picture-nonstandard-275",
+      "expr": "$now(\"[X]\")",
+      "inputJSON": "{}",
+      "error": "D3132",
+      "standardOnly": true
+    },
+    {
+      "id": "picture-nonstandard-276",
+      "expr": "$toMillis(\"1970\",\"[X]\")",
+      "inputJSON": "{}",
+      "error": "D3132",
+      "standardOnly": true
+    },
+    {
+      "id": "picture-nonstandard-277",
+      "expr": "$fromMillis(0,\"[xNn]\")",
+      "inputJSON": "{}",
+      "error": "D3132",
+      "standardOnly": true
+    },
+    {
+      "id": "picture-nonstandard-278",
+      "expr": "$now(\"[xNn]\")",
+      "inputJSON": "{}",
+      "error": "D3132",
+      "standardOnly": true
+    },
+    {
+      "id": "picture-nonstandard-279",
+      "expr": "$toMillis(\"1970\",\"[xNn]\")",
+      "inputJSON": "{}",
+      "error": "D3132",
+      "standardOnly": true
+    },
+    {
+      "id": "timezone-pattern-280",
+      "expr": "$fromMillis(0,\"[Z0]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-10\""
+    },
+    {
+      "id": "timezone-readback-281",
+      "expr": "$toMillis(\"1970-01-01 00:00 -10\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-282",
+      "expr": "$fromMillis(0,\"[Z01]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-10\""
+    },
+    {
+      "id": "timezone-readback-283",
+      "expr": "$toMillis(\"1970-01-01 00:00 -10\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-284",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-1000\""
+    },
+    {
+      "id": "timezone-readback-285",
+      "expr": "$toMillis(\"1970-01-01 00:00 -1000\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-286",
+      "expr": "$fromMillis(0,\"[Z001]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-1000\""
+    },
+    {
+      "id": "timezone-readback-287",
+      "expr": "$toMillis(\"1970-01-01 00:00 -1000\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-288",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-10.00\""
+    },
+    {
+      "id": "timezone-readback-289",
+      "expr": "$toMillis(\"1970-01-01 00:00 -10.00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-290",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"W\""
+    },
+    {
+      "id": "timezone-readback-291",
+      "expr": "$toMillis(\"1970-01-01 00:00 W\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-292",
+      "expr": "$fromMillis(0,\"[zZ]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"W\""
+    },
+    {
+      "id": "timezone-readback-293",
+      "expr": "$toMillis(\"1970-01-01 00:00 W\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-294",
+      "expr": "$fromMillis(0,\"[ZN]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-10:00\""
+    },
+    {
+      "id": "timezone-readback-295",
+      "expr": "$toMillis(\"1970-01-01 00:00 -10:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-296",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"-1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-10:00    \""
+    },
+    {
+      "id": "timezone-readback-297",
+      "expr": "$toMillis(\"1970-01-01 00:00 -10:00    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "36000000"
+    },
+    {
+      "id": "timezone-pattern-298",
+      "expr": "$fromMillis(0,\"[Z0]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-5:30\""
+    },
+    {
+      "id": "timezone-readback-299",
+      "expr": "$toMillis(\"1970-01-01 00:00 -5:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-300",
+      "expr": "$fromMillis(0,\"[Z01]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05:30\""
+    },
+    {
+      "id": "timezone-readback-301",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-302",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-0530\""
+    },
+    {
+      "id": "timezone-readback-303",
+      "expr": "$toMillis(\"1970-01-01 00:00 -0530\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-304",
+      "expr": "$fromMillis(0,\"[Z001]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-530\""
+    },
+    {
+      "id": "timezone-readback-305",
+      "expr": "$toMillis(\"1970-01-01 00:00 -530\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-306",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05.30\""
+    },
+    {
+      "id": "timezone-readback-307",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05.30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-308",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05:30\""
+    },
+    {
+      "id": "timezone-readback-309",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-310",
+      "expr": "$fromMillis(0,\"[zZ]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"GMT-05:30\""
+    },
+    {
+      "id": "timezone-readback-311",
+      "expr": "$toMillis(\"1970-01-01 00:00 GMT-05:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-312",
+      "expr": "$fromMillis(0,\"[ZN]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05:30\""
+    },
+    {
+      "id": "timezone-readback-313",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-314",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"-0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05:30    \""
+    },
+    {
+      "id": "timezone-readback-315",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05:30    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "19800000"
+    },
+    {
+      "id": "timezone-pattern-316",
+      "expr": "$fromMillis(0,\"[Z0]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-5\""
+    },
+    {
+      "id": "timezone-readback-317",
+      "expr": "$toMillis(\"1970-01-01 00:00 -5\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-318",
+      "expr": "$fromMillis(0,\"[Z01]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05\""
+    },
+    {
+      "id": "timezone-readback-319",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-320",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-0500\""
+    },
+    {
+      "id": "timezone-readback-321",
+      "expr": "$toMillis(\"1970-01-01 00:00 -0500\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-322",
+      "expr": "$fromMillis(0,\"[Z001]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-500\""
+    },
+    {
+      "id": "timezone-readback-323",
+      "expr": "$toMillis(\"1970-01-01 00:00 -500\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-324",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05.00\""
+    },
+    {
+      "id": "timezone-readback-325",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05.00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-326",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"R\""
+    },
+    {
+      "id": "timezone-readback-327",
+      "expr": "$toMillis(\"1970-01-01 00:00 R\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-328",
+      "expr": "$fromMillis(0,\"[zZ]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"R\""
+    },
+    {
+      "id": "timezone-readback-329",
+      "expr": "$toMillis(\"1970-01-01 00:00 R\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-330",
+      "expr": "$fromMillis(0,\"[ZN]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05:00\""
+    },
+    {
+      "id": "timezone-readback-331",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-332",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"-0500\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-05:00    \""
+    },
+    {
+      "id": "timezone-readback-333",
+      "expr": "$toMillis(\"1970-01-01 00:00 -05:00    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18000000"
+    },
+    {
+      "id": "timezone-pattern-334",
+      "expr": "$fromMillis(0,\"[Z0]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-0:30\""
+    },
+    {
+      "id": "timezone-readback-335",
+      "expr": "$toMillis(\"1970-01-01 00:00 -0:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-336",
+      "expr": "$fromMillis(0,\"[Z01]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-00:30\""
+    },
+    {
+      "id": "timezone-readback-337",
+      "expr": "$toMillis(\"1970-01-01 00:00 -00:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-338",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-0030\""
+    },
+    {
+      "id": "timezone-readback-339",
+      "expr": "$toMillis(\"1970-01-01 00:00 -0030\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-340",
+      "expr": "$fromMillis(0,\"[Z001]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-030\""
+    },
+    {
+      "id": "timezone-readback-341",
+      "expr": "$toMillis(\"1970-01-01 00:00 -030\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-342",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-00.30\""
+    },
+    {
+      "id": "timezone-readback-343",
+      "expr": "$toMillis(\"1970-01-01 00:00 -00.30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-344",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-00:30\""
+    },
+    {
+      "id": "timezone-readback-345",
+      "expr": "$toMillis(\"1970-01-01 00:00 -00:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-346",
+      "expr": "$fromMillis(0,\"[zZ]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"GMT-00:30\""
+    },
+    {
+      "id": "timezone-readback-347",
+      "expr": "$toMillis(\"1970-01-01 00:00 GMT-00:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-348",
+      "expr": "$fromMillis(0,\"[ZN]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-00:30\""
+    },
+    {
+      "id": "timezone-readback-349",
+      "expr": "$toMillis(\"1970-01-01 00:00 -00:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-350",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-00:30    \""
+    },
+    {
+      "id": "timezone-readback-351",
+      "expr": "$toMillis(\"1970-01-01 00:00 -00:30    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1800000"
+    },
+    {
+      "id": "timezone-pattern-352",
+      "expr": "$fromMillis(0,\"[Z0]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+0\""
+    },
+    {
+      "id": "timezone-readback-353",
+      "expr": "$toMillis(\"1970-01-01 00:00 +0\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-354",
+      "expr": "$fromMillis(0,\"[Z01]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+00\""
+    },
+    {
+      "id": "timezone-readback-355",
+      "expr": "$toMillis(\"1970-01-01 00:00 +00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-356",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+0000\""
+    },
+    {
+      "id": "timezone-readback-357",
+      "expr": "$toMillis(\"1970-01-01 00:00 +0000\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-358",
+      "expr": "$fromMillis(0,\"[Z001]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+000\""
+    },
+    {
+      "id": "timezone-readback-359",
+      "expr": "$toMillis(\"1970-01-01 00:00 +000\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-360",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+00.00\""
+    },
+    {
+      "id": "timezone-readback-361",
+      "expr": "$toMillis(\"1970-01-01 00:00 +00.00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-362",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"Z\""
+    },
+    {
+      "id": "timezone-readback-363",
+      "expr": "$toMillis(\"1970-01-01 00:00 Z\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-364",
+      "expr": "$fromMillis(0,\"[zZ]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"Z\""
+    },
+    {
+      "id": "timezone-readback-365",
+      "expr": "$toMillis(\"1970-01-01 00:00 Z\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-366",
+      "expr": "$fromMillis(0,\"[ZN]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"GMT\""
+    },
+    {
+      "id": "timezone-readback-367",
+      "expr": "$toMillis(\"1970-01-01 00:00 GMT\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-368",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"+0000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+00:00    \""
+    },
+    {
+      "id": "timezone-readback-369",
+      "expr": "$toMillis(\"1970-01-01 00:00 +00:00    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "timezone-pattern-370",
+      "expr": "$fromMillis(0,\"[Z0]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+1:30\""
+    },
+    {
+      "id": "timezone-readback-371",
+      "expr": "$toMillis(\"1970-01-01 00:00 +1:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-372",
+      "expr": "$fromMillis(0,\"[Z01]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+01:30\""
+    },
+    {
+      "id": "timezone-readback-373",
+      "expr": "$toMillis(\"1970-01-01 00:00 +01:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-374",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+0130\""
+    },
+    {
+      "id": "timezone-readback-375",
+      "expr": "$toMillis(\"1970-01-01 00:00 +0130\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-376",
+      "expr": "$fromMillis(0,\"[Z001]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+130\""
+    },
+    {
+      "id": "timezone-readback-377",
+      "expr": "$toMillis(\"1970-01-01 00:00 +130\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-378",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+01.30\""
+    },
+    {
+      "id": "timezone-readback-379",
+      "expr": "$toMillis(\"1970-01-01 00:00 +01.30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-380",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+01:30\""
+    },
+    {
+      "id": "timezone-readback-381",
+      "expr": "$toMillis(\"1970-01-01 00:00 +01:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-382",
+      "expr": "$fromMillis(0,\"[zZ]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"GMT+01:30\""
+    },
+    {
+      "id": "timezone-readback-383",
+      "expr": "$toMillis(\"1970-01-01 00:00 GMT+01:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-384",
+      "expr": "$fromMillis(0,\"[ZN]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+01:30\""
+    },
+    {
+      "id": "timezone-readback-385",
+      "expr": "$toMillis(\"1970-01-01 00:00 +01:30\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-386",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"+0130\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+01:30    \""
+    },
+    {
+      "id": "timezone-readback-387",
+      "expr": "$toMillis(\"1970-01-01 00:00 +01:30    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-5400000"
+    },
+    {
+      "id": "timezone-pattern-388",
+      "expr": "$fromMillis(0,\"[Z0]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+10\""
+    },
+    {
+      "id": "timezone-readback-389",
+      "expr": "$toMillis(\"1970-01-01 00:00 +10\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-390",
+      "expr": "$fromMillis(0,\"[Z01]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+10\""
+    },
+    {
+      "id": "timezone-readback-391",
+      "expr": "$toMillis(\"1970-01-01 00:00 +10\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-392",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+1000\""
+    },
+    {
+      "id": "timezone-readback-393",
+      "expr": "$toMillis(\"1970-01-01 00:00 +1000\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-394",
+      "expr": "$fromMillis(0,\"[Z001]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+1000\""
+    },
+    {
+      "id": "timezone-readback-395",
+      "expr": "$toMillis(\"1970-01-01 00:00 +1000\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-396",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+10.00\""
+    },
+    {
+      "id": "timezone-readback-397",
+      "expr": "$toMillis(\"1970-01-01 00:00 +10.00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-398",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"K\""
+    },
+    {
+      "id": "timezone-readback-399",
+      "expr": "$toMillis(\"1970-01-01 00:00 K\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-400",
+      "expr": "$fromMillis(0,\"[zZ]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"K\""
+    },
+    {
+      "id": "timezone-readback-401",
+      "expr": "$toMillis(\"1970-01-01 00:00 K\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-402",
+      "expr": "$fromMillis(0,\"[ZN]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+10:00\""
+    },
+    {
+      "id": "timezone-readback-403",
+      "expr": "$toMillis(\"1970-01-01 00:00 +10:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-404",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"+1000\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+10:00    \""
+    },
+    {
+      "id": "timezone-readback-405",
+      "expr": "$toMillis(\"1970-01-01 00:00 +10:00    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-36000000"
+    },
+    {
+      "id": "timezone-pattern-406",
+      "expr": "$fromMillis(0,\"[Z0]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+12\""
+    },
+    {
+      "id": "timezone-readback-407",
+      "expr": "$toMillis(\"1970-01-01 00:00 +12\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-408",
+      "expr": "$fromMillis(0,\"[Z01]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+12\""
+    },
+    {
+      "id": "timezone-readback-409",
+      "expr": "$toMillis(\"1970-01-01 00:00 +12\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-410",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+1200\""
+    },
+    {
+      "id": "timezone-readback-411",
+      "expr": "$toMillis(\"1970-01-01 00:00 +1200\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-412",
+      "expr": "$fromMillis(0,\"[Z001]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+1200\""
+    },
+    {
+      "id": "timezone-readback-413",
+      "expr": "$toMillis(\"1970-01-01 00:00 +1200\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-414",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+12.00\""
+    },
+    {
+      "id": "timezone-readback-415",
+      "expr": "$toMillis(\"1970-01-01 00:00 +12.00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-416",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"M\""
+    },
+    {
+      "id": "timezone-readback-417",
+      "expr": "$toMillis(\"1970-01-01 00:00 M\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-418",
+      "expr": "$fromMillis(0,\"[zZ]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"M\""
+    },
+    {
+      "id": "timezone-readback-419",
+      "expr": "$toMillis(\"1970-01-01 00:00 M\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-420",
+      "expr": "$fromMillis(0,\"[ZN]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+12:00\""
+    },
+    {
+      "id": "timezone-readback-421",
+      "expr": "$toMillis(\"1970-01-01 00:00 +12:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-422",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"+1200\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+12:00    \""
+    },
+    {
+      "id": "timezone-readback-423",
+      "expr": "$toMillis(\"1970-01-01 00:00 +12:00    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-43200000"
+    },
+    {
+      "id": "timezone-pattern-424",
+      "expr": "$fromMillis(0,\"[Z0]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+13\""
+    },
+    {
+      "id": "timezone-readback-425",
+      "expr": "$toMillis(\"1970-01-01 00:00 +13\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "timezone-pattern-426",
+      "expr": "$fromMillis(0,\"[Z01]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+13\""
+    },
+    {
+      "id": "timezone-readback-427",
+      "expr": "$toMillis(\"1970-01-01 00:00 +13\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "timezone-pattern-428",
+      "expr": "$fromMillis(0,\"[Z0001]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+1300\""
+    },
+    {
+      "id": "timezone-readback-429",
+      "expr": "$toMillis(\"1970-01-01 00:00 +1300\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z0001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "timezone-pattern-430",
+      "expr": "$fromMillis(0,\"[Z001]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+1300\""
+    },
+    {
+      "id": "timezone-readback-431",
+      "expr": "$toMillis(\"1970-01-01 00:00 +1300\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z001]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "timezone-pattern-432",
+      "expr": "$fromMillis(0,\"[Z01.01]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+13.00\""
+    },
+    {
+      "id": "timezone-readback-433",
+      "expr": "$toMillis(\"1970-01-01 00:00 +13.00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "timezone-pattern-434",
+      "expr": "$fromMillis(0,\"[ZZ]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+13:00\""
+    },
+    {
+      "id": "timezone-readback-435",
+      "expr": "$toMillis(\"1970-01-01 00:00 +13:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "timezone-pattern-436",
+      "expr": "$fromMillis(0,\"[zZ]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"GMT+13:00\""
+    },
+    {
+      "id": "timezone-readback-437",
+      "expr": "$toMillis(\"1970-01-01 00:00 GMT+13:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [zZ]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "timezone-pattern-438",
+      "expr": "$fromMillis(0,\"[ZN]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+13:00\""
+    },
+    {
+      "id": "timezone-readback-439",
+      "expr": "$toMillis(\"1970-01-01 00:00 +13:00\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [ZN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "timezone-pattern-440",
+      "expr": "$fromMillis(0,\"[Z01:01,10]\",\"+1300\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"+13:00    \""
+    },
+    {
+      "id": "timezone-readback-441",
+      "expr": "$toMillis(\"1970-01-01 00:00 +13:00    \",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Z01:01,10]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-46800000"
+    },
+    {
+      "id": "week-picture-442",
+      "expr": "$toMillis(\"1970-01-01 Thursday\",\"[Y0001]-[M01]-[D01] [FNn]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "week-picture-443",
+      "expr": "$toMillis(\"0001-01-W01-1\",\"[Y0001]-[M01]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62135596800000"
+    },
+    {
+      "id": "week-picture-444",
+      "expr": "$toMillis(\"1970-W01-4\",\"[Y0001]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "week-picture-445",
+      "expr": "$toMillis(\"2020-W53-4\",\"[Y0001]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1609372800000"
+    },
+    {
+      "id": "week-picture-446",
+      "expr": "$toMillis(\"2021-W53-5\",\"[Y0001]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1609459200000"
+    },
+    {
+      "id": "week-picture-447",
+      "expr": "$toMillis(\"2013-02-5-5\",\"[Y0001]-[M01]-[w1]-[F1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1359676800000"
+    },
+    {
+      "id": "week-picture-448",
+      "expr": "$toMillis(\"1970-W02\",\"[Y0001]-W[W01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "345600000"
+    },
+    {
+      "id": "week-picture-449",
+      "expr": "$toMillis(\"1970-01-01 1 1 4\",\"[Y0001]-[M01]-[D01] [W] [w] [F1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "week-picture-invalid-450",
+      "expr": "$toMillis(\"1970-01-01 Friday\",\"[Y0001]-[M01]-[D01] [FNn]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "week-picture-invalid-451",
+      "expr": "$toMillis(\"1970-01-01 2\",\"[Y0001]-[M01]-[D01] [W]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "week-picture-invalid-452",
+      "expr": "$toMillis(\"1970-01-01 5\",\"[Y0001]-[M01]-[D01] [F1]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "week-picture-invalid-453",
+      "expr": "$toMillis(\"1970-W54-4\",\"[Y0001]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "week-picture-invalid-454",
+      "expr": "$toMillis(\"1970-W01-0\",\"[Y0001]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "week-picture-invalid-455",
+      "expr": "$toMillis(\"1970-W01-8\",\"[Y0001]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "week-picture-calendar-year-ambiguity",
+      "expr": "$toMillis(\"2018-W01-1\",\"[Y0001]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "error": "D3136"
+    },
+    {
+      "id": "week-picture-year-domain",
+      "expr": "$toMillis(\"999999-W01-4\",\"[Y1]-W[W01]-[F1]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-duplicate-contradiction",
+      "expr": "$toMillis(\"1970-1971-01-01\",\"[Y1]-[Y1]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-duplicate-equal",
+      "expr": "$toMillis(\"1970-1970-01-01\",\"[Y1]-[Y1]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-unknown-month",
+      "expr": "$exists($toMillis(\"1970-bogus-01\",\"[Y0001]-[MNn]-[D01]\"))",
+      "inputJSON": "{}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "timezone-malformed-461",
+      "expr": "$toMillis(\"1970-01-01 +:0530\",\"[Y0001]-[M01]-[D01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "timezone-malformed-462",
+      "expr": "$toMillis(\"1970-01-01 +05:30:\",\"[Y0001]-[M01]-[D01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "timezone-malformed-463",
+      "expr": "$toMillis(\"1970-01-01 +05::30\",\"[Y0001]-[M01]-[D01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "timezone-malformed-464",
+      "expr": "$toMillis(\"1970-01-01 +05:30:4\",\"[Y0001]-[M01]-[D01] [Z01:01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-inverse-grouping-465",
+      "expr": "$toMillis(\"1970-01-01 +0:5.30\",\"[Y0001]-[M01]-[D01] [Z0:0.01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-19800000"
+    },
+    {
+      "id": "picture-inverse-grouping-466",
+      "expr": "$toMillis(\"1970-01-01 00:00:00.1:2.0\",\"[Y0001]-[M01]-[D01] [H01]:[m01]:[s01].[f0:0.0]\")",
+      "inputJSON": "{}",
+      "resultJSON": "120"
+    },
+    {
+      "id": "picture-inverse-grouping-467",
+      "expr": "$toMillis(\"1970-01-01 00:00:00.1'2'0\",\"[Y0001]-[M01]-[D01] [H01]:[m01]:[s01].[f0'00]\")",
+      "inputJSON": "{}",
+      "resultJSON": "120"
+    },
+    {
+      "id": "picture-inverse-grouping-468",
+      "expr": "$toMillis(\"1970-01-01 00:00:00.12\",\"[Y0001]-[M01]-[D01] [H01]:[m01]:[s01].[fN]\")",
+      "inputJSON": "{}",
+      "resultJSON": "120"
+    },
+    {
+      "id": "picture-padded-or-redundant-469",
+      "expr": "$toMillis(\"1970-January   -01\",\"[Y0001]-[MNn,10-12]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-padded-or-redundant-470",
+      "expr": "$toMillis(\"1970-Jan-01\",\"[Y0001]-[MNn,3-3]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-padded-or-redundant-471",
+      "expr": "$toMillis(\"1970-01-01 Thursday  \",\"[Y0001]-[M01]-[D01] [FNn,10-12]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-padded-or-redundant-472",
+      "expr": "$toMillis(\"1970-01-01 13:00 01 pm\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [h01] [Pn]\")",
+      "inputJSON": "{}",
+      "resultJSON": "46800000"
+    },
+    {
+      "id": "picture-redundant-conflict-473",
+      "expr": "$toMillis(\"1970-01-01 13:00 02 pm\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [h01] [Pn]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-redundant-conflict-474",
+      "expr": "$toMillis(\"1970-01-01 13:00 am\",\"[Y0001]-[M01]-[D01] [H01]:[m01] [Pn]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-redundant-conflict-475",
+      "expr": "$toMillis(\"1970-01-01 Z GMT+01:00\",\"[Y0001]-[M01]-[D01] [Z01:01t] [z01:01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-integer-carriage-476",
+      "expr": "$toMillis(\"Zero-01-01\",\"[YWw]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62167219200000"
+    },
+    {
+      "id": "picture-integer-carriage-477",
+      "expr": "$toMillis(\"Zeroth-01-01\",\"[YWwo]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "-62167219200000"
+    },
+    {
+      "id": "picture-integer-carriage-478",
+      "expr": "$toMillis(\"MCMLXX-01-01\",\"[YI,1]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-integer-carriage-479",
+      "expr": "$toMillis(\"MCMLXX-01-01\",\"[YI,1-20]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-integer-carriage-480",
+      "expr": "$toMillis(\"BWT-01-01\",\"[YA,1]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-integer-carriage-481",
+      "expr": "$toMillis(\"BWT-01-01\",\"[YA,1-20]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "picture-integer-overflow-482",
+      "expr": "$toMillis(\"GKGWBYLWRXTONJ-01-01\",\"[YA]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-integer-overflow-483",
+      "expr": "$toMillis(\"18446744073709553586-01-01\",\"[Y1]-[M01]-[D01]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "picture-integer-overflow-484",
+      "expr": "$toMillis(\"1970-01-01 GKGWBYLWRXTONJ\",\"[Y0001]-[M01]-[D01] [FA]\")",
+      "inputJSON": "{}",
+      "error": "D3110"
+    },
+    {
+      "id": "ampm-convention-485",
+      "expr": "$fromMillis(0,\"[Pn,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"am\""
+    },
+    {
+      "id": "ampm-convention-486",
+      "expr": "$fromMillis(0,\"[PN,4-4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"AM\""
+    },
+    {
+      "id": "ampm-convention-487",
+      "expr": "$fromMillis(0,\"[PNn,4]\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"am\""
+    },
+    {
+      "id": "ambiguous-month-convention-J",
+      "expr": "$toMillis(\"1970-J-01\",\"[Y0001]-[MNn,1-1]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "15638400000"
+    },
+    {
+      "id": "ambiguous-month-convention-M",
+      "expr": "$toMillis(\"1970-M-01\",\"[Y0001]-[MNn,1-1]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "10368000000"
+    },
+    {
+      "id": "ambiguous-month-convention-A",
+      "expr": "$toMillis(\"1970-A-01\",\"[Y0001]-[MNn,1-1]-[D01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "18316800000"
+    },
+    {
+      "id": "ambiguous-weekday-convention-F",
+      "expr": "$toMillis(\"1970-01-02 F\",\"[Y0001]-[M01]-[D01] [FNn,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "86400000"
+    },
+    {
+      "id": "ambiguous-weekday-convention-S",
+      "expr": "$toMillis(\"1970-01-04 S\",\"[Y0001]-[M01]-[D01] [FNn,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "259200000"
+    },
+    {
+      "id": "ambiguous-weekday-convention-T",
+      "expr": "$toMillis(\"1970-01-01 T\",\"[Y0001]-[M01]-[D01] [FNn,1-1]\")",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "digits-integer-48",
+      "expr": "$formatInteger(1234567,\"0,001\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1,234,567\""
+    },
+    {
+      "id": "digits-parse-integer-48",
+      "expr": "$parseInteger(\"1,234,567\",\"0,001\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-48",
+      "expr": "$fromMillis(789,\"[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01].[f001][Z01:01]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"1970-01-01T05:30:00.789+05:30\""
+    },
+    {
+      "id": "digits-date-parse-48",
+      "expr": "$toMillis(\"1970-01-01T05:30:00.789+05:30\",\"[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01].[f001][Z01:01]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-48",
+      "expr": "$formatInteger(21,\"1;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"21st\""
+    },
+    {
+      "id": "digits-zone-short-48",
+      "expr": "$fromMillis(0,\"[Z01]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-00:30\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-48",
+      "expr": "$toMillis(\"1970-01-21st\",\"[Y0001]-[M01]-[D1o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-1632",
+      "expr": "$formatInteger(1234567,\"٠,٠٠١\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"١,٢٣٤,٥٦٧\""
+    },
+    {
+      "id": "digits-parse-integer-1632",
+      "expr": "$parseInteger(\"١,٢٣٤,٥٦٧\",\"٠,٠٠١\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-1632",
+      "expr": "$fromMillis(789,\"[Y٠٠٠١]-[M٠١]-[D٠١]T[H٠١]:[m٠١]:[s٠١].[f٠٠١][Z٠١:٠١]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"١٩٧٠-٠١-٠١T٠٥:٣٠:٠٠.٧٨٩+٠٥:٣٠\""
+    },
+    {
+      "id": "digits-date-parse-1632",
+      "expr": "$toMillis(\"١٩٧٠-٠١-٠١T٠٥:٣٠:٠٠.٧٨٩+٠٥:٣٠\",\"[Y٠٠٠١]-[M٠١]-[D٠١]T[H٠١]:[m٠١]:[s٠١].[f٠٠١][Z٠١:٠١]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-1632",
+      "expr": "$formatInteger(21,\"١;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"٢١st\""
+    },
+    {
+      "id": "digits-zone-short-1632",
+      "expr": "$fromMillis(0,\"[Z٠١]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-٠٠:٣٠\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-1632",
+      "expr": "$toMillis(\"١٩٧٠-٠١-٢١st\",\"[Y٠٠٠١]-[M٠١]-[D١o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-1776",
+      "expr": "$formatInteger(1234567,\"۰,۰۰۱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"۱,۲۳۴,۵۶۷\""
+    },
+    {
+      "id": "digits-parse-integer-1776",
+      "expr": "$parseInteger(\"۱,۲۳۴,۵۶۷\",\"۰,۰۰۱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-1776",
+      "expr": "$fromMillis(789,\"[Y۰۰۰۱]-[M۰۱]-[D۰۱]T[H۰۱]:[m۰۱]:[s۰۱].[f۰۰۱][Z۰۱:۰۱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"۱۹۷۰-۰۱-۰۱T۰۵:۳۰:۰۰.۷۸۹+۰۵:۳۰\""
+    },
+    {
+      "id": "digits-date-parse-1776",
+      "expr": "$toMillis(\"۱۹۷۰-۰۱-۰۱T۰۵:۳۰:۰۰.۷۸۹+۰۵:۳۰\",\"[Y۰۰۰۱]-[M۰۱]-[D۰۱]T[H۰۱]:[m۰۱]:[s۰۱].[f۰۰۱][Z۰۱:۰۱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-1776",
+      "expr": "$formatInteger(21,\"۱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"۲۱st\""
+    },
+    {
+      "id": "digits-zone-short-1776",
+      "expr": "$fromMillis(0,\"[Z۰۱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-۰۰:۳۰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-1776",
+      "expr": "$toMillis(\"۱۹۷۰-۰۱-۲۱st\",\"[Y۰۰۰۱]-[M۰۱]-[D۱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-1984",
+      "expr": "$formatInteger(1234567,\"߀,߀߀߁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"߁,߂߃߄,߅߆߇\""
+    },
+    {
+      "id": "digits-parse-integer-1984",
+      "expr": "$parseInteger(\"߁,߂߃߄,߅߆߇\",\"߀,߀߀߁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-1984",
+      "expr": "$fromMillis(789,\"[Y߀߀߀߁]-[M߀߁]-[D߀߁]T[H߀߁]:[m߀߁]:[s߀߁].[f߀߀߁][Z߀߁:߀߁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"߁߉߇߀-߀߁-߀߁T߀߅:߃߀:߀߀.߇߈߉+߀߅:߃߀\""
+    },
+    {
+      "id": "digits-date-parse-1984",
+      "expr": "$toMillis(\"߁߉߇߀-߀߁-߀߁T߀߅:߃߀:߀߀.߇߈߉+߀߅:߃߀\",\"[Y߀߀߀߁]-[M߀߁]-[D߀߁]T[H߀߁]:[m߀߁]:[s߀߁].[f߀߀߁][Z߀߁:߀߁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-1984",
+      "expr": "$formatInteger(21,\"߁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"߂߁st\""
+    },
+    {
+      "id": "digits-zone-short-1984",
+      "expr": "$fromMillis(0,\"[Z߀߁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-߀߀:߃߀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-1984",
+      "expr": "$toMillis(\"߁߉߇߀-߀߁-߂߁st\",\"[Y߀߀߀߁]-[M߀߁]-[D߁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-2406",
+      "expr": "$formatInteger(1234567,\"०,००१\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"१,२३४,५६७\""
+    },
+    {
+      "id": "digits-parse-integer-2406",
+      "expr": "$parseInteger(\"१,२३४,५६७\",\"०,००१\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-2406",
+      "expr": "$fromMillis(789,\"[Y०००१]-[M०१]-[D०१]T[H०१]:[m०१]:[s०१].[f००१][Z०१:०१]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"१९७०-०१-०१T०५:३०:००.७८९+०५:३०\""
+    },
+    {
+      "id": "digits-date-parse-2406",
+      "expr": "$toMillis(\"१९७०-०१-०१T०५:३०:००.७८९+०५:३०\",\"[Y०००१]-[M०१]-[D०१]T[H०१]:[m०१]:[s०१].[f००१][Z०१:०१]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-2406",
+      "expr": "$formatInteger(21,\"१;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"२१st\""
+    },
+    {
+      "id": "digits-zone-short-2406",
+      "expr": "$fromMillis(0,\"[Z०१]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-००:३०\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-2406",
+      "expr": "$toMillis(\"१९७०-०१-२१st\",\"[Y०००१]-[M०१]-[D१o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-2534",
+      "expr": "$formatInteger(1234567,\"০,০০১\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"১,২৩৪,৫৬৭\""
+    },
+    {
+      "id": "digits-parse-integer-2534",
+      "expr": "$parseInteger(\"১,২৩৪,৫৬৭\",\"০,০০১\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-2534",
+      "expr": "$fromMillis(789,\"[Y০০০১]-[M০১]-[D০১]T[H০১]:[m০১]:[s০১].[f০০১][Z০১:০১]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"১৯৭০-০১-০১T০৫:৩০:০০.৭৮৯+০৫:৩০\""
+    },
+    {
+      "id": "digits-date-parse-2534",
+      "expr": "$toMillis(\"১৯৭০-০১-০১T০৫:৩০:০০.৭৮৯+০৫:৩০\",\"[Y০০০১]-[M০১]-[D০১]T[H০১]:[m০১]:[s০১].[f০০১][Z০১:০১]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-2534",
+      "expr": "$formatInteger(21,\"১;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"২১st\""
+    },
+    {
+      "id": "digits-zone-short-2534",
+      "expr": "$fromMillis(0,\"[Z০১]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-০০:৩০\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-2534",
+      "expr": "$toMillis(\"১৯৭০-০১-২১st\",\"[Y০০০১]-[M০১]-[D১o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-2662",
+      "expr": "$formatInteger(1234567,\"੦,੦੦੧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"੧,੨੩੪,੫੬੭\""
+    },
+    {
+      "id": "digits-parse-integer-2662",
+      "expr": "$parseInteger(\"੧,੨੩੪,੫੬੭\",\"੦,੦੦੧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-2662",
+      "expr": "$fromMillis(789,\"[Y੦੦੦੧]-[M੦੧]-[D੦੧]T[H੦੧]:[m੦੧]:[s੦੧].[f੦੦੧][Z੦੧:੦੧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"੧੯੭੦-੦੧-੦੧T੦੫:੩੦:੦੦.੭੮੯+੦੫:੩੦\""
+    },
+    {
+      "id": "digits-date-parse-2662",
+      "expr": "$toMillis(\"੧੯੭੦-੦੧-੦੧T੦੫:੩੦:੦੦.੭੮੯+੦੫:੩੦\",\"[Y੦੦੦੧]-[M੦੧]-[D੦੧]T[H੦੧]:[m੦੧]:[s੦੧].[f੦੦੧][Z੦੧:੦੧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-2662",
+      "expr": "$formatInteger(21,\"੧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"੨੧st\""
+    },
+    {
+      "id": "digits-zone-short-2662",
+      "expr": "$fromMillis(0,\"[Z੦੧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-੦੦:੩੦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-2662",
+      "expr": "$toMillis(\"੧੯੭੦-੦੧-੨੧st\",\"[Y੦੦੦੧]-[M੦੧]-[D੧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-2790",
+      "expr": "$formatInteger(1234567,\"૦,૦૦૧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"૧,૨૩૪,૫૬૭\""
+    },
+    {
+      "id": "digits-parse-integer-2790",
+      "expr": "$parseInteger(\"૧,૨૩૪,૫૬૭\",\"૦,૦૦૧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-2790",
+      "expr": "$fromMillis(789,\"[Y૦૦૦૧]-[M૦૧]-[D૦૧]T[H૦૧]:[m૦૧]:[s૦૧].[f૦૦૧][Z૦૧:૦૧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"૧૯૭૦-૦૧-૦૧T૦૫:૩૦:૦૦.૭૮૯+૦૫:૩૦\""
+    },
+    {
+      "id": "digits-date-parse-2790",
+      "expr": "$toMillis(\"૧૯૭૦-૦૧-૦૧T૦૫:૩૦:૦૦.૭૮૯+૦૫:૩૦\",\"[Y૦૦૦૧]-[M૦૧]-[D૦૧]T[H૦૧]:[m૦૧]:[s૦૧].[f૦૦૧][Z૦૧:૦૧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-2790",
+      "expr": "$formatInteger(21,\"૧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"૨૧st\""
+    },
+    {
+      "id": "digits-zone-short-2790",
+      "expr": "$fromMillis(0,\"[Z૦૧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-૦૦:૩૦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-2790",
+      "expr": "$toMillis(\"૧૯૭૦-૦૧-૨૧st\",\"[Y૦૦૦૧]-[M૦૧]-[D૧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-2918",
+      "expr": "$formatInteger(1234567,\"୦,୦୦୧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"୧,୨୩୪,୫୬୭\""
+    },
+    {
+      "id": "digits-parse-integer-2918",
+      "expr": "$parseInteger(\"୧,୨୩୪,୫୬୭\",\"୦,୦୦୧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-2918",
+      "expr": "$fromMillis(789,\"[Y୦୦୦୧]-[M୦୧]-[D୦୧]T[H୦୧]:[m୦୧]:[s୦୧].[f୦୦୧][Z୦୧:୦୧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"୧୯୭୦-୦୧-୦୧T୦୫:୩୦:୦୦.୭୮୯+୦୫:୩୦\""
+    },
+    {
+      "id": "digits-date-parse-2918",
+      "expr": "$toMillis(\"୧୯୭୦-୦୧-୦୧T୦୫:୩୦:୦୦.୭୮୯+୦୫:୩୦\",\"[Y୦୦୦୧]-[M୦୧]-[D୦୧]T[H୦୧]:[m୦୧]:[s୦୧].[f୦୦୧][Z୦୧:୦୧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-2918",
+      "expr": "$formatInteger(21,\"୧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"୨୧st\""
+    },
+    {
+      "id": "digits-zone-short-2918",
+      "expr": "$fromMillis(0,\"[Z୦୧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-୦୦:୩୦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-2918",
+      "expr": "$toMillis(\"୧୯୭୦-୦୧-୨୧st\",\"[Y୦୦୦୧]-[M୦୧]-[D୧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-3046",
+      "expr": "$formatInteger(1234567,\"௦,௦௦௧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"௧,௨௩௪,௫௬௭\""
+    },
+    {
+      "id": "digits-parse-integer-3046",
+      "expr": "$parseInteger(\"௧,௨௩௪,௫௬௭\",\"௦,௦௦௧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-3046",
+      "expr": "$fromMillis(789,\"[Y௦௦௦௧]-[M௦௧]-[D௦௧]T[H௦௧]:[m௦௧]:[s௦௧].[f௦௦௧][Z௦௧:௦௧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"௧௯௭௦-௦௧-௦௧T௦௫:௩௦:௦௦.௭௮௯+௦௫:௩௦\""
+    },
+    {
+      "id": "digits-date-parse-3046",
+      "expr": "$toMillis(\"௧௯௭௦-௦௧-௦௧T௦௫:௩௦:௦௦.௭௮௯+௦௫:௩௦\",\"[Y௦௦௦௧]-[M௦௧]-[D௦௧]T[H௦௧]:[m௦௧]:[s௦௧].[f௦௦௧][Z௦௧:௦௧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-3046",
+      "expr": "$formatInteger(21,\"௧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"௨௧st\""
+    },
+    {
+      "id": "digits-zone-short-3046",
+      "expr": "$fromMillis(0,\"[Z௦௧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-௦௦:௩௦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-3046",
+      "expr": "$toMillis(\"௧௯௭௦-௦௧-௨௧st\",\"[Y௦௦௦௧]-[M௦௧]-[D௧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-3174",
+      "expr": "$formatInteger(1234567,\"౦,౦౦౧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"౧,౨౩౪,౫౬౭\""
+    },
+    {
+      "id": "digits-parse-integer-3174",
+      "expr": "$parseInteger(\"౧,౨౩౪,౫౬౭\",\"౦,౦౦౧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-3174",
+      "expr": "$fromMillis(789,\"[Y౦౦౦౧]-[M౦౧]-[D౦౧]T[H౦౧]:[m౦౧]:[s౦౧].[f౦౦౧][Z౦౧:౦౧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"౧౯౭౦-౦౧-౦౧T౦౫:౩౦:౦౦.౭౮౯+౦౫:౩౦\""
+    },
+    {
+      "id": "digits-date-parse-3174",
+      "expr": "$toMillis(\"౧౯౭౦-౦౧-౦౧T౦౫:౩౦:౦౦.౭౮౯+౦౫:౩౦\",\"[Y౦౦౦౧]-[M౦౧]-[D౦౧]T[H౦౧]:[m౦౧]:[s౦౧].[f౦౦౧][Z౦౧:౦౧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-3174",
+      "expr": "$formatInteger(21,\"౧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"౨౧st\""
+    },
+    {
+      "id": "digits-zone-short-3174",
+      "expr": "$fromMillis(0,\"[Z౦౧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-౦౦:౩౦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-3174",
+      "expr": "$toMillis(\"౧౯౭౦-౦౧-౨౧st\",\"[Y౦౦౦౧]-[M౦౧]-[D౧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-3302",
+      "expr": "$formatInteger(1234567,\"೦,೦೦೧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"೧,೨೩೪,೫೬೭\""
+    },
+    {
+      "id": "digits-parse-integer-3302",
+      "expr": "$parseInteger(\"೧,೨೩೪,೫೬೭\",\"೦,೦೦೧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-3302",
+      "expr": "$fromMillis(789,\"[Y೦೦೦೧]-[M೦೧]-[D೦೧]T[H೦೧]:[m೦೧]:[s೦೧].[f೦೦೧][Z೦೧:೦೧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"೧೯೭೦-೦೧-೦೧T೦೫:೩೦:೦೦.೭೮೯+೦೫:೩೦\""
+    },
+    {
+      "id": "digits-date-parse-3302",
+      "expr": "$toMillis(\"೧೯೭೦-೦೧-೦೧T೦೫:೩೦:೦೦.೭೮೯+೦೫:೩೦\",\"[Y೦೦೦೧]-[M೦೧]-[D೦೧]T[H೦೧]:[m೦೧]:[s೦೧].[f೦೦೧][Z೦೧:೦೧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-3302",
+      "expr": "$formatInteger(21,\"೧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"೨೧st\""
+    },
+    {
+      "id": "digits-zone-short-3302",
+      "expr": "$fromMillis(0,\"[Z೦೧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-೦೦:೩೦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-3302",
+      "expr": "$toMillis(\"೧೯೭೦-೦೧-೨೧st\",\"[Y೦೦೦೧]-[M೦೧]-[D೧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-3430",
+      "expr": "$formatInteger(1234567,\"൦,൦൦൧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"൧,൨൩൪,൫൬൭\""
+    },
+    {
+      "id": "digits-parse-integer-3430",
+      "expr": "$parseInteger(\"൧,൨൩൪,൫൬൭\",\"൦,൦൦൧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-3430",
+      "expr": "$fromMillis(789,\"[Y൦൦൦൧]-[M൦൧]-[D൦൧]T[H൦൧]:[m൦൧]:[s൦൧].[f൦൦൧][Z൦൧:൦൧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"൧൯൭൦-൦൧-൦൧T൦൫:൩൦:൦൦.൭൮൯+൦൫:൩൦\""
+    },
+    {
+      "id": "digits-date-parse-3430",
+      "expr": "$toMillis(\"൧൯൭൦-൦൧-൦൧T൦൫:൩൦:൦൦.൭൮൯+൦൫:൩൦\",\"[Y൦൦൦൧]-[M൦൧]-[D൦൧]T[H൦൧]:[m൦൧]:[s൦൧].[f൦൦൧][Z൦൧:൦൧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-3430",
+      "expr": "$formatInteger(21,\"൧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"൨൧st\""
+    },
+    {
+      "id": "digits-zone-short-3430",
+      "expr": "$fromMillis(0,\"[Z൦൧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-൦൦:൩൦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-3430",
+      "expr": "$toMillis(\"൧൯൭൦-൦൧-൨൧st\",\"[Y൦൦൦൧]-[M൦൧]-[D൧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-3558",
+      "expr": "$formatInteger(1234567,\"෦,෦෦෧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"෧,෨෩෪,෫෬෭\""
+    },
+    {
+      "id": "digits-parse-integer-3558",
+      "expr": "$parseInteger(\"෧,෨෩෪,෫෬෭\",\"෦,෦෦෧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-3558",
+      "expr": "$fromMillis(789,\"[Y෦෦෦෧]-[M෦෧]-[D෦෧]T[H෦෧]:[m෦෧]:[s෦෧].[f෦෦෧][Z෦෧:෦෧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"෧෯෭෦-෦෧-෦෧T෦෫:෩෦:෦෦.෭෮෯+෦෫:෩෦\""
+    },
+    {
+      "id": "digits-date-parse-3558",
+      "expr": "$toMillis(\"෧෯෭෦-෦෧-෦෧T෦෫:෩෦:෦෦.෭෮෯+෦෫:෩෦\",\"[Y෦෦෦෧]-[M෦෧]-[D෦෧]T[H෦෧]:[m෦෧]:[s෦෧].[f෦෦෧][Z෦෧:෦෧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-3558",
+      "expr": "$formatInteger(21,\"෧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"෨෧st\""
+    },
+    {
+      "id": "digits-zone-short-3558",
+      "expr": "$fromMillis(0,\"[Z෦෧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-෦෦:෩෦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-3558",
+      "expr": "$toMillis(\"෧෯෭෦-෦෧-෨෧st\",\"[Y෦෦෦෧]-[M෦෧]-[D෧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-3664",
+      "expr": "$formatInteger(1234567,\"๐,๐๐๑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"๑,๒๓๔,๕๖๗\""
+    },
+    {
+      "id": "digits-parse-integer-3664",
+      "expr": "$parseInteger(\"๑,๒๓๔,๕๖๗\",\"๐,๐๐๑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-3664",
+      "expr": "$fromMillis(789,\"[Y๐๐๐๑]-[M๐๑]-[D๐๑]T[H๐๑]:[m๐๑]:[s๐๑].[f๐๐๑][Z๐๑:๐๑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"๑๙๗๐-๐๑-๐๑T๐๕:๓๐:๐๐.๗๘๙+๐๕:๓๐\""
+    },
+    {
+      "id": "digits-date-parse-3664",
+      "expr": "$toMillis(\"๑๙๗๐-๐๑-๐๑T๐๕:๓๐:๐๐.๗๘๙+๐๕:๓๐\",\"[Y๐๐๐๑]-[M๐๑]-[D๐๑]T[H๐๑]:[m๐๑]:[s๐๑].[f๐๐๑][Z๐๑:๐๑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-3664",
+      "expr": "$formatInteger(21,\"๑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"๒๑st\""
+    },
+    {
+      "id": "digits-zone-short-3664",
+      "expr": "$fromMillis(0,\"[Z๐๑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-๐๐:๓๐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-3664",
+      "expr": "$toMillis(\"๑๙๗๐-๐๑-๒๑st\",\"[Y๐๐๐๑]-[M๐๑]-[D๑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-3792",
+      "expr": "$formatInteger(1234567,\"໐,໐໐໑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"໑,໒໓໔,໕໖໗\""
+    },
+    {
+      "id": "digits-parse-integer-3792",
+      "expr": "$parseInteger(\"໑,໒໓໔,໕໖໗\",\"໐,໐໐໑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-3792",
+      "expr": "$fromMillis(789,\"[Y໐໐໐໑]-[M໐໑]-[D໐໑]T[H໐໑]:[m໐໑]:[s໐໑].[f໐໐໑][Z໐໑:໐໑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"໑໙໗໐-໐໑-໐໑T໐໕:໓໐:໐໐.໗໘໙+໐໕:໓໐\""
+    },
+    {
+      "id": "digits-date-parse-3792",
+      "expr": "$toMillis(\"໑໙໗໐-໐໑-໐໑T໐໕:໓໐:໐໐.໗໘໙+໐໕:໓໐\",\"[Y໐໐໐໑]-[M໐໑]-[D໐໑]T[H໐໑]:[m໐໑]:[s໐໑].[f໐໐໑][Z໐໑:໐໑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-3792",
+      "expr": "$formatInteger(21,\"໑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"໒໑st\""
+    },
+    {
+      "id": "digits-zone-short-3792",
+      "expr": "$fromMillis(0,\"[Z໐໑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-໐໐:໓໐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-3792",
+      "expr": "$toMillis(\"໑໙໗໐-໐໑-໒໑st\",\"[Y໐໐໐໑]-[M໐໑]-[D໑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-3872",
+      "expr": "$formatInteger(1234567,\"༠,༠༠༡\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"༡,༢༣༤,༥༦༧\""
+    },
+    {
+      "id": "digits-parse-integer-3872",
+      "expr": "$parseInteger(\"༡,༢༣༤,༥༦༧\",\"༠,༠༠༡\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-3872",
+      "expr": "$fromMillis(789,\"[Y༠༠༠༡]-[M༠༡]-[D༠༡]T[H༠༡]:[m༠༡]:[s༠༡].[f༠༠༡][Z༠༡:༠༡]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"༡༩༧༠-༠༡-༠༡T༠༥:༣༠:༠༠.༧༨༩+༠༥:༣༠\""
+    },
+    {
+      "id": "digits-date-parse-3872",
+      "expr": "$toMillis(\"༡༩༧༠-༠༡-༠༡T༠༥:༣༠:༠༠.༧༨༩+༠༥:༣༠\",\"[Y༠༠༠༡]-[M༠༡]-[D༠༡]T[H༠༡]:[m༠༡]:[s༠༡].[f༠༠༡][Z༠༡:༠༡]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-3872",
+      "expr": "$formatInteger(21,\"༡;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"༢༡st\""
+    },
+    {
+      "id": "digits-zone-short-3872",
+      "expr": "$fromMillis(0,\"[Z༠༡]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-༠༠:༣༠\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-3872",
+      "expr": "$toMillis(\"༡༩༧༠-༠༡-༢༡st\",\"[Y༠༠༠༡]-[M༠༡]-[D༡o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-4160",
+      "expr": "$formatInteger(1234567,\"၀,၀၀၁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"၁,၂၃၄,၅၆၇\""
+    },
+    {
+      "id": "digits-parse-integer-4160",
+      "expr": "$parseInteger(\"၁,၂၃၄,၅၆၇\",\"၀,၀၀၁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-4160",
+      "expr": "$fromMillis(789,\"[Y၀၀၀၁]-[M၀၁]-[D၀၁]T[H၀၁]:[m၀၁]:[s၀၁].[f၀၀၁][Z၀၁:၀၁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"၁၉၇၀-၀၁-၀၁T၀၅:၃၀:၀၀.၇၈၉+၀၅:၃၀\""
+    },
+    {
+      "id": "digits-date-parse-4160",
+      "expr": "$toMillis(\"၁၉၇၀-၀၁-၀၁T၀၅:၃၀:၀၀.၇၈၉+၀၅:၃၀\",\"[Y၀၀၀၁]-[M၀၁]-[D၀၁]T[H၀၁]:[m၀၁]:[s၀၁].[f၀၀၁][Z၀၁:၀၁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-4160",
+      "expr": "$formatInteger(21,\"၁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"၂၁st\""
+    },
+    {
+      "id": "digits-zone-short-4160",
+      "expr": "$fromMillis(0,\"[Z၀၁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-၀၀:၃၀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-4160",
+      "expr": "$toMillis(\"၁၉၇၀-၀၁-၂၁st\",\"[Y၀၀၀၁]-[M၀၁]-[D၁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-4240",
+      "expr": "$formatInteger(1234567,\"႐,႐႐႑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"႑,႒႓႔,႕႖႗\""
+    },
+    {
+      "id": "digits-parse-integer-4240",
+      "expr": "$parseInteger(\"႑,႒႓႔,႕႖႗\",\"႐,႐႐႑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-4240",
+      "expr": "$fromMillis(789,\"[Y႐႐႐႑]-[M႐႑]-[D႐႑]T[H႐႑]:[m႐႑]:[s႐႑].[f႐႐႑][Z႐႑:႐႑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"႑႙႗႐-႐႑-႐႑T႐႕:႓႐:႐႐.႗႘႙+႐႕:႓႐\""
+    },
+    {
+      "id": "digits-date-parse-4240",
+      "expr": "$toMillis(\"႑႙႗႐-႐႑-႐႑T႐႕:႓႐:႐႐.႗႘႙+႐႕:႓႐\",\"[Y႐႐႐႑]-[M႐႑]-[D႐႑]T[H႐႑]:[m႐႑]:[s႐႑].[f႐႐႑][Z႐႑:႐႑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-4240",
+      "expr": "$formatInteger(21,\"႑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"႒႑st\""
+    },
+    {
+      "id": "digits-zone-short-4240",
+      "expr": "$fromMillis(0,\"[Z႐႑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-႐႐:႓႐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-4240",
+      "expr": "$toMillis(\"႑႙႗႐-႐႑-႒႑st\",\"[Y႐႐႐႑]-[M႐႑]-[D႑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-6112",
+      "expr": "$formatInteger(1234567,\"០,០០១\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"១,២៣៤,៥៦៧\""
+    },
+    {
+      "id": "digits-parse-integer-6112",
+      "expr": "$parseInteger(\"១,២៣៤,៥៦៧\",\"០,០០១\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-6112",
+      "expr": "$fromMillis(789,\"[Y០០០១]-[M០១]-[D០១]T[H០១]:[m០១]:[s០១].[f០០១][Z០១:០១]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"១៩៧០-០១-០១T០៥:៣០:០០.៧៨៩+០៥:៣០\""
+    },
+    {
+      "id": "digits-date-parse-6112",
+      "expr": "$toMillis(\"១៩៧០-០១-០១T០៥:៣០:០០.៧៨៩+០៥:៣០\",\"[Y០០០១]-[M០១]-[D០១]T[H០១]:[m០១]:[s០១].[f០០១][Z០១:០១]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-6112",
+      "expr": "$formatInteger(21,\"១;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"២១st\""
+    },
+    {
+      "id": "digits-zone-short-6112",
+      "expr": "$fromMillis(0,\"[Z០១]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-០០:៣០\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-6112",
+      "expr": "$toMillis(\"១៩៧០-០១-២១st\",\"[Y០០០១]-[M០១]-[D១o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-6160",
+      "expr": "$formatInteger(1234567,\"᠐,᠐᠐᠑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᠑,᠒᠓᠔,᠕᠖᠗\""
+    },
+    {
+      "id": "digits-parse-integer-6160",
+      "expr": "$parseInteger(\"᠑,᠒᠓᠔,᠕᠖᠗\",\"᠐,᠐᠐᠑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-6160",
+      "expr": "$fromMillis(789,\"[Y᠐᠐᠐᠑]-[M᠐᠑]-[D᠐᠑]T[H᠐᠑]:[m᠐᠑]:[s᠐᠑].[f᠐᠐᠑][Z᠐᠑:᠐᠑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᠑᠙᠗᠐-᠐᠑-᠐᠑T᠐᠕:᠓᠐:᠐᠐.᠗᠘᠙+᠐᠕:᠓᠐\""
+    },
+    {
+      "id": "digits-date-parse-6160",
+      "expr": "$toMillis(\"᠑᠙᠗᠐-᠐᠑-᠐᠑T᠐᠕:᠓᠐:᠐᠐.᠗᠘᠙+᠐᠕:᠓᠐\",\"[Y᠐᠐᠐᠑]-[M᠐᠑]-[D᠐᠑]T[H᠐᠑]:[m᠐᠑]:[s᠐᠑].[f᠐᠐᠑][Z᠐᠑:᠐᠑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-6160",
+      "expr": "$formatInteger(21,\"᠑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᠒᠑st\""
+    },
+    {
+      "id": "digits-zone-short-6160",
+      "expr": "$fromMillis(0,\"[Z᠐᠑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᠐᠐:᠓᠐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-6160",
+      "expr": "$toMillis(\"᠑᠙᠗᠐-᠐᠑-᠒᠑st\",\"[Y᠐᠐᠐᠑]-[M᠐᠑]-[D᠑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-6470",
+      "expr": "$formatInteger(1234567,\"᥆,᥆᥆᥇\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᥇,᥈᥉᥊,᥋᥌᥍\""
+    },
+    {
+      "id": "digits-parse-integer-6470",
+      "expr": "$parseInteger(\"᥇,᥈᥉᥊,᥋᥌᥍\",\"᥆,᥆᥆᥇\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-6470",
+      "expr": "$fromMillis(789,\"[Y᥆᥆᥆᥇]-[M᥆᥇]-[D᥆᥇]T[H᥆᥇]:[m᥆᥇]:[s᥆᥇].[f᥆᥆᥇][Z᥆᥇:᥆᥇]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᥇᥏᥍᥆-᥆᥇-᥆᥇T᥆᥋:᥉᥆:᥆᥆.᥍᥎᥏+᥆᥋:᥉᥆\""
+    },
+    {
+      "id": "digits-date-parse-6470",
+      "expr": "$toMillis(\"᥇᥏᥍᥆-᥆᥇-᥆᥇T᥆᥋:᥉᥆:᥆᥆.᥍᥎᥏+᥆᥋:᥉᥆\",\"[Y᥆᥆᥆᥇]-[M᥆᥇]-[D᥆᥇]T[H᥆᥇]:[m᥆᥇]:[s᥆᥇].[f᥆᥆᥇][Z᥆᥇:᥆᥇]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-6470",
+      "expr": "$formatInteger(21,\"᥇;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᥈᥇st\""
+    },
+    {
+      "id": "digits-zone-short-6470",
+      "expr": "$fromMillis(0,\"[Z᥆᥇]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᥆᥆:᥉᥆\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-6470",
+      "expr": "$toMillis(\"᥇᥏᥍᥆-᥆᥇-᥈᥇st\",\"[Y᥆᥆᥆᥇]-[M᥆᥇]-[D᥇o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-6608",
+      "expr": "$formatInteger(1234567,\"᧐,᧐᧐᧑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᧑,᧒᧓᧔,᧕᧖᧗\""
+    },
+    {
+      "id": "digits-parse-integer-6608",
+      "expr": "$parseInteger(\"᧑,᧒᧓᧔,᧕᧖᧗\",\"᧐,᧐᧐᧑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-6608",
+      "expr": "$fromMillis(789,\"[Y᧐᧐᧐᧑]-[M᧐᧑]-[D᧐᧑]T[H᧐᧑]:[m᧐᧑]:[s᧐᧑].[f᧐᧐᧑][Z᧐᧑:᧐᧑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᧑᧙᧗᧐-᧐᧑-᧐᧑T᧐᧕:᧓᧐:᧐᧐.᧗᧘᧙+᧐᧕:᧓᧐\""
+    },
+    {
+      "id": "digits-date-parse-6608",
+      "expr": "$toMillis(\"᧑᧙᧗᧐-᧐᧑-᧐᧑T᧐᧕:᧓᧐:᧐᧐.᧗᧘᧙+᧐᧕:᧓᧐\",\"[Y᧐᧐᧐᧑]-[M᧐᧑]-[D᧐᧑]T[H᧐᧑]:[m᧐᧑]:[s᧐᧑].[f᧐᧐᧑][Z᧐᧑:᧐᧑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-6608",
+      "expr": "$formatInteger(21,\"᧑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᧒᧑st\""
+    },
+    {
+      "id": "digits-zone-short-6608",
+      "expr": "$fromMillis(0,\"[Z᧐᧑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᧐᧐:᧓᧐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-6608",
+      "expr": "$toMillis(\"᧑᧙᧗᧐-᧐᧑-᧒᧑st\",\"[Y᧐᧐᧐᧑]-[M᧐᧑]-[D᧑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-6784",
+      "expr": "$formatInteger(1234567,\"᪀,᪀᪀᪁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᪁,᪂᪃᪄,᪅᪆᪇\""
+    },
+    {
+      "id": "digits-parse-integer-6784",
+      "expr": "$parseInteger(\"᪁,᪂᪃᪄,᪅᪆᪇\",\"᪀,᪀᪀᪁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-6784",
+      "expr": "$fromMillis(789,\"[Y᪀᪀᪀᪁]-[M᪀᪁]-[D᪀᪁]T[H᪀᪁]:[m᪀᪁]:[s᪀᪁].[f᪀᪀᪁][Z᪀᪁:᪀᪁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᪁᪉᪇᪀-᪀᪁-᪀᪁T᪀᪅:᪃᪀:᪀᪀.᪇᪈᪉+᪀᪅:᪃᪀\""
+    },
+    {
+      "id": "digits-date-parse-6784",
+      "expr": "$toMillis(\"᪁᪉᪇᪀-᪀᪁-᪀᪁T᪀᪅:᪃᪀:᪀᪀.᪇᪈᪉+᪀᪅:᪃᪀\",\"[Y᪀᪀᪀᪁]-[M᪀᪁]-[D᪀᪁]T[H᪀᪁]:[m᪀᪁]:[s᪀᪁].[f᪀᪀᪁][Z᪀᪁:᪀᪁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-6784",
+      "expr": "$formatInteger(21,\"᪁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᪂᪁st\""
+    },
+    {
+      "id": "digits-zone-short-6784",
+      "expr": "$fromMillis(0,\"[Z᪀᪁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᪀᪀:᪃᪀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-6784",
+      "expr": "$toMillis(\"᪁᪉᪇᪀-᪀᪁-᪂᪁st\",\"[Y᪀᪀᪀᪁]-[M᪀᪁]-[D᪁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-6800",
+      "expr": "$formatInteger(1234567,\"᪐,᪐᪐᪑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᪑,᪒᪓᪔,᪕᪖᪗\""
+    },
+    {
+      "id": "digits-parse-integer-6800",
+      "expr": "$parseInteger(\"᪑,᪒᪓᪔,᪕᪖᪗\",\"᪐,᪐᪐᪑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-6800",
+      "expr": "$fromMillis(789,\"[Y᪐᪐᪐᪑]-[M᪐᪑]-[D᪐᪑]T[H᪐᪑]:[m᪐᪑]:[s᪐᪑].[f᪐᪐᪑][Z᪐᪑:᪐᪑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᪑᪙᪗᪐-᪐᪑-᪐᪑T᪐᪕:᪓᪐:᪐᪐.᪗᪘᪙+᪐᪕:᪓᪐\""
+    },
+    {
+      "id": "digits-date-parse-6800",
+      "expr": "$toMillis(\"᪑᪙᪗᪐-᪐᪑-᪐᪑T᪐᪕:᪓᪐:᪐᪐.᪗᪘᪙+᪐᪕:᪓᪐\",\"[Y᪐᪐᪐᪑]-[M᪐᪑]-[D᪐᪑]T[H᪐᪑]:[m᪐᪑]:[s᪐᪑].[f᪐᪐᪑][Z᪐᪑:᪐᪑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-6800",
+      "expr": "$formatInteger(21,\"᪑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᪒᪑st\""
+    },
+    {
+      "id": "digits-zone-short-6800",
+      "expr": "$fromMillis(0,\"[Z᪐᪑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᪐᪐:᪓᪐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-6800",
+      "expr": "$toMillis(\"᪑᪙᪗᪐-᪐᪑-᪒᪑st\",\"[Y᪐᪐᪐᪑]-[M᪐᪑]-[D᪑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-6992",
+      "expr": "$formatInteger(1234567,\"᭐,᭐᭐᭑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᭑,᭒᭓᭔,᭕᭖᭗\""
+    },
+    {
+      "id": "digits-parse-integer-6992",
+      "expr": "$parseInteger(\"᭑,᭒᭓᭔,᭕᭖᭗\",\"᭐,᭐᭐᭑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-6992",
+      "expr": "$fromMillis(789,\"[Y᭐᭐᭐᭑]-[M᭐᭑]-[D᭐᭑]T[H᭐᭑]:[m᭐᭑]:[s᭐᭑].[f᭐᭐᭑][Z᭐᭑:᭐᭑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᭑᭙᭗᭐-᭐᭑-᭐᭑T᭐᭕:᭓᭐:᭐᭐.᭗᭘᭙+᭐᭕:᭓᭐\""
+    },
+    {
+      "id": "digits-date-parse-6992",
+      "expr": "$toMillis(\"᭑᭙᭗᭐-᭐᭑-᭐᭑T᭐᭕:᭓᭐:᭐᭐.᭗᭘᭙+᭐᭕:᭓᭐\",\"[Y᭐᭐᭐᭑]-[M᭐᭑]-[D᭐᭑]T[H᭐᭑]:[m᭐᭑]:[s᭐᭑].[f᭐᭐᭑][Z᭐᭑:᭐᭑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-6992",
+      "expr": "$formatInteger(21,\"᭑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᭒᭑st\""
+    },
+    {
+      "id": "digits-zone-short-6992",
+      "expr": "$fromMillis(0,\"[Z᭐᭑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᭐᭐:᭓᭐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-6992",
+      "expr": "$toMillis(\"᭑᭙᭗᭐-᭐᭑-᭒᭑st\",\"[Y᭐᭐᭐᭑]-[M᭐᭑]-[D᭑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-7088",
+      "expr": "$formatInteger(1234567,\"᮰,᮰᮰᮱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᮱,᮲᮳᮴,᮵᮶᮷\""
+    },
+    {
+      "id": "digits-parse-integer-7088",
+      "expr": "$parseInteger(\"᮱,᮲᮳᮴,᮵᮶᮷\",\"᮰,᮰᮰᮱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-7088",
+      "expr": "$fromMillis(789,\"[Y᮰᮰᮰᮱]-[M᮰᮱]-[D᮰᮱]T[H᮰᮱]:[m᮰᮱]:[s᮰᮱].[f᮰᮰᮱][Z᮰᮱:᮰᮱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᮱᮹᮷᮰-᮰᮱-᮰᮱T᮰᮵:᮳᮰:᮰᮰.᮷᮸᮹+᮰᮵:᮳᮰\""
+    },
+    {
+      "id": "digits-date-parse-7088",
+      "expr": "$toMillis(\"᮱᮹᮷᮰-᮰᮱-᮰᮱T᮰᮵:᮳᮰:᮰᮰.᮷᮸᮹+᮰᮵:᮳᮰\",\"[Y᮰᮰᮰᮱]-[M᮰᮱]-[D᮰᮱]T[H᮰᮱]:[m᮰᮱]:[s᮰᮱].[f᮰᮰᮱][Z᮰᮱:᮰᮱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-7088",
+      "expr": "$formatInteger(21,\"᮱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᮲᮱st\""
+    },
+    {
+      "id": "digits-zone-short-7088",
+      "expr": "$fromMillis(0,\"[Z᮰᮱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᮰᮰:᮳᮰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-7088",
+      "expr": "$toMillis(\"᮱᮹᮷᮰-᮰᮱-᮲᮱st\",\"[Y᮰᮰᮰᮱]-[M᮰᮱]-[D᮱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-7232",
+      "expr": "$formatInteger(1234567,\"᱀,᱀᱀᱁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᱁,᱂᱃᱄,᱅᱆᱇\""
+    },
+    {
+      "id": "digits-parse-integer-7232",
+      "expr": "$parseInteger(\"᱁,᱂᱃᱄,᱅᱆᱇\",\"᱀,᱀᱀᱁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-7232",
+      "expr": "$fromMillis(789,\"[Y᱀᱀᱀᱁]-[M᱀᱁]-[D᱀᱁]T[H᱀᱁]:[m᱀᱁]:[s᱀᱁].[f᱀᱀᱁][Z᱀᱁:᱀᱁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᱁᱉᱇᱀-᱀᱁-᱀᱁T᱀᱅:᱃᱀:᱀᱀.᱇᱈᱉+᱀᱅:᱃᱀\""
+    },
+    {
+      "id": "digits-date-parse-7232",
+      "expr": "$toMillis(\"᱁᱉᱇᱀-᱀᱁-᱀᱁T᱀᱅:᱃᱀:᱀᱀.᱇᱈᱉+᱀᱅:᱃᱀\",\"[Y᱀᱀᱀᱁]-[M᱀᱁]-[D᱀᱁]T[H᱀᱁]:[m᱀᱁]:[s᱀᱁].[f᱀᱀᱁][Z᱀᱁:᱀᱁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-7232",
+      "expr": "$formatInteger(21,\"᱁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᱂᱁st\""
+    },
+    {
+      "id": "digits-zone-short-7232",
+      "expr": "$fromMillis(0,\"[Z᱀᱁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᱀᱀:᱃᱀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-7232",
+      "expr": "$toMillis(\"᱁᱉᱇᱀-᱀᱁-᱂᱁st\",\"[Y᱀᱀᱀᱁]-[M᱀᱁]-[D᱁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-7248",
+      "expr": "$formatInteger(1234567,\"᱐,᱐᱐᱑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᱑,᱒᱓᱔,᱕᱖᱗\""
+    },
+    {
+      "id": "digits-parse-integer-7248",
+      "expr": "$parseInteger(\"᱑,᱒᱓᱔,᱕᱖᱗\",\"᱐,᱐᱐᱑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-7248",
+      "expr": "$fromMillis(789,\"[Y᱐᱐᱐᱑]-[M᱐᱑]-[D᱐᱑]T[H᱐᱑]:[m᱐᱑]:[s᱐᱑].[f᱐᱐᱑][Z᱐᱑:᱐᱑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᱑᱙᱗᱐-᱐᱑-᱐᱑T᱐᱕:᱓᱐:᱐᱐.᱗᱘᱙+᱐᱕:᱓᱐\""
+    },
+    {
+      "id": "digits-date-parse-7248",
+      "expr": "$toMillis(\"᱑᱙᱗᱐-᱐᱑-᱐᱑T᱐᱕:᱓᱐:᱐᱐.᱗᱘᱙+᱐᱕:᱓᱐\",\"[Y᱐᱐᱐᱑]-[M᱐᱑]-[D᱐᱑]T[H᱐᱑]:[m᱐᱑]:[s᱐᱑].[f᱐᱐᱑][Z᱐᱑:᱐᱑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-7248",
+      "expr": "$formatInteger(21,\"᱑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"᱒᱑st\""
+    },
+    {
+      "id": "digits-zone-short-7248",
+      "expr": "$fromMillis(0,\"[Z᱐᱑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-᱐᱐:᱓᱐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-7248",
+      "expr": "$toMillis(\"᱑᱙᱗᱐-᱐᱑-᱒᱑st\",\"[Y᱐᱐᱐᱑]-[M᱐᱑]-[D᱑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-42528",
+      "expr": "$formatInteger(1234567,\"꘠,꘠꘠꘡\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꘡,꘢꘣꘤,꘥꘦꘧\""
+    },
+    {
+      "id": "digits-parse-integer-42528",
+      "expr": "$parseInteger(\"꘡,꘢꘣꘤,꘥꘦꘧\",\"꘠,꘠꘠꘡\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-42528",
+      "expr": "$fromMillis(789,\"[Y꘠꘠꘠꘡]-[M꘠꘡]-[D꘠꘡]T[H꘠꘡]:[m꘠꘡]:[s꘠꘡].[f꘠꘠꘡][Z꘠꘡:꘠꘡]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꘡꘩꘧꘠-꘠꘡-꘠꘡T꘠꘥:꘣꘠:꘠꘠.꘧꘨꘩+꘠꘥:꘣꘠\""
+    },
+    {
+      "id": "digits-date-parse-42528",
+      "expr": "$toMillis(\"꘡꘩꘧꘠-꘠꘡-꘠꘡T꘠꘥:꘣꘠:꘠꘠.꘧꘨꘩+꘠꘥:꘣꘠\",\"[Y꘠꘠꘠꘡]-[M꘠꘡]-[D꘠꘡]T[H꘠꘡]:[m꘠꘡]:[s꘠꘡].[f꘠꘠꘡][Z꘠꘡:꘠꘡]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-42528",
+      "expr": "$formatInteger(21,\"꘡;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꘢꘡st\""
+    },
+    {
+      "id": "digits-zone-short-42528",
+      "expr": "$fromMillis(0,\"[Z꘠꘡]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-꘠꘠:꘣꘠\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-42528",
+      "expr": "$toMillis(\"꘡꘩꘧꘠-꘠꘡-꘢꘡st\",\"[Y꘠꘠꘠꘡]-[M꘠꘡]-[D꘡o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-43216",
+      "expr": "$formatInteger(1234567,\"꣐,꣐꣐꣑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꣑,꣒꣓꣔,꣕꣖꣗\""
+    },
+    {
+      "id": "digits-parse-integer-43216",
+      "expr": "$parseInteger(\"꣑,꣒꣓꣔,꣕꣖꣗\",\"꣐,꣐꣐꣑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-43216",
+      "expr": "$fromMillis(789,\"[Y꣐꣐꣐꣑]-[M꣐꣑]-[D꣐꣑]T[H꣐꣑]:[m꣐꣑]:[s꣐꣑].[f꣐꣐꣑][Z꣐꣑:꣐꣑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꣑꣙꣗꣐-꣐꣑-꣐꣑T꣐꣕:꣓꣐:꣐꣐.꣗꣘꣙+꣐꣕:꣓꣐\""
+    },
+    {
+      "id": "digits-date-parse-43216",
+      "expr": "$toMillis(\"꣑꣙꣗꣐-꣐꣑-꣐꣑T꣐꣕:꣓꣐:꣐꣐.꣗꣘꣙+꣐꣕:꣓꣐\",\"[Y꣐꣐꣐꣑]-[M꣐꣑]-[D꣐꣑]T[H꣐꣑]:[m꣐꣑]:[s꣐꣑].[f꣐꣐꣑][Z꣐꣑:꣐꣑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-43216",
+      "expr": "$formatInteger(21,\"꣑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꣒꣑st\""
+    },
+    {
+      "id": "digits-zone-short-43216",
+      "expr": "$fromMillis(0,\"[Z꣐꣑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-꣐꣐:꣓꣐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-43216",
+      "expr": "$toMillis(\"꣑꣙꣗꣐-꣐꣑-꣒꣑st\",\"[Y꣐꣐꣐꣑]-[M꣐꣑]-[D꣑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-43264",
+      "expr": "$formatInteger(1234567,\"꤀,꤀꤀꤁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꤁,꤂꤃꤄,꤅꤆꤇\""
+    },
+    {
+      "id": "digits-parse-integer-43264",
+      "expr": "$parseInteger(\"꤁,꤂꤃꤄,꤅꤆꤇\",\"꤀,꤀꤀꤁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-43264",
+      "expr": "$fromMillis(789,\"[Y꤀꤀꤀꤁]-[M꤀꤁]-[D꤀꤁]T[H꤀꤁]:[m꤀꤁]:[s꤀꤁].[f꤀꤀꤁][Z꤀꤁:꤀꤁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꤁꤉꤇꤀-꤀꤁-꤀꤁T꤀꤅:꤃꤀:꤀꤀.꤇꤈꤉+꤀꤅:꤃꤀\""
+    },
+    {
+      "id": "digits-date-parse-43264",
+      "expr": "$toMillis(\"꤁꤉꤇꤀-꤀꤁-꤀꤁T꤀꤅:꤃꤀:꤀꤀.꤇꤈꤉+꤀꤅:꤃꤀\",\"[Y꤀꤀꤀꤁]-[M꤀꤁]-[D꤀꤁]T[H꤀꤁]:[m꤀꤁]:[s꤀꤁].[f꤀꤀꤁][Z꤀꤁:꤀꤁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-43264",
+      "expr": "$formatInteger(21,\"꤁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꤂꤁st\""
+    },
+    {
+      "id": "digits-zone-short-43264",
+      "expr": "$fromMillis(0,\"[Z꤀꤁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-꤀꤀:꤃꤀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-43264",
+      "expr": "$toMillis(\"꤁꤉꤇꤀-꤀꤁-꤂꤁st\",\"[Y꤀꤀꤀꤁]-[M꤀꤁]-[D꤁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-43472",
+      "expr": "$formatInteger(1234567,\"꧐,꧐꧐꧑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꧑,꧒꧓꧔,꧕꧖꧗\""
+    },
+    {
+      "id": "digits-parse-integer-43472",
+      "expr": "$parseInteger(\"꧑,꧒꧓꧔,꧕꧖꧗\",\"꧐,꧐꧐꧑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-43472",
+      "expr": "$fromMillis(789,\"[Y꧐꧐꧐꧑]-[M꧐꧑]-[D꧐꧑]T[H꧐꧑]:[m꧐꧑]:[s꧐꧑].[f꧐꧐꧑][Z꧐꧑:꧐꧑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꧑꧙꧗꧐-꧐꧑-꧐꧑T꧐꧕:꧓꧐:꧐꧐.꧗꧘꧙+꧐꧕:꧓꧐\""
+    },
+    {
+      "id": "digits-date-parse-43472",
+      "expr": "$toMillis(\"꧑꧙꧗꧐-꧐꧑-꧐꧑T꧐꧕:꧓꧐:꧐꧐.꧗꧘꧙+꧐꧕:꧓꧐\",\"[Y꧐꧐꧐꧑]-[M꧐꧑]-[D꧐꧑]T[H꧐꧑]:[m꧐꧑]:[s꧐꧑].[f꧐꧐꧑][Z꧐꧑:꧐꧑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-43472",
+      "expr": "$formatInteger(21,\"꧑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꧒꧑st\""
+    },
+    {
+      "id": "digits-zone-short-43472",
+      "expr": "$fromMillis(0,\"[Z꧐꧑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-꧐꧐:꧓꧐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-43472",
+      "expr": "$toMillis(\"꧑꧙꧗꧐-꧐꧑-꧒꧑st\",\"[Y꧐꧐꧐꧑]-[M꧐꧑]-[D꧑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-43504",
+      "expr": "$formatInteger(1234567,\"꧰,꧰꧰꧱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꧱,꧲꧳꧴,꧵꧶꧷\""
+    },
+    {
+      "id": "digits-parse-integer-43504",
+      "expr": "$parseInteger(\"꧱,꧲꧳꧴,꧵꧶꧷\",\"꧰,꧰꧰꧱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-43504",
+      "expr": "$fromMillis(789,\"[Y꧰꧰꧰꧱]-[M꧰꧱]-[D꧰꧱]T[H꧰꧱]:[m꧰꧱]:[s꧰꧱].[f꧰꧰꧱][Z꧰꧱:꧰꧱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꧱꧹꧷꧰-꧰꧱-꧰꧱T꧰꧵:꧳꧰:꧰꧰.꧷꧸꧹+꧰꧵:꧳꧰\""
+    },
+    {
+      "id": "digits-date-parse-43504",
+      "expr": "$toMillis(\"꧱꧹꧷꧰-꧰꧱-꧰꧱T꧰꧵:꧳꧰:꧰꧰.꧷꧸꧹+꧰꧵:꧳꧰\",\"[Y꧰꧰꧰꧱]-[M꧰꧱]-[D꧰꧱]T[H꧰꧱]:[m꧰꧱]:[s꧰꧱].[f꧰꧰꧱][Z꧰꧱:꧰꧱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-43504",
+      "expr": "$formatInteger(21,\"꧱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꧲꧱st\""
+    },
+    {
+      "id": "digits-zone-short-43504",
+      "expr": "$fromMillis(0,\"[Z꧰꧱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-꧰꧰:꧳꧰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-43504",
+      "expr": "$toMillis(\"꧱꧹꧷꧰-꧰꧱-꧲꧱st\",\"[Y꧰꧰꧰꧱]-[M꧰꧱]-[D꧱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-43600",
+      "expr": "$formatInteger(1234567,\"꩐,꩐꩐꩑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꩑,꩒꩓꩔,꩕꩖꩗\""
+    },
+    {
+      "id": "digits-parse-integer-43600",
+      "expr": "$parseInteger(\"꩑,꩒꩓꩔,꩕꩖꩗\",\"꩐,꩐꩐꩑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-43600",
+      "expr": "$fromMillis(789,\"[Y꩐꩐꩐꩑]-[M꩐꩑]-[D꩐꩑]T[H꩐꩑]:[m꩐꩑]:[s꩐꩑].[f꩐꩐꩑][Z꩐꩑:꩐꩑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꩑꩙꩗꩐-꩐꩑-꩐꩑T꩐꩕:꩓꩐:꩐꩐.꩗꩘꩙+꩐꩕:꩓꩐\""
+    },
+    {
+      "id": "digits-date-parse-43600",
+      "expr": "$toMillis(\"꩑꩙꩗꩐-꩐꩑-꩐꩑T꩐꩕:꩓꩐:꩐꩐.꩗꩘꩙+꩐꩕:꩓꩐\",\"[Y꩐꩐꩐꩑]-[M꩐꩑]-[D꩐꩑]T[H꩐꩑]:[m꩐꩑]:[s꩐꩑].[f꩐꩐꩑][Z꩐꩑:꩐꩑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-43600",
+      "expr": "$formatInteger(21,\"꩑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꩒꩑st\""
+    },
+    {
+      "id": "digits-zone-short-43600",
+      "expr": "$fromMillis(0,\"[Z꩐꩑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-꩐꩐:꩓꩐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-43600",
+      "expr": "$toMillis(\"꩑꩙꩗꩐-꩐꩑-꩒꩑st\",\"[Y꩐꩐꩐꩑]-[M꩐꩑]-[D꩑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-44016",
+      "expr": "$formatInteger(1234567,\"꯰,꯰꯰꯱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꯱,꯲꯳꯴,꯵꯶꯷\""
+    },
+    {
+      "id": "digits-parse-integer-44016",
+      "expr": "$parseInteger(\"꯱,꯲꯳꯴,꯵꯶꯷\",\"꯰,꯰꯰꯱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-44016",
+      "expr": "$fromMillis(789,\"[Y꯰꯰꯰꯱]-[M꯰꯱]-[D꯰꯱]T[H꯰꯱]:[m꯰꯱]:[s꯰꯱].[f꯰꯰꯱][Z꯰꯱:꯰꯱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꯱꯹꯷꯰-꯰꯱-꯰꯱T꯰꯵:꯳꯰:꯰꯰.꯷꯸꯹+꯰꯵:꯳꯰\""
+    },
+    {
+      "id": "digits-date-parse-44016",
+      "expr": "$toMillis(\"꯱꯹꯷꯰-꯰꯱-꯰꯱T꯰꯵:꯳꯰:꯰꯰.꯷꯸꯹+꯰꯵:꯳꯰\",\"[Y꯰꯰꯰꯱]-[M꯰꯱]-[D꯰꯱]T[H꯰꯱]:[m꯰꯱]:[s꯰꯱].[f꯰꯰꯱][Z꯰꯱:꯰꯱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-44016",
+      "expr": "$formatInteger(21,\"꯱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"꯲꯱st\""
+    },
+    {
+      "id": "digits-zone-short-44016",
+      "expr": "$fromMillis(0,\"[Z꯰꯱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-꯰꯰:꯳꯰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-44016",
+      "expr": "$toMillis(\"꯱꯹꯷꯰-꯰꯱-꯲꯱st\",\"[Y꯰꯰꯰꯱]-[M꯰꯱]-[D꯱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-65296",
+      "expr": "$formatInteger(1234567,\"０,００１\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"１,２３４,５６７\""
+    },
+    {
+      "id": "digits-parse-integer-65296",
+      "expr": "$parseInteger(\"１,２３４,５６７\",\"０,００１\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-65296",
+      "expr": "$fromMillis(789,\"[Y０００１]-[M０１]-[D０１]T[H０１]:[m０１]:[s０１].[f００１][Z０１:０１]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"１９７０-０１-０１T０５:３０:００.７８９+０５:３０\""
+    },
+    {
+      "id": "digits-date-parse-65296",
+      "expr": "$toMillis(\"１９７０-０１-０１T０５:３０:００.７８９+０５:３０\",\"[Y０００１]-[M０１]-[D０１]T[H０１]:[m０１]:[s０１].[f００１][Z０１:０１]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-65296",
+      "expr": "$formatInteger(21,\"１;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"２１st\""
+    },
+    {
+      "id": "digits-zone-short-65296",
+      "expr": "$fromMillis(0,\"[Z０１]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-００:３０\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-65296",
+      "expr": "$toMillis(\"１９７０-０１-２１st\",\"[Y０００１]-[M０１]-[D１o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-66720",
+      "expr": "$formatInteger(1234567,\"𐒠,𐒠𐒠𐒡\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐒡,𐒢𐒣𐒤,𐒥𐒦𐒧\""
+    },
+    {
+      "id": "digits-parse-integer-66720",
+      "expr": "$parseInteger(\"𐒡,𐒢𐒣𐒤,𐒥𐒦𐒧\",\"𐒠,𐒠𐒠𐒡\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-66720",
+      "expr": "$fromMillis(789,\"[Y𐒠𐒠𐒠𐒡]-[M𐒠𐒡]-[D𐒠𐒡]T[H𐒠𐒡]:[m𐒠𐒡]:[s𐒠𐒡].[f𐒠𐒠𐒡][Z𐒠𐒡:𐒠𐒡]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐒡𐒩𐒧𐒠-𐒠𐒡-𐒠𐒡T𐒠𐒥:𐒣𐒠:𐒠𐒠.𐒧𐒨𐒩+𐒠𐒥:𐒣𐒠\""
+    },
+    {
+      "id": "digits-date-parse-66720",
+      "expr": "$toMillis(\"𐒡𐒩𐒧𐒠-𐒠𐒡-𐒠𐒡T𐒠𐒥:𐒣𐒠:𐒠𐒠.𐒧𐒨𐒩+𐒠𐒥:𐒣𐒠\",\"[Y𐒠𐒠𐒠𐒡]-[M𐒠𐒡]-[D𐒠𐒡]T[H𐒠𐒡]:[m𐒠𐒡]:[s𐒠𐒡].[f𐒠𐒠𐒡][Z𐒠𐒡:𐒠𐒡]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-66720",
+      "expr": "$formatInteger(21,\"𐒡;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐒢𐒡st\""
+    },
+    {
+      "id": "digits-zone-short-66720",
+      "expr": "$fromMillis(0,\"[Z𐒠𐒡]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𐒠𐒠:𐒣𐒠\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-66720",
+      "expr": "$toMillis(\"𐒡𐒩𐒧𐒠-𐒠𐒡-𐒢𐒡st\",\"[Y𐒠𐒠𐒠𐒡]-[M𐒠𐒡]-[D𐒡o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-68912",
+      "expr": "$formatInteger(1234567,\"𐴰,𐴰𐴰𐴱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐴱,𐴲𐴳𐴴,𐴵𐴶𐴷\""
+    },
+    {
+      "id": "digits-parse-integer-68912",
+      "expr": "$parseInteger(\"𐴱,𐴲𐴳𐴴,𐴵𐴶𐴷\",\"𐴰,𐴰𐴰𐴱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-68912",
+      "expr": "$fromMillis(789,\"[Y𐴰𐴰𐴰𐴱]-[M𐴰𐴱]-[D𐴰𐴱]T[H𐴰𐴱]:[m𐴰𐴱]:[s𐴰𐴱].[f𐴰𐴰𐴱][Z𐴰𐴱:𐴰𐴱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐴱𐴹𐴷𐴰-𐴰𐴱-𐴰𐴱T𐴰𐴵:𐴳𐴰:𐴰𐴰.𐴷𐴸𐴹+𐴰𐴵:𐴳𐴰\""
+    },
+    {
+      "id": "digits-date-parse-68912",
+      "expr": "$toMillis(\"𐴱𐴹𐴷𐴰-𐴰𐴱-𐴰𐴱T𐴰𐴵:𐴳𐴰:𐴰𐴰.𐴷𐴸𐴹+𐴰𐴵:𐴳𐴰\",\"[Y𐴰𐴰𐴰𐴱]-[M𐴰𐴱]-[D𐴰𐴱]T[H𐴰𐴱]:[m𐴰𐴱]:[s𐴰𐴱].[f𐴰𐴰𐴱][Z𐴰𐴱:𐴰𐴱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-68912",
+      "expr": "$formatInteger(21,\"𐴱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐴲𐴱st\""
+    },
+    {
+      "id": "digits-zone-short-68912",
+      "expr": "$fromMillis(0,\"[Z𐴰𐴱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𐴰𐴰:𐴳𐴰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-68912",
+      "expr": "$toMillis(\"𐴱𐴹𐴷𐴰-𐴰𐴱-𐴲𐴱st\",\"[Y𐴰𐴰𐴰𐴱]-[M𐴰𐴱]-[D𐴱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-68928",
+      "expr": "$formatInteger(1234567,\"𐵀,𐵀𐵀𐵁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐵁,𐵂𐵃𐵄,𐵅𐵆𐵇\""
+    },
+    {
+      "id": "digits-parse-integer-68928",
+      "expr": "$parseInteger(\"𐵁,𐵂𐵃𐵄,𐵅𐵆𐵇\",\"𐵀,𐵀𐵀𐵁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-68928",
+      "expr": "$fromMillis(789,\"[Y𐵀𐵀𐵀𐵁]-[M𐵀𐵁]-[D𐵀𐵁]T[H𐵀𐵁]:[m𐵀𐵁]:[s𐵀𐵁].[f𐵀𐵀𐵁][Z𐵀𐵁:𐵀𐵁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐵁𐵉𐵇𐵀-𐵀𐵁-𐵀𐵁T𐵀𐵅:𐵃𐵀:𐵀𐵀.𐵇𐵈𐵉+𐵀𐵅:𐵃𐵀\""
+    },
+    {
+      "id": "digits-date-parse-68928",
+      "expr": "$toMillis(\"𐵁𐵉𐵇𐵀-𐵀𐵁-𐵀𐵁T𐵀𐵅:𐵃𐵀:𐵀𐵀.𐵇𐵈𐵉+𐵀𐵅:𐵃𐵀\",\"[Y𐵀𐵀𐵀𐵁]-[M𐵀𐵁]-[D𐵀𐵁]T[H𐵀𐵁]:[m𐵀𐵁]:[s𐵀𐵁].[f𐵀𐵀𐵁][Z𐵀𐵁:𐵀𐵁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-68928",
+      "expr": "$formatInteger(21,\"𐵁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𐵂𐵁st\""
+    },
+    {
+      "id": "digits-zone-short-68928",
+      "expr": "$fromMillis(0,\"[Z𐵀𐵁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𐵀𐵀:𐵃𐵀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-68928",
+      "expr": "$toMillis(\"𐵁𐵉𐵇𐵀-𐵀𐵁-𐵂𐵁st\",\"[Y𐵀𐵀𐵀𐵁]-[M𐵀𐵁]-[D𐵁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-69734",
+      "expr": "$formatInteger(1234567,\"𑁦,𑁦𑁦𑁧\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑁧,𑁨𑁩𑁪,𑁫𑁬𑁭\""
+    },
+    {
+      "id": "digits-parse-integer-69734",
+      "expr": "$parseInteger(\"𑁧,𑁨𑁩𑁪,𑁫𑁬𑁭\",\"𑁦,𑁦𑁦𑁧\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-69734",
+      "expr": "$fromMillis(789,\"[Y𑁦𑁦𑁦𑁧]-[M𑁦𑁧]-[D𑁦𑁧]T[H𑁦𑁧]:[m𑁦𑁧]:[s𑁦𑁧].[f𑁦𑁦𑁧][Z𑁦𑁧:𑁦𑁧]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑁧𑁯𑁭𑁦-𑁦𑁧-𑁦𑁧T𑁦𑁫:𑁩𑁦:𑁦𑁦.𑁭𑁮𑁯+𑁦𑁫:𑁩𑁦\""
+    },
+    {
+      "id": "digits-date-parse-69734",
+      "expr": "$toMillis(\"𑁧𑁯𑁭𑁦-𑁦𑁧-𑁦𑁧T𑁦𑁫:𑁩𑁦:𑁦𑁦.𑁭𑁮𑁯+𑁦𑁫:𑁩𑁦\",\"[Y𑁦𑁦𑁦𑁧]-[M𑁦𑁧]-[D𑁦𑁧]T[H𑁦𑁧]:[m𑁦𑁧]:[s𑁦𑁧].[f𑁦𑁦𑁧][Z𑁦𑁧:𑁦𑁧]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-69734",
+      "expr": "$formatInteger(21,\"𑁧;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑁨𑁧st\""
+    },
+    {
+      "id": "digits-zone-short-69734",
+      "expr": "$fromMillis(0,\"[Z𑁦𑁧]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑁦𑁦:𑁩𑁦\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-69734",
+      "expr": "$toMillis(\"𑁧𑁯𑁭𑁦-𑁦𑁧-𑁨𑁧st\",\"[Y𑁦𑁦𑁦𑁧]-[M𑁦𑁧]-[D𑁧o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-69872",
+      "expr": "$formatInteger(1234567,\"𑃰,𑃰𑃰𑃱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑃱,𑃲𑃳𑃴,𑃵𑃶𑃷\""
+    },
+    {
+      "id": "digits-parse-integer-69872",
+      "expr": "$parseInteger(\"𑃱,𑃲𑃳𑃴,𑃵𑃶𑃷\",\"𑃰,𑃰𑃰𑃱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-69872",
+      "expr": "$fromMillis(789,\"[Y𑃰𑃰𑃰𑃱]-[M𑃰𑃱]-[D𑃰𑃱]T[H𑃰𑃱]:[m𑃰𑃱]:[s𑃰𑃱].[f𑃰𑃰𑃱][Z𑃰𑃱:𑃰𑃱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑃱𑃹𑃷𑃰-𑃰𑃱-𑃰𑃱T𑃰𑃵:𑃳𑃰:𑃰𑃰.𑃷𑃸𑃹+𑃰𑃵:𑃳𑃰\""
+    },
+    {
+      "id": "digits-date-parse-69872",
+      "expr": "$toMillis(\"𑃱𑃹𑃷𑃰-𑃰𑃱-𑃰𑃱T𑃰𑃵:𑃳𑃰:𑃰𑃰.𑃷𑃸𑃹+𑃰𑃵:𑃳𑃰\",\"[Y𑃰𑃰𑃰𑃱]-[M𑃰𑃱]-[D𑃰𑃱]T[H𑃰𑃱]:[m𑃰𑃱]:[s𑃰𑃱].[f𑃰𑃰𑃱][Z𑃰𑃱:𑃰𑃱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-69872",
+      "expr": "$formatInteger(21,\"𑃱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑃲𑃱st\""
+    },
+    {
+      "id": "digits-zone-short-69872",
+      "expr": "$fromMillis(0,\"[Z𑃰𑃱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑃰𑃰:𑃳𑃰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-69872",
+      "expr": "$toMillis(\"𑃱𑃹𑃷𑃰-𑃰𑃱-𑃲𑃱st\",\"[Y𑃰𑃰𑃰𑃱]-[M𑃰𑃱]-[D𑃱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-69942",
+      "expr": "$formatInteger(1234567,\"𑄶,𑄶𑄶𑄷\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑄷,𑄸𑄹𑄺,𑄻𑄼𑄽\""
+    },
+    {
+      "id": "digits-parse-integer-69942",
+      "expr": "$parseInteger(\"𑄷,𑄸𑄹𑄺,𑄻𑄼𑄽\",\"𑄶,𑄶𑄶𑄷\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-69942",
+      "expr": "$fromMillis(789,\"[Y𑄶𑄶𑄶𑄷]-[M𑄶𑄷]-[D𑄶𑄷]T[H𑄶𑄷]:[m𑄶𑄷]:[s𑄶𑄷].[f𑄶𑄶𑄷][Z𑄶𑄷:𑄶𑄷]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑄷𑄿𑄽𑄶-𑄶𑄷-𑄶𑄷T𑄶𑄻:𑄹𑄶:𑄶𑄶.𑄽𑄾𑄿+𑄶𑄻:𑄹𑄶\""
+    },
+    {
+      "id": "digits-date-parse-69942",
+      "expr": "$toMillis(\"𑄷𑄿𑄽𑄶-𑄶𑄷-𑄶𑄷T𑄶𑄻:𑄹𑄶:𑄶𑄶.𑄽𑄾𑄿+𑄶𑄻:𑄹𑄶\",\"[Y𑄶𑄶𑄶𑄷]-[M𑄶𑄷]-[D𑄶𑄷]T[H𑄶𑄷]:[m𑄶𑄷]:[s𑄶𑄷].[f𑄶𑄶𑄷][Z𑄶𑄷:𑄶𑄷]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-69942",
+      "expr": "$formatInteger(21,\"𑄷;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑄸𑄷st\""
+    },
+    {
+      "id": "digits-zone-short-69942",
+      "expr": "$fromMillis(0,\"[Z𑄶𑄷]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑄶𑄶:𑄹𑄶\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-69942",
+      "expr": "$toMillis(\"𑄷𑄿𑄽𑄶-𑄶𑄷-𑄸𑄷st\",\"[Y𑄶𑄶𑄶𑄷]-[M𑄶𑄷]-[D𑄷o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-70096",
+      "expr": "$formatInteger(1234567,\"𑇐,𑇐𑇐𑇑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑇑,𑇒𑇓𑇔,𑇕𑇖𑇗\""
+    },
+    {
+      "id": "digits-parse-integer-70096",
+      "expr": "$parseInteger(\"𑇑,𑇒𑇓𑇔,𑇕𑇖𑇗\",\"𑇐,𑇐𑇐𑇑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-70096",
+      "expr": "$fromMillis(789,\"[Y𑇐𑇐𑇐𑇑]-[M𑇐𑇑]-[D𑇐𑇑]T[H𑇐𑇑]:[m𑇐𑇑]:[s𑇐𑇑].[f𑇐𑇐𑇑][Z𑇐𑇑:𑇐𑇑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑇑𑇙𑇗𑇐-𑇐𑇑-𑇐𑇑T𑇐𑇕:𑇓𑇐:𑇐𑇐.𑇗𑇘𑇙+𑇐𑇕:𑇓𑇐\""
+    },
+    {
+      "id": "digits-date-parse-70096",
+      "expr": "$toMillis(\"𑇑𑇙𑇗𑇐-𑇐𑇑-𑇐𑇑T𑇐𑇕:𑇓𑇐:𑇐𑇐.𑇗𑇘𑇙+𑇐𑇕:𑇓𑇐\",\"[Y𑇐𑇐𑇐𑇑]-[M𑇐𑇑]-[D𑇐𑇑]T[H𑇐𑇑]:[m𑇐𑇑]:[s𑇐𑇑].[f𑇐𑇐𑇑][Z𑇐𑇑:𑇐𑇑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-70096",
+      "expr": "$formatInteger(21,\"𑇑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑇒𑇑st\""
+    },
+    {
+      "id": "digits-zone-short-70096",
+      "expr": "$fromMillis(0,\"[Z𑇐𑇑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑇐𑇐:𑇓𑇐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-70096",
+      "expr": "$toMillis(\"𑇑𑇙𑇗𑇐-𑇐𑇑-𑇒𑇑st\",\"[Y𑇐𑇐𑇐𑇑]-[M𑇐𑇑]-[D𑇑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-70384",
+      "expr": "$formatInteger(1234567,\"𑋰,𑋰𑋰𑋱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑋱,𑋲𑋳𑋴,𑋵𑋶𑋷\""
+    },
+    {
+      "id": "digits-parse-integer-70384",
+      "expr": "$parseInteger(\"𑋱,𑋲𑋳𑋴,𑋵𑋶𑋷\",\"𑋰,𑋰𑋰𑋱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-70384",
+      "expr": "$fromMillis(789,\"[Y𑋰𑋰𑋰𑋱]-[M𑋰𑋱]-[D𑋰𑋱]T[H𑋰𑋱]:[m𑋰𑋱]:[s𑋰𑋱].[f𑋰𑋰𑋱][Z𑋰𑋱:𑋰𑋱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑋱𑋹𑋷𑋰-𑋰𑋱-𑋰𑋱T𑋰𑋵:𑋳𑋰:𑋰𑋰.𑋷𑋸𑋹+𑋰𑋵:𑋳𑋰\""
+    },
+    {
+      "id": "digits-date-parse-70384",
+      "expr": "$toMillis(\"𑋱𑋹𑋷𑋰-𑋰𑋱-𑋰𑋱T𑋰𑋵:𑋳𑋰:𑋰𑋰.𑋷𑋸𑋹+𑋰𑋵:𑋳𑋰\",\"[Y𑋰𑋰𑋰𑋱]-[M𑋰𑋱]-[D𑋰𑋱]T[H𑋰𑋱]:[m𑋰𑋱]:[s𑋰𑋱].[f𑋰𑋰𑋱][Z𑋰𑋱:𑋰𑋱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-70384",
+      "expr": "$formatInteger(21,\"𑋱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑋲𑋱st\""
+    },
+    {
+      "id": "digits-zone-short-70384",
+      "expr": "$fromMillis(0,\"[Z𑋰𑋱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑋰𑋰:𑋳𑋰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-70384",
+      "expr": "$toMillis(\"𑋱𑋹𑋷𑋰-𑋰𑋱-𑋲𑋱st\",\"[Y𑋰𑋰𑋰𑋱]-[M𑋰𑋱]-[D𑋱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-70736",
+      "expr": "$formatInteger(1234567,\"𑑐,𑑐𑑐𑑑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑑑,𑑒𑑓𑑔,𑑕𑑖𑑗\""
+    },
+    {
+      "id": "digits-parse-integer-70736",
+      "expr": "$parseInteger(\"𑑑,𑑒𑑓𑑔,𑑕𑑖𑑗\",\"𑑐,𑑐𑑐𑑑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-70736",
+      "expr": "$fromMillis(789,\"[Y𑑐𑑐𑑐𑑑]-[M𑑐𑑑]-[D𑑐𑑑]T[H𑑐𑑑]:[m𑑐𑑑]:[s𑑐𑑑].[f𑑐𑑐𑑑][Z𑑐𑑑:𑑐𑑑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑑑𑑙𑑗𑑐-𑑐𑑑-𑑐𑑑T𑑐𑑕:𑑓𑑐:𑑐𑑐.𑑗𑑘𑑙+𑑐𑑕:𑑓𑑐\""
+    },
+    {
+      "id": "digits-date-parse-70736",
+      "expr": "$toMillis(\"𑑑𑑙𑑗𑑐-𑑐𑑑-𑑐𑑑T𑑐𑑕:𑑓𑑐:𑑐𑑐.𑑗𑑘𑑙+𑑐𑑕:𑑓𑑐\",\"[Y𑑐𑑐𑑐𑑑]-[M𑑐𑑑]-[D𑑐𑑑]T[H𑑐𑑑]:[m𑑐𑑑]:[s𑑐𑑑].[f𑑐𑑐𑑑][Z𑑐𑑑:𑑐𑑑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-70736",
+      "expr": "$formatInteger(21,\"𑑑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑑒𑑑st\""
+    },
+    {
+      "id": "digits-zone-short-70736",
+      "expr": "$fromMillis(0,\"[Z𑑐𑑑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑑐𑑐:𑑓𑑐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-70736",
+      "expr": "$toMillis(\"𑑑𑑙𑑗𑑐-𑑐𑑑-𑑒𑑑st\",\"[Y𑑐𑑐𑑐𑑑]-[M𑑐𑑑]-[D𑑑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-70864",
+      "expr": "$formatInteger(1234567,\"𑓐,𑓐𑓐𑓑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑓑,𑓒𑓓𑓔,𑓕𑓖𑓗\""
+    },
+    {
+      "id": "digits-parse-integer-70864",
+      "expr": "$parseInteger(\"𑓑,𑓒𑓓𑓔,𑓕𑓖𑓗\",\"𑓐,𑓐𑓐𑓑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-70864",
+      "expr": "$fromMillis(789,\"[Y𑓐𑓐𑓐𑓑]-[M𑓐𑓑]-[D𑓐𑓑]T[H𑓐𑓑]:[m𑓐𑓑]:[s𑓐𑓑].[f𑓐𑓐𑓑][Z𑓐𑓑:𑓐𑓑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑓑𑓙𑓗𑓐-𑓐𑓑-𑓐𑓑T𑓐𑓕:𑓓𑓐:𑓐𑓐.𑓗𑓘𑓙+𑓐𑓕:𑓓𑓐\""
+    },
+    {
+      "id": "digits-date-parse-70864",
+      "expr": "$toMillis(\"𑓑𑓙𑓗𑓐-𑓐𑓑-𑓐𑓑T𑓐𑓕:𑓓𑓐:𑓐𑓐.𑓗𑓘𑓙+𑓐𑓕:𑓓𑓐\",\"[Y𑓐𑓐𑓐𑓑]-[M𑓐𑓑]-[D𑓐𑓑]T[H𑓐𑓑]:[m𑓐𑓑]:[s𑓐𑓑].[f𑓐𑓐𑓑][Z𑓐𑓑:𑓐𑓑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-70864",
+      "expr": "$formatInteger(21,\"𑓑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑓒𑓑st\""
+    },
+    {
+      "id": "digits-zone-short-70864",
+      "expr": "$fromMillis(0,\"[Z𑓐𑓑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑓐𑓐:𑓓𑓐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-70864",
+      "expr": "$toMillis(\"𑓑𑓙𑓗𑓐-𑓐𑓑-𑓒𑓑st\",\"[Y𑓐𑓐𑓐𑓑]-[M𑓐𑓑]-[D𑓑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-71248",
+      "expr": "$formatInteger(1234567,\"𑙐,𑙐𑙐𑙑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑙑,𑙒𑙓𑙔,𑙕𑙖𑙗\""
+    },
+    {
+      "id": "digits-parse-integer-71248",
+      "expr": "$parseInteger(\"𑙑,𑙒𑙓𑙔,𑙕𑙖𑙗\",\"𑙐,𑙐𑙐𑙑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-71248",
+      "expr": "$fromMillis(789,\"[Y𑙐𑙐𑙐𑙑]-[M𑙐𑙑]-[D𑙐𑙑]T[H𑙐𑙑]:[m𑙐𑙑]:[s𑙐𑙑].[f𑙐𑙐𑙑][Z𑙐𑙑:𑙐𑙑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑙑𑙙𑙗𑙐-𑙐𑙑-𑙐𑙑T𑙐𑙕:𑙓𑙐:𑙐𑙐.𑙗𑙘𑙙+𑙐𑙕:𑙓𑙐\""
+    },
+    {
+      "id": "digits-date-parse-71248",
+      "expr": "$toMillis(\"𑙑𑙙𑙗𑙐-𑙐𑙑-𑙐𑙑T𑙐𑙕:𑙓𑙐:𑙐𑙐.𑙗𑙘𑙙+𑙐𑙕:𑙓𑙐\",\"[Y𑙐𑙐𑙐𑙑]-[M𑙐𑙑]-[D𑙐𑙑]T[H𑙐𑙑]:[m𑙐𑙑]:[s𑙐𑙑].[f𑙐𑙐𑙑][Z𑙐𑙑:𑙐𑙑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-71248",
+      "expr": "$formatInteger(21,\"𑙑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑙒𑙑st\""
+    },
+    {
+      "id": "digits-zone-short-71248",
+      "expr": "$fromMillis(0,\"[Z𑙐𑙑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑙐𑙐:𑙓𑙐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-71248",
+      "expr": "$toMillis(\"𑙑𑙙𑙗𑙐-𑙐𑙑-𑙒𑙑st\",\"[Y𑙐𑙐𑙐𑙑]-[M𑙐𑙑]-[D𑙑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-71360",
+      "expr": "$formatInteger(1234567,\"𑛀,𑛀𑛀𑛁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛁,𑛂𑛃𑛄,𑛅𑛆𑛇\""
+    },
+    {
+      "id": "digits-parse-integer-71360",
+      "expr": "$parseInteger(\"𑛁,𑛂𑛃𑛄,𑛅𑛆𑛇\",\"𑛀,𑛀𑛀𑛁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-71360",
+      "expr": "$fromMillis(789,\"[Y𑛀𑛀𑛀𑛁]-[M𑛀𑛁]-[D𑛀𑛁]T[H𑛀𑛁]:[m𑛀𑛁]:[s𑛀𑛁].[f𑛀𑛀𑛁][Z𑛀𑛁:𑛀𑛁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛁𑛉𑛇𑛀-𑛀𑛁-𑛀𑛁T𑛀𑛅:𑛃𑛀:𑛀𑛀.𑛇𑛈𑛉+𑛀𑛅:𑛃𑛀\""
+    },
+    {
+      "id": "digits-date-parse-71360",
+      "expr": "$toMillis(\"𑛁𑛉𑛇𑛀-𑛀𑛁-𑛀𑛁T𑛀𑛅:𑛃𑛀:𑛀𑛀.𑛇𑛈𑛉+𑛀𑛅:𑛃𑛀\",\"[Y𑛀𑛀𑛀𑛁]-[M𑛀𑛁]-[D𑛀𑛁]T[H𑛀𑛁]:[m𑛀𑛁]:[s𑛀𑛁].[f𑛀𑛀𑛁][Z𑛀𑛁:𑛀𑛁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-71360",
+      "expr": "$formatInteger(21,\"𑛁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛂𑛁st\""
+    },
+    {
+      "id": "digits-zone-short-71360",
+      "expr": "$fromMillis(0,\"[Z𑛀𑛁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑛀𑛀:𑛃𑛀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-71360",
+      "expr": "$toMillis(\"𑛁𑛉𑛇𑛀-𑛀𑛁-𑛂𑛁st\",\"[Y𑛀𑛀𑛀𑛁]-[M𑛀𑛁]-[D𑛁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-71376",
+      "expr": "$formatInteger(1234567,\"𑛐,𑛐𑛐𑛑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛑,𑛒𑛓𑛔,𑛕𑛖𑛗\""
+    },
+    {
+      "id": "digits-parse-integer-71376",
+      "expr": "$parseInteger(\"𑛑,𑛒𑛓𑛔,𑛕𑛖𑛗\",\"𑛐,𑛐𑛐𑛑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-71376",
+      "expr": "$fromMillis(789,\"[Y𑛐𑛐𑛐𑛑]-[M𑛐𑛑]-[D𑛐𑛑]T[H𑛐𑛑]:[m𑛐𑛑]:[s𑛐𑛑].[f𑛐𑛐𑛑][Z𑛐𑛑:𑛐𑛑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛑𑛙𑛗𑛐-𑛐𑛑-𑛐𑛑T𑛐𑛕:𑛓𑛐:𑛐𑛐.𑛗𑛘𑛙+𑛐𑛕:𑛓𑛐\""
+    },
+    {
+      "id": "digits-date-parse-71376",
+      "expr": "$toMillis(\"𑛑𑛙𑛗𑛐-𑛐𑛑-𑛐𑛑T𑛐𑛕:𑛓𑛐:𑛐𑛐.𑛗𑛘𑛙+𑛐𑛕:𑛓𑛐\",\"[Y𑛐𑛐𑛐𑛑]-[M𑛐𑛑]-[D𑛐𑛑]T[H𑛐𑛑]:[m𑛐𑛑]:[s𑛐𑛑].[f𑛐𑛐𑛑][Z𑛐𑛑:𑛐𑛑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-71376",
+      "expr": "$formatInteger(21,\"𑛑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛒𑛑st\""
+    },
+    {
+      "id": "digits-zone-short-71376",
+      "expr": "$fromMillis(0,\"[Z𑛐𑛑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑛐𑛐:𑛓𑛐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-71376",
+      "expr": "$toMillis(\"𑛑𑛙𑛗𑛐-𑛐𑛑-𑛒𑛑st\",\"[Y𑛐𑛐𑛐𑛑]-[M𑛐𑛑]-[D𑛑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-71386",
+      "expr": "$formatInteger(1234567,\"𑛚,𑛚𑛚𑛛\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛛,𑛜𑛝𑛞,𑛟𑛠𑛡\""
+    },
+    {
+      "id": "digits-parse-integer-71386",
+      "expr": "$parseInteger(\"𑛛,𑛜𑛝𑛞,𑛟𑛠𑛡\",\"𑛚,𑛚𑛚𑛛\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-71386",
+      "expr": "$fromMillis(789,\"[Y𑛚𑛚𑛚𑛛]-[M𑛚𑛛]-[D𑛚𑛛]T[H𑛚𑛛]:[m𑛚𑛛]:[s𑛚𑛛].[f𑛚𑛚𑛛][Z𑛚𑛛:𑛚𑛛]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛛𑛣𑛡𑛚-𑛚𑛛-𑛚𑛛T𑛚𑛟:𑛝𑛚:𑛚𑛚.𑛡𑛢𑛣+𑛚𑛟:𑛝𑛚\""
+    },
+    {
+      "id": "digits-date-parse-71386",
+      "expr": "$toMillis(\"𑛛𑛣𑛡𑛚-𑛚𑛛-𑛚𑛛T𑛚𑛟:𑛝𑛚:𑛚𑛚.𑛡𑛢𑛣+𑛚𑛟:𑛝𑛚\",\"[Y𑛚𑛚𑛚𑛛]-[M𑛚𑛛]-[D𑛚𑛛]T[H𑛚𑛛]:[m𑛚𑛛]:[s𑛚𑛛].[f𑛚𑛚𑛛][Z𑛚𑛛:𑛚𑛛]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-71386",
+      "expr": "$formatInteger(21,\"𑛛;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑛜𑛛st\""
+    },
+    {
+      "id": "digits-zone-short-71386",
+      "expr": "$fromMillis(0,\"[Z𑛚𑛛]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑛚𑛚:𑛝𑛚\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-71386",
+      "expr": "$toMillis(\"𑛛𑛣𑛡𑛚-𑛚𑛛-𑛜𑛛st\",\"[Y𑛚𑛚𑛚𑛛]-[M𑛚𑛛]-[D𑛛o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-71472",
+      "expr": "$formatInteger(1234567,\"𑜰,𑜰𑜰𑜱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑜱,𑜲𑜳𑜴,𑜵𑜶𑜷\""
+    },
+    {
+      "id": "digits-parse-integer-71472",
+      "expr": "$parseInteger(\"𑜱,𑜲𑜳𑜴,𑜵𑜶𑜷\",\"𑜰,𑜰𑜰𑜱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-71472",
+      "expr": "$fromMillis(789,\"[Y𑜰𑜰𑜰𑜱]-[M𑜰𑜱]-[D𑜰𑜱]T[H𑜰𑜱]:[m𑜰𑜱]:[s𑜰𑜱].[f𑜰𑜰𑜱][Z𑜰𑜱:𑜰𑜱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑜱𑜹𑜷𑜰-𑜰𑜱-𑜰𑜱T𑜰𑜵:𑜳𑜰:𑜰𑜰.𑜷𑜸𑜹+𑜰𑜵:𑜳𑜰\""
+    },
+    {
+      "id": "digits-date-parse-71472",
+      "expr": "$toMillis(\"𑜱𑜹𑜷𑜰-𑜰𑜱-𑜰𑜱T𑜰𑜵:𑜳𑜰:𑜰𑜰.𑜷𑜸𑜹+𑜰𑜵:𑜳𑜰\",\"[Y𑜰𑜰𑜰𑜱]-[M𑜰𑜱]-[D𑜰𑜱]T[H𑜰𑜱]:[m𑜰𑜱]:[s𑜰𑜱].[f𑜰𑜰𑜱][Z𑜰𑜱:𑜰𑜱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-71472",
+      "expr": "$formatInteger(21,\"𑜱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑜲𑜱st\""
+    },
+    {
+      "id": "digits-zone-short-71472",
+      "expr": "$fromMillis(0,\"[Z𑜰𑜱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑜰𑜰:𑜳𑜰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-71472",
+      "expr": "$toMillis(\"𑜱𑜹𑜷𑜰-𑜰𑜱-𑜲𑜱st\",\"[Y𑜰𑜰𑜰𑜱]-[M𑜰𑜱]-[D𑜱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-71904",
+      "expr": "$formatInteger(1234567,\"𑣠,𑣠𑣠𑣡\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑣡,𑣢𑣣𑣤,𑣥𑣦𑣧\""
+    },
+    {
+      "id": "digits-parse-integer-71904",
+      "expr": "$parseInteger(\"𑣡,𑣢𑣣𑣤,𑣥𑣦𑣧\",\"𑣠,𑣠𑣠𑣡\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-71904",
+      "expr": "$fromMillis(789,\"[Y𑣠𑣠𑣠𑣡]-[M𑣠𑣡]-[D𑣠𑣡]T[H𑣠𑣡]:[m𑣠𑣡]:[s𑣠𑣡].[f𑣠𑣠𑣡][Z𑣠𑣡:𑣠𑣡]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑣡𑣩𑣧𑣠-𑣠𑣡-𑣠𑣡T𑣠𑣥:𑣣𑣠:𑣠𑣠.𑣧𑣨𑣩+𑣠𑣥:𑣣𑣠\""
+    },
+    {
+      "id": "digits-date-parse-71904",
+      "expr": "$toMillis(\"𑣡𑣩𑣧𑣠-𑣠𑣡-𑣠𑣡T𑣠𑣥:𑣣𑣠:𑣠𑣠.𑣧𑣨𑣩+𑣠𑣥:𑣣𑣠\",\"[Y𑣠𑣠𑣠𑣡]-[M𑣠𑣡]-[D𑣠𑣡]T[H𑣠𑣡]:[m𑣠𑣡]:[s𑣠𑣡].[f𑣠𑣠𑣡][Z𑣠𑣡:𑣠𑣡]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-71904",
+      "expr": "$formatInteger(21,\"𑣡;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑣢𑣡st\""
+    },
+    {
+      "id": "digits-zone-short-71904",
+      "expr": "$fromMillis(0,\"[Z𑣠𑣡]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑣠𑣠:𑣣𑣠\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-71904",
+      "expr": "$toMillis(\"𑣡𑣩𑣧𑣠-𑣠𑣡-𑣢𑣡st\",\"[Y𑣠𑣠𑣠𑣡]-[M𑣠𑣡]-[D𑣡o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-72016",
+      "expr": "$formatInteger(1234567,\"𑥐,𑥐𑥐𑥑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑥑,𑥒𑥓𑥔,𑥕𑥖𑥗\""
+    },
+    {
+      "id": "digits-parse-integer-72016",
+      "expr": "$parseInteger(\"𑥑,𑥒𑥓𑥔,𑥕𑥖𑥗\",\"𑥐,𑥐𑥐𑥑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-72016",
+      "expr": "$fromMillis(789,\"[Y𑥐𑥐𑥐𑥑]-[M𑥐𑥑]-[D𑥐𑥑]T[H𑥐𑥑]:[m𑥐𑥑]:[s𑥐𑥑].[f𑥐𑥐𑥑][Z𑥐𑥑:𑥐𑥑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑥑𑥙𑥗𑥐-𑥐𑥑-𑥐𑥑T𑥐𑥕:𑥓𑥐:𑥐𑥐.𑥗𑥘𑥙+𑥐𑥕:𑥓𑥐\""
+    },
+    {
+      "id": "digits-date-parse-72016",
+      "expr": "$toMillis(\"𑥑𑥙𑥗𑥐-𑥐𑥑-𑥐𑥑T𑥐𑥕:𑥓𑥐:𑥐𑥐.𑥗𑥘𑥙+𑥐𑥕:𑥓𑥐\",\"[Y𑥐𑥐𑥐𑥑]-[M𑥐𑥑]-[D𑥐𑥑]T[H𑥐𑥑]:[m𑥐𑥑]:[s𑥐𑥑].[f𑥐𑥐𑥑][Z𑥐𑥑:𑥐𑥑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-72016",
+      "expr": "$formatInteger(21,\"𑥑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑥒𑥑st\""
+    },
+    {
+      "id": "digits-zone-short-72016",
+      "expr": "$fromMillis(0,\"[Z𑥐𑥑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑥐𑥐:𑥓𑥐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-72016",
+      "expr": "$toMillis(\"𑥑𑥙𑥗𑥐-𑥐𑥑-𑥒𑥑st\",\"[Y𑥐𑥐𑥐𑥑]-[M𑥐𑥑]-[D𑥑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-72688",
+      "expr": "$formatInteger(1234567,\"𑯰,𑯰𑯰𑯱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑯱,𑯲𑯳𑯴,𑯵𑯶𑯷\""
+    },
+    {
+      "id": "digits-parse-integer-72688",
+      "expr": "$parseInteger(\"𑯱,𑯲𑯳𑯴,𑯵𑯶𑯷\",\"𑯰,𑯰𑯰𑯱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-72688",
+      "expr": "$fromMillis(789,\"[Y𑯰𑯰𑯰𑯱]-[M𑯰𑯱]-[D𑯰𑯱]T[H𑯰𑯱]:[m𑯰𑯱]:[s𑯰𑯱].[f𑯰𑯰𑯱][Z𑯰𑯱:𑯰𑯱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑯱𑯹𑯷𑯰-𑯰𑯱-𑯰𑯱T𑯰𑯵:𑯳𑯰:𑯰𑯰.𑯷𑯸𑯹+𑯰𑯵:𑯳𑯰\""
+    },
+    {
+      "id": "digits-date-parse-72688",
+      "expr": "$toMillis(\"𑯱𑯹𑯷𑯰-𑯰𑯱-𑯰𑯱T𑯰𑯵:𑯳𑯰:𑯰𑯰.𑯷𑯸𑯹+𑯰𑯵:𑯳𑯰\",\"[Y𑯰𑯰𑯰𑯱]-[M𑯰𑯱]-[D𑯰𑯱]T[H𑯰𑯱]:[m𑯰𑯱]:[s𑯰𑯱].[f𑯰𑯰𑯱][Z𑯰𑯱:𑯰𑯱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-72688",
+      "expr": "$formatInteger(21,\"𑯱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑯲𑯱st\""
+    },
+    {
+      "id": "digits-zone-short-72688",
+      "expr": "$fromMillis(0,\"[Z𑯰𑯱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑯰𑯰:𑯳𑯰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-72688",
+      "expr": "$toMillis(\"𑯱𑯹𑯷𑯰-𑯰𑯱-𑯲𑯱st\",\"[Y𑯰𑯰𑯰𑯱]-[M𑯰𑯱]-[D𑯱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-72784",
+      "expr": "$formatInteger(1234567,\"𑱐,𑱐𑱐𑱑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑱑,𑱒𑱓𑱔,𑱕𑱖𑱗\""
+    },
+    {
+      "id": "digits-parse-integer-72784",
+      "expr": "$parseInteger(\"𑱑,𑱒𑱓𑱔,𑱕𑱖𑱗\",\"𑱐,𑱐𑱐𑱑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-72784",
+      "expr": "$fromMillis(789,\"[Y𑱐𑱐𑱐𑱑]-[M𑱐𑱑]-[D𑱐𑱑]T[H𑱐𑱑]:[m𑱐𑱑]:[s𑱐𑱑].[f𑱐𑱐𑱑][Z𑱐𑱑:𑱐𑱑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑱑𑱙𑱗𑱐-𑱐𑱑-𑱐𑱑T𑱐𑱕:𑱓𑱐:𑱐𑱐.𑱗𑱘𑱙+𑱐𑱕:𑱓𑱐\""
+    },
+    {
+      "id": "digits-date-parse-72784",
+      "expr": "$toMillis(\"𑱑𑱙𑱗𑱐-𑱐𑱑-𑱐𑱑T𑱐𑱕:𑱓𑱐:𑱐𑱐.𑱗𑱘𑱙+𑱐𑱕:𑱓𑱐\",\"[Y𑱐𑱐𑱐𑱑]-[M𑱐𑱑]-[D𑱐𑱑]T[H𑱐𑱑]:[m𑱐𑱑]:[s𑱐𑱑].[f𑱐𑱐𑱑][Z𑱐𑱑:𑱐𑱑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-72784",
+      "expr": "$formatInteger(21,\"𑱑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑱒𑱑st\""
+    },
+    {
+      "id": "digits-zone-short-72784",
+      "expr": "$fromMillis(0,\"[Z𑱐𑱑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑱐𑱐:𑱓𑱐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-72784",
+      "expr": "$toMillis(\"𑱑𑱙𑱗𑱐-𑱐𑱑-𑱒𑱑st\",\"[Y𑱐𑱐𑱐𑱑]-[M𑱐𑱑]-[D𑱑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-73040",
+      "expr": "$formatInteger(1234567,\"𑵐,𑵐𑵐𑵑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑵑,𑵒𑵓𑵔,𑵕𑵖𑵗\""
+    },
+    {
+      "id": "digits-parse-integer-73040",
+      "expr": "$parseInteger(\"𑵑,𑵒𑵓𑵔,𑵕𑵖𑵗\",\"𑵐,𑵐𑵐𑵑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-73040",
+      "expr": "$fromMillis(789,\"[Y𑵐𑵐𑵐𑵑]-[M𑵐𑵑]-[D𑵐𑵑]T[H𑵐𑵑]:[m𑵐𑵑]:[s𑵐𑵑].[f𑵐𑵐𑵑][Z𑵐𑵑:𑵐𑵑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑵑𑵙𑵗𑵐-𑵐𑵑-𑵐𑵑T𑵐𑵕:𑵓𑵐:𑵐𑵐.𑵗𑵘𑵙+𑵐𑵕:𑵓𑵐\""
+    },
+    {
+      "id": "digits-date-parse-73040",
+      "expr": "$toMillis(\"𑵑𑵙𑵗𑵐-𑵐𑵑-𑵐𑵑T𑵐𑵕:𑵓𑵐:𑵐𑵐.𑵗𑵘𑵙+𑵐𑵕:𑵓𑵐\",\"[Y𑵐𑵐𑵐𑵑]-[M𑵐𑵑]-[D𑵐𑵑]T[H𑵐𑵑]:[m𑵐𑵑]:[s𑵐𑵑].[f𑵐𑵐𑵑][Z𑵐𑵑:𑵐𑵑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-73040",
+      "expr": "$formatInteger(21,\"𑵑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑵒𑵑st\""
+    },
+    {
+      "id": "digits-zone-short-73040",
+      "expr": "$fromMillis(0,\"[Z𑵐𑵑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑵐𑵐:𑵓𑵐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-73040",
+      "expr": "$toMillis(\"𑵑𑵙𑵗𑵐-𑵐𑵑-𑵒𑵑st\",\"[Y𑵐𑵐𑵐𑵑]-[M𑵐𑵑]-[D𑵑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-73120",
+      "expr": "$formatInteger(1234567,\"𑶠,𑶠𑶠𑶡\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑶡,𑶢𑶣𑶤,𑶥𑶦𑶧\""
+    },
+    {
+      "id": "digits-parse-integer-73120",
+      "expr": "$parseInteger(\"𑶡,𑶢𑶣𑶤,𑶥𑶦𑶧\",\"𑶠,𑶠𑶠𑶡\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-73120",
+      "expr": "$fromMillis(789,\"[Y𑶠𑶠𑶠𑶡]-[M𑶠𑶡]-[D𑶠𑶡]T[H𑶠𑶡]:[m𑶠𑶡]:[s𑶠𑶡].[f𑶠𑶠𑶡][Z𑶠𑶡:𑶠𑶡]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑶡𑶩𑶧𑶠-𑶠𑶡-𑶠𑶡T𑶠𑶥:𑶣𑶠:𑶠𑶠.𑶧𑶨𑶩+𑶠𑶥:𑶣𑶠\""
+    },
+    {
+      "id": "digits-date-parse-73120",
+      "expr": "$toMillis(\"𑶡𑶩𑶧𑶠-𑶠𑶡-𑶠𑶡T𑶠𑶥:𑶣𑶠:𑶠𑶠.𑶧𑶨𑶩+𑶠𑶥:𑶣𑶠\",\"[Y𑶠𑶠𑶠𑶡]-[M𑶠𑶡]-[D𑶠𑶡]T[H𑶠𑶡]:[m𑶠𑶡]:[s𑶠𑶡].[f𑶠𑶠𑶡][Z𑶠𑶡:𑶠𑶡]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-73120",
+      "expr": "$formatInteger(21,\"𑶡;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑶢𑶡st\""
+    },
+    {
+      "id": "digits-zone-short-73120",
+      "expr": "$fromMillis(0,\"[Z𑶠𑶡]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑶠𑶠:𑶣𑶠\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-73120",
+      "expr": "$toMillis(\"𑶡𑶩𑶧𑶠-𑶠𑶡-𑶢𑶡st\",\"[Y𑶠𑶠𑶠𑶡]-[M𑶠𑶡]-[D𑶡o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-73552",
+      "expr": "$formatInteger(1234567,\"𑽐,𑽐𑽐𑽑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑽑,𑽒𑽓𑽔,𑽕𑽖𑽗\""
+    },
+    {
+      "id": "digits-parse-integer-73552",
+      "expr": "$parseInteger(\"𑽑,𑽒𑽓𑽔,𑽕𑽖𑽗\",\"𑽐,𑽐𑽐𑽑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-73552",
+      "expr": "$fromMillis(789,\"[Y𑽐𑽐𑽐𑽑]-[M𑽐𑽑]-[D𑽐𑽑]T[H𑽐𑽑]:[m𑽐𑽑]:[s𑽐𑽑].[f𑽐𑽐𑽑][Z𑽐𑽑:𑽐𑽑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑽑𑽙𑽗𑽐-𑽐𑽑-𑽐𑽑T𑽐𑽕:𑽓𑽐:𑽐𑽐.𑽗𑽘𑽙+𑽐𑽕:𑽓𑽐\""
+    },
+    {
+      "id": "digits-date-parse-73552",
+      "expr": "$toMillis(\"𑽑𑽙𑽗𑽐-𑽐𑽑-𑽐𑽑T𑽐𑽕:𑽓𑽐:𑽐𑽐.𑽗𑽘𑽙+𑽐𑽕:𑽓𑽐\",\"[Y𑽐𑽐𑽐𑽑]-[M𑽐𑽑]-[D𑽐𑽑]T[H𑽐𑽑]:[m𑽐𑽑]:[s𑽐𑽑].[f𑽐𑽐𑽑][Z𑽐𑽑:𑽐𑽑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-73552",
+      "expr": "$formatInteger(21,\"𑽑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𑽒𑽑st\""
+    },
+    {
+      "id": "digits-zone-short-73552",
+      "expr": "$fromMillis(0,\"[Z𑽐𑽑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𑽐𑽐:𑽓𑽐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-73552",
+      "expr": "$toMillis(\"𑽑𑽙𑽗𑽐-𑽐𑽑-𑽒𑽑st\",\"[Y𑽐𑽐𑽐𑽑]-[M𑽐𑽑]-[D𑽑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-90416",
+      "expr": "$formatInteger(1234567,\"𖄰,𖄰𖄰𖄱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖄱,𖄲𖄳𖄴,𖄵𖄶𖄷\""
+    },
+    {
+      "id": "digits-parse-integer-90416",
+      "expr": "$parseInteger(\"𖄱,𖄲𖄳𖄴,𖄵𖄶𖄷\",\"𖄰,𖄰𖄰𖄱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-90416",
+      "expr": "$fromMillis(789,\"[Y𖄰𖄰𖄰𖄱]-[M𖄰𖄱]-[D𖄰𖄱]T[H𖄰𖄱]:[m𖄰𖄱]:[s𖄰𖄱].[f𖄰𖄰𖄱][Z𖄰𖄱:𖄰𖄱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖄱𖄹𖄷𖄰-𖄰𖄱-𖄰𖄱T𖄰𖄵:𖄳𖄰:𖄰𖄰.𖄷𖄸𖄹+𖄰𖄵:𖄳𖄰\""
+    },
+    {
+      "id": "digits-date-parse-90416",
+      "expr": "$toMillis(\"𖄱𖄹𖄷𖄰-𖄰𖄱-𖄰𖄱T𖄰𖄵:𖄳𖄰:𖄰𖄰.𖄷𖄸𖄹+𖄰𖄵:𖄳𖄰\",\"[Y𖄰𖄰𖄰𖄱]-[M𖄰𖄱]-[D𖄰𖄱]T[H𖄰𖄱]:[m𖄰𖄱]:[s𖄰𖄱].[f𖄰𖄰𖄱][Z𖄰𖄱:𖄰𖄱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-90416",
+      "expr": "$formatInteger(21,\"𖄱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖄲𖄱st\""
+    },
+    {
+      "id": "digits-zone-short-90416",
+      "expr": "$fromMillis(0,\"[Z𖄰𖄱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𖄰𖄰:𖄳𖄰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-90416",
+      "expr": "$toMillis(\"𖄱𖄹𖄷𖄰-𖄰𖄱-𖄲𖄱st\",\"[Y𖄰𖄰𖄰𖄱]-[M𖄰𖄱]-[D𖄱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-92768",
+      "expr": "$formatInteger(1234567,\"𖩠,𖩠𖩠𖩡\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖩡,𖩢𖩣𖩤,𖩥𖩦𖩧\""
+    },
+    {
+      "id": "digits-parse-integer-92768",
+      "expr": "$parseInteger(\"𖩡,𖩢𖩣𖩤,𖩥𖩦𖩧\",\"𖩠,𖩠𖩠𖩡\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-92768",
+      "expr": "$fromMillis(789,\"[Y𖩠𖩠𖩠𖩡]-[M𖩠𖩡]-[D𖩠𖩡]T[H𖩠𖩡]:[m𖩠𖩡]:[s𖩠𖩡].[f𖩠𖩠𖩡][Z𖩠𖩡:𖩠𖩡]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖩡𖩩𖩧𖩠-𖩠𖩡-𖩠𖩡T𖩠𖩥:𖩣𖩠:𖩠𖩠.𖩧𖩨𖩩+𖩠𖩥:𖩣𖩠\""
+    },
+    {
+      "id": "digits-date-parse-92768",
+      "expr": "$toMillis(\"𖩡𖩩𖩧𖩠-𖩠𖩡-𖩠𖩡T𖩠𖩥:𖩣𖩠:𖩠𖩠.𖩧𖩨𖩩+𖩠𖩥:𖩣𖩠\",\"[Y𖩠𖩠𖩠𖩡]-[M𖩠𖩡]-[D𖩠𖩡]T[H𖩠𖩡]:[m𖩠𖩡]:[s𖩠𖩡].[f𖩠𖩠𖩡][Z𖩠𖩡:𖩠𖩡]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-92768",
+      "expr": "$formatInteger(21,\"𖩡;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖩢𖩡st\""
+    },
+    {
+      "id": "digits-zone-short-92768",
+      "expr": "$fromMillis(0,\"[Z𖩠𖩡]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𖩠𖩠:𖩣𖩠\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-92768",
+      "expr": "$toMillis(\"𖩡𖩩𖩧𖩠-𖩠𖩡-𖩢𖩡st\",\"[Y𖩠𖩠𖩠𖩡]-[M𖩠𖩡]-[D𖩡o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-92864",
+      "expr": "$formatInteger(1234567,\"𖫀,𖫀𖫀𖫁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖫁,𖫂𖫃𖫄,𖫅𖫆𖫇\""
+    },
+    {
+      "id": "digits-parse-integer-92864",
+      "expr": "$parseInteger(\"𖫁,𖫂𖫃𖫄,𖫅𖫆𖫇\",\"𖫀,𖫀𖫀𖫁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-92864",
+      "expr": "$fromMillis(789,\"[Y𖫀𖫀𖫀𖫁]-[M𖫀𖫁]-[D𖫀𖫁]T[H𖫀𖫁]:[m𖫀𖫁]:[s𖫀𖫁].[f𖫀𖫀𖫁][Z𖫀𖫁:𖫀𖫁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖫁𖫉𖫇𖫀-𖫀𖫁-𖫀𖫁T𖫀𖫅:𖫃𖫀:𖫀𖫀.𖫇𖫈𖫉+𖫀𖫅:𖫃𖫀\""
+    },
+    {
+      "id": "digits-date-parse-92864",
+      "expr": "$toMillis(\"𖫁𖫉𖫇𖫀-𖫀𖫁-𖫀𖫁T𖫀𖫅:𖫃𖫀:𖫀𖫀.𖫇𖫈𖫉+𖫀𖫅:𖫃𖫀\",\"[Y𖫀𖫀𖫀𖫁]-[M𖫀𖫁]-[D𖫀𖫁]T[H𖫀𖫁]:[m𖫀𖫁]:[s𖫀𖫁].[f𖫀𖫀𖫁][Z𖫀𖫁:𖫀𖫁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-92864",
+      "expr": "$formatInteger(21,\"𖫁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖫂𖫁st\""
+    },
+    {
+      "id": "digits-zone-short-92864",
+      "expr": "$fromMillis(0,\"[Z𖫀𖫁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𖫀𖫀:𖫃𖫀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-92864",
+      "expr": "$toMillis(\"𖫁𖫉𖫇𖫀-𖫀𖫁-𖫂𖫁st\",\"[Y𖫀𖫀𖫀𖫁]-[M𖫀𖫁]-[D𖫁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-93008",
+      "expr": "$formatInteger(1234567,\"𖭐,𖭐𖭐𖭑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖭑,𖭒𖭓𖭔,𖭕𖭖𖭗\""
+    },
+    {
+      "id": "digits-parse-integer-93008",
+      "expr": "$parseInteger(\"𖭑,𖭒𖭓𖭔,𖭕𖭖𖭗\",\"𖭐,𖭐𖭐𖭑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-93008",
+      "expr": "$fromMillis(789,\"[Y𖭐𖭐𖭐𖭑]-[M𖭐𖭑]-[D𖭐𖭑]T[H𖭐𖭑]:[m𖭐𖭑]:[s𖭐𖭑].[f𖭐𖭐𖭑][Z𖭐𖭑:𖭐𖭑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖭑𖭙𖭗𖭐-𖭐𖭑-𖭐𖭑T𖭐𖭕:𖭓𖭐:𖭐𖭐.𖭗𖭘𖭙+𖭐𖭕:𖭓𖭐\""
+    },
+    {
+      "id": "digits-date-parse-93008",
+      "expr": "$toMillis(\"𖭑𖭙𖭗𖭐-𖭐𖭑-𖭐𖭑T𖭐𖭕:𖭓𖭐:𖭐𖭐.𖭗𖭘𖭙+𖭐𖭕:𖭓𖭐\",\"[Y𖭐𖭐𖭐𖭑]-[M𖭐𖭑]-[D𖭐𖭑]T[H𖭐𖭑]:[m𖭐𖭑]:[s𖭐𖭑].[f𖭐𖭐𖭑][Z𖭐𖭑:𖭐𖭑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-93008",
+      "expr": "$formatInteger(21,\"𖭑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖭒𖭑st\""
+    },
+    {
+      "id": "digits-zone-short-93008",
+      "expr": "$fromMillis(0,\"[Z𖭐𖭑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𖭐𖭐:𖭓𖭐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-93008",
+      "expr": "$toMillis(\"𖭑𖭙𖭗𖭐-𖭐𖭑-𖭒𖭑st\",\"[Y𖭐𖭐𖭐𖭑]-[M𖭐𖭑]-[D𖭑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-93552",
+      "expr": "$formatInteger(1234567,\"𖵰,𖵰𖵰𖵱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖵱,𖵲𖵳𖵴,𖵵𖵶𖵷\""
+    },
+    {
+      "id": "digits-parse-integer-93552",
+      "expr": "$parseInteger(\"𖵱,𖵲𖵳𖵴,𖵵𖵶𖵷\",\"𖵰,𖵰𖵰𖵱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-93552",
+      "expr": "$fromMillis(789,\"[Y𖵰𖵰𖵰𖵱]-[M𖵰𖵱]-[D𖵰𖵱]T[H𖵰𖵱]:[m𖵰𖵱]:[s𖵰𖵱].[f𖵰𖵰𖵱][Z𖵰𖵱:𖵰𖵱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖵱𖵹𖵷𖵰-𖵰𖵱-𖵰𖵱T𖵰𖵵:𖵳𖵰:𖵰𖵰.𖵷𖵸𖵹+𖵰𖵵:𖵳𖵰\""
+    },
+    {
+      "id": "digits-date-parse-93552",
+      "expr": "$toMillis(\"𖵱𖵹𖵷𖵰-𖵰𖵱-𖵰𖵱T𖵰𖵵:𖵳𖵰:𖵰𖵰.𖵷𖵸𖵹+𖵰𖵵:𖵳𖵰\",\"[Y𖵰𖵰𖵰𖵱]-[M𖵰𖵱]-[D𖵰𖵱]T[H𖵰𖵱]:[m𖵰𖵱]:[s𖵰𖵱].[f𖵰𖵰𖵱][Z𖵰𖵱:𖵰𖵱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-93552",
+      "expr": "$formatInteger(21,\"𖵱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𖵲𖵱st\""
+    },
+    {
+      "id": "digits-zone-short-93552",
+      "expr": "$fromMillis(0,\"[Z𖵰𖵱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𖵰𖵰:𖵳𖵰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-93552",
+      "expr": "$toMillis(\"𖵱𖵹𖵷𖵰-𖵰𖵱-𖵲𖵱st\",\"[Y𖵰𖵰𖵰𖵱]-[M𖵰𖵱]-[D𖵱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-118000",
+      "expr": "$formatInteger(1234567,\"𜳰,𜳰𜳰𜳱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𜳱,𜳲𜳳𜳴,𜳵𜳶𜳷\""
+    },
+    {
+      "id": "digits-parse-integer-118000",
+      "expr": "$parseInteger(\"𜳱,𜳲𜳳𜳴,𜳵𜳶𜳷\",\"𜳰,𜳰𜳰𜳱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-118000",
+      "expr": "$fromMillis(789,\"[Y𜳰𜳰𜳰𜳱]-[M𜳰𜳱]-[D𜳰𜳱]T[H𜳰𜳱]:[m𜳰𜳱]:[s𜳰𜳱].[f𜳰𜳰𜳱][Z𜳰𜳱:𜳰𜳱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𜳱𜳹𜳷𜳰-𜳰𜳱-𜳰𜳱T𜳰𜳵:𜳳𜳰:𜳰𜳰.𜳷𜳸𜳹+𜳰𜳵:𜳳𜳰\""
+    },
+    {
+      "id": "digits-date-parse-118000",
+      "expr": "$toMillis(\"𜳱𜳹𜳷𜳰-𜳰𜳱-𜳰𜳱T𜳰𜳵:𜳳𜳰:𜳰𜳰.𜳷𜳸𜳹+𜳰𜳵:𜳳𜳰\",\"[Y𜳰𜳰𜳰𜳱]-[M𜳰𜳱]-[D𜳰𜳱]T[H𜳰𜳱]:[m𜳰𜳱]:[s𜳰𜳱].[f𜳰𜳰𜳱][Z𜳰𜳱:𜳰𜳱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-118000",
+      "expr": "$formatInteger(21,\"𜳱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𜳲𜳱st\""
+    },
+    {
+      "id": "digits-zone-short-118000",
+      "expr": "$fromMillis(0,\"[Z𜳰𜳱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𜳰𜳰:𜳳𜳰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-118000",
+      "expr": "$toMillis(\"𜳱𜳹𜳷𜳰-𜳰𜳱-𜳲𜳱st\",\"[Y𜳰𜳰𜳰𜳱]-[M𜳰𜳱]-[D𜳱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-120782",
+      "expr": "$formatInteger(1234567,\"𝟎,𝟎𝟎𝟏\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟏,𝟐𝟑𝟒,𝟓𝟔𝟕\""
+    },
+    {
+      "id": "digits-parse-integer-120782",
+      "expr": "$parseInteger(\"𝟏,𝟐𝟑𝟒,𝟓𝟔𝟕\",\"𝟎,𝟎𝟎𝟏\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-120782",
+      "expr": "$fromMillis(789,\"[Y𝟎𝟎𝟎𝟏]-[M𝟎𝟏]-[D𝟎𝟏]T[H𝟎𝟏]:[m𝟎𝟏]:[s𝟎𝟏].[f𝟎𝟎𝟏][Z𝟎𝟏:𝟎𝟏]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟏𝟗𝟕𝟎-𝟎𝟏-𝟎𝟏T𝟎𝟓:𝟑𝟎:𝟎𝟎.𝟕𝟖𝟗+𝟎𝟓:𝟑𝟎\""
+    },
+    {
+      "id": "digits-date-parse-120782",
+      "expr": "$toMillis(\"𝟏𝟗𝟕𝟎-𝟎𝟏-𝟎𝟏T𝟎𝟓:𝟑𝟎:𝟎𝟎.𝟕𝟖𝟗+𝟎𝟓:𝟑𝟎\",\"[Y𝟎𝟎𝟎𝟏]-[M𝟎𝟏]-[D𝟎𝟏]T[H𝟎𝟏]:[m𝟎𝟏]:[s𝟎𝟏].[f𝟎𝟎𝟏][Z𝟎𝟏:𝟎𝟏]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-120782",
+      "expr": "$formatInteger(21,\"𝟏;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟐𝟏st\""
+    },
+    {
+      "id": "digits-zone-short-120782",
+      "expr": "$fromMillis(0,\"[Z𝟎𝟏]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𝟎𝟎:𝟑𝟎\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-120782",
+      "expr": "$toMillis(\"𝟏𝟗𝟕𝟎-𝟎𝟏-𝟐𝟏st\",\"[Y𝟎𝟎𝟎𝟏]-[M𝟎𝟏]-[D𝟏o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-120792",
+      "expr": "$formatInteger(1234567,\"𝟘,𝟘𝟘𝟙\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟙,𝟚𝟛𝟜,𝟝𝟞𝟟\""
+    },
+    {
+      "id": "digits-parse-integer-120792",
+      "expr": "$parseInteger(\"𝟙,𝟚𝟛𝟜,𝟝𝟞𝟟\",\"𝟘,𝟘𝟘𝟙\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-120792",
+      "expr": "$fromMillis(789,\"[Y𝟘𝟘𝟘𝟙]-[M𝟘𝟙]-[D𝟘𝟙]T[H𝟘𝟙]:[m𝟘𝟙]:[s𝟘𝟙].[f𝟘𝟘𝟙][Z𝟘𝟙:𝟘𝟙]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟙𝟡𝟟𝟘-𝟘𝟙-𝟘𝟙T𝟘𝟝:𝟛𝟘:𝟘𝟘.𝟟𝟠𝟡+𝟘𝟝:𝟛𝟘\""
+    },
+    {
+      "id": "digits-date-parse-120792",
+      "expr": "$toMillis(\"𝟙𝟡𝟟𝟘-𝟘𝟙-𝟘𝟙T𝟘𝟝:𝟛𝟘:𝟘𝟘.𝟟𝟠𝟡+𝟘𝟝:𝟛𝟘\",\"[Y𝟘𝟘𝟘𝟙]-[M𝟘𝟙]-[D𝟘𝟙]T[H𝟘𝟙]:[m𝟘𝟙]:[s𝟘𝟙].[f𝟘𝟘𝟙][Z𝟘𝟙:𝟘𝟙]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-120792",
+      "expr": "$formatInteger(21,\"𝟙;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟚𝟙st\""
+    },
+    {
+      "id": "digits-zone-short-120792",
+      "expr": "$fromMillis(0,\"[Z𝟘𝟙]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𝟘𝟘:𝟛𝟘\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-120792",
+      "expr": "$toMillis(\"𝟙𝟡𝟟𝟘-𝟘𝟙-𝟚𝟙st\",\"[Y𝟘𝟘𝟘𝟙]-[M𝟘𝟙]-[D𝟙o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-120802",
+      "expr": "$formatInteger(1234567,\"𝟢,𝟢𝟢𝟣\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟣,𝟤𝟥𝟦,𝟧𝟨𝟩\""
+    },
+    {
+      "id": "digits-parse-integer-120802",
+      "expr": "$parseInteger(\"𝟣,𝟤𝟥𝟦,𝟧𝟨𝟩\",\"𝟢,𝟢𝟢𝟣\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-120802",
+      "expr": "$fromMillis(789,\"[Y𝟢𝟢𝟢𝟣]-[M𝟢𝟣]-[D𝟢𝟣]T[H𝟢𝟣]:[m𝟢𝟣]:[s𝟢𝟣].[f𝟢𝟢𝟣][Z𝟢𝟣:𝟢𝟣]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟣𝟫𝟩𝟢-𝟢𝟣-𝟢𝟣T𝟢𝟧:𝟥𝟢:𝟢𝟢.𝟩𝟪𝟫+𝟢𝟧:𝟥𝟢\""
+    },
+    {
+      "id": "digits-date-parse-120802",
+      "expr": "$toMillis(\"𝟣𝟫𝟩𝟢-𝟢𝟣-𝟢𝟣T𝟢𝟧:𝟥𝟢:𝟢𝟢.𝟩𝟪𝟫+𝟢𝟧:𝟥𝟢\",\"[Y𝟢𝟢𝟢𝟣]-[M𝟢𝟣]-[D𝟢𝟣]T[H𝟢𝟣]:[m𝟢𝟣]:[s𝟢𝟣].[f𝟢𝟢𝟣][Z𝟢𝟣:𝟢𝟣]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-120802",
+      "expr": "$formatInteger(21,\"𝟣;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟤𝟣st\""
+    },
+    {
+      "id": "digits-zone-short-120802",
+      "expr": "$fromMillis(0,\"[Z𝟢𝟣]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𝟢𝟢:𝟥𝟢\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-120802",
+      "expr": "$toMillis(\"𝟣𝟫𝟩𝟢-𝟢𝟣-𝟤𝟣st\",\"[Y𝟢𝟢𝟢𝟣]-[M𝟢𝟣]-[D𝟣o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-120812",
+      "expr": "$formatInteger(1234567,\"𝟬,𝟬𝟬𝟭\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟭,𝟮𝟯𝟰,𝟱𝟲𝟳\""
+    },
+    {
+      "id": "digits-parse-integer-120812",
+      "expr": "$parseInteger(\"𝟭,𝟮𝟯𝟰,𝟱𝟲𝟳\",\"𝟬,𝟬𝟬𝟭\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-120812",
+      "expr": "$fromMillis(789,\"[Y𝟬𝟬𝟬𝟭]-[M𝟬𝟭]-[D𝟬𝟭]T[H𝟬𝟭]:[m𝟬𝟭]:[s𝟬𝟭].[f𝟬𝟬𝟭][Z𝟬𝟭:𝟬𝟭]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟭𝟵𝟳𝟬-𝟬𝟭-𝟬𝟭T𝟬𝟱:𝟯𝟬:𝟬𝟬.𝟳𝟴𝟵+𝟬𝟱:𝟯𝟬\""
+    },
+    {
+      "id": "digits-date-parse-120812",
+      "expr": "$toMillis(\"𝟭𝟵𝟳𝟬-𝟬𝟭-𝟬𝟭T𝟬𝟱:𝟯𝟬:𝟬𝟬.𝟳𝟴𝟵+𝟬𝟱:𝟯𝟬\",\"[Y𝟬𝟬𝟬𝟭]-[M𝟬𝟭]-[D𝟬𝟭]T[H𝟬𝟭]:[m𝟬𝟭]:[s𝟬𝟭].[f𝟬𝟬𝟭][Z𝟬𝟭:𝟬𝟭]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-120812",
+      "expr": "$formatInteger(21,\"𝟭;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟮𝟭st\""
+    },
+    {
+      "id": "digits-zone-short-120812",
+      "expr": "$fromMillis(0,\"[Z𝟬𝟭]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𝟬𝟬:𝟯𝟬\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-120812",
+      "expr": "$toMillis(\"𝟭𝟵𝟳𝟬-𝟬𝟭-𝟮𝟭st\",\"[Y𝟬𝟬𝟬𝟭]-[M𝟬𝟭]-[D𝟭o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-120822",
+      "expr": "$formatInteger(1234567,\"𝟶,𝟶𝟶𝟷\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟷,𝟸𝟹𝟺,𝟻𝟼𝟽\""
+    },
+    {
+      "id": "digits-parse-integer-120822",
+      "expr": "$parseInteger(\"𝟷,𝟸𝟹𝟺,𝟻𝟼𝟽\",\"𝟶,𝟶𝟶𝟷\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-120822",
+      "expr": "$fromMillis(789,\"[Y𝟶𝟶𝟶𝟷]-[M𝟶𝟷]-[D𝟶𝟷]T[H𝟶𝟷]:[m𝟶𝟷]:[s𝟶𝟷].[f𝟶𝟶𝟷][Z𝟶𝟷:𝟶𝟷]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟷𝟿𝟽𝟶-𝟶𝟷-𝟶𝟷T𝟶𝟻:𝟹𝟶:𝟶𝟶.𝟽𝟾𝟿+𝟶𝟻:𝟹𝟶\""
+    },
+    {
+      "id": "digits-date-parse-120822",
+      "expr": "$toMillis(\"𝟷𝟿𝟽𝟶-𝟶𝟷-𝟶𝟷T𝟶𝟻:𝟹𝟶:𝟶𝟶.𝟽𝟾𝟿+𝟶𝟻:𝟹𝟶\",\"[Y𝟶𝟶𝟶𝟷]-[M𝟶𝟷]-[D𝟶𝟷]T[H𝟶𝟷]:[m𝟶𝟷]:[s𝟶𝟷].[f𝟶𝟶𝟷][Z𝟶𝟷:𝟶𝟷]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-120822",
+      "expr": "$formatInteger(21,\"𝟷;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𝟸𝟷st\""
+    },
+    {
+      "id": "digits-zone-short-120822",
+      "expr": "$fromMillis(0,\"[Z𝟶𝟷]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𝟶𝟶:𝟹𝟶\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-120822",
+      "expr": "$toMillis(\"𝟷𝟿𝟽𝟶-𝟶𝟷-𝟸𝟷st\",\"[Y𝟶𝟶𝟶𝟷]-[M𝟶𝟷]-[D𝟷o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-123200",
+      "expr": "$formatInteger(1234567,\"𞅀,𞅀𞅀𞅁\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞅁,𞅂𞅃𞅄,𞅅𞅆𞅇\""
+    },
+    {
+      "id": "digits-parse-integer-123200",
+      "expr": "$parseInteger(\"𞅁,𞅂𞅃𞅄,𞅅𞅆𞅇\",\"𞅀,𞅀𞅀𞅁\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-123200",
+      "expr": "$fromMillis(789,\"[Y𞅀𞅀𞅀𞅁]-[M𞅀𞅁]-[D𞅀𞅁]T[H𞅀𞅁]:[m𞅀𞅁]:[s𞅀𞅁].[f𞅀𞅀𞅁][Z𞅀𞅁:𞅀𞅁]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞅁𞅉𞅇𞅀-𞅀𞅁-𞅀𞅁T𞅀𞅅:𞅃𞅀:𞅀𞅀.𞅇𞅈𞅉+𞅀𞅅:𞅃𞅀\""
+    },
+    {
+      "id": "digits-date-parse-123200",
+      "expr": "$toMillis(\"𞅁𞅉𞅇𞅀-𞅀𞅁-𞅀𞅁T𞅀𞅅:𞅃𞅀:𞅀𞅀.𞅇𞅈𞅉+𞅀𞅅:𞅃𞅀\",\"[Y𞅀𞅀𞅀𞅁]-[M𞅀𞅁]-[D𞅀𞅁]T[H𞅀𞅁]:[m𞅀𞅁]:[s𞅀𞅁].[f𞅀𞅀𞅁][Z𞅀𞅁:𞅀𞅁]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-123200",
+      "expr": "$formatInteger(21,\"𞅁;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞅂𞅁st\""
+    },
+    {
+      "id": "digits-zone-short-123200",
+      "expr": "$fromMillis(0,\"[Z𞅀𞅁]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𞅀𞅀:𞅃𞅀\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-123200",
+      "expr": "$toMillis(\"𞅁𞅉𞅇𞅀-𞅀𞅁-𞅂𞅁st\",\"[Y𞅀𞅀𞅀𞅁]-[M𞅀𞅁]-[D𞅁o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-123632",
+      "expr": "$formatInteger(1234567,\"𞋰,𞋰𞋰𞋱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞋱,𞋲𞋳𞋴,𞋵𞋶𞋷\""
+    },
+    {
+      "id": "digits-parse-integer-123632",
+      "expr": "$parseInteger(\"𞋱,𞋲𞋳𞋴,𞋵𞋶𞋷\",\"𞋰,𞋰𞋰𞋱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-123632",
+      "expr": "$fromMillis(789,\"[Y𞋰𞋰𞋰𞋱]-[M𞋰𞋱]-[D𞋰𞋱]T[H𞋰𞋱]:[m𞋰𞋱]:[s𞋰𞋱].[f𞋰𞋰𞋱][Z𞋰𞋱:𞋰𞋱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞋱𞋹𞋷𞋰-𞋰𞋱-𞋰𞋱T𞋰𞋵:𞋳𞋰:𞋰𞋰.𞋷𞋸𞋹+𞋰𞋵:𞋳𞋰\""
+    },
+    {
+      "id": "digits-date-parse-123632",
+      "expr": "$toMillis(\"𞋱𞋹𞋷𞋰-𞋰𞋱-𞋰𞋱T𞋰𞋵:𞋳𞋰:𞋰𞋰.𞋷𞋸𞋹+𞋰𞋵:𞋳𞋰\",\"[Y𞋰𞋰𞋰𞋱]-[M𞋰𞋱]-[D𞋰𞋱]T[H𞋰𞋱]:[m𞋰𞋱]:[s𞋰𞋱].[f𞋰𞋰𞋱][Z𞋰𞋱:𞋰𞋱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-123632",
+      "expr": "$formatInteger(21,\"𞋱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞋲𞋱st\""
+    },
+    {
+      "id": "digits-zone-short-123632",
+      "expr": "$fromMillis(0,\"[Z𞋰𞋱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𞋰𞋰:𞋳𞋰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-123632",
+      "expr": "$toMillis(\"𞋱𞋹𞋷𞋰-𞋰𞋱-𞋲𞋱st\",\"[Y𞋰𞋰𞋰𞋱]-[M𞋰𞋱]-[D𞋱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-124144",
+      "expr": "$formatInteger(1234567,\"𞓰,𞓰𞓰𞓱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞓱,𞓲𞓳𞓴,𞓵𞓶𞓷\""
+    },
+    {
+      "id": "digits-parse-integer-124144",
+      "expr": "$parseInteger(\"𞓱,𞓲𞓳𞓴,𞓵𞓶𞓷\",\"𞓰,𞓰𞓰𞓱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-124144",
+      "expr": "$fromMillis(789,\"[Y𞓰𞓰𞓰𞓱]-[M𞓰𞓱]-[D𞓰𞓱]T[H𞓰𞓱]:[m𞓰𞓱]:[s𞓰𞓱].[f𞓰𞓰𞓱][Z𞓰𞓱:𞓰𞓱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞓱𞓹𞓷𞓰-𞓰𞓱-𞓰𞓱T𞓰𞓵:𞓳𞓰:𞓰𞓰.𞓷𞓸𞓹+𞓰𞓵:𞓳𞓰\""
+    },
+    {
+      "id": "digits-date-parse-124144",
+      "expr": "$toMillis(\"𞓱𞓹𞓷𞓰-𞓰𞓱-𞓰𞓱T𞓰𞓵:𞓳𞓰:𞓰𞓰.𞓷𞓸𞓹+𞓰𞓵:𞓳𞓰\",\"[Y𞓰𞓰𞓰𞓱]-[M𞓰𞓱]-[D𞓰𞓱]T[H𞓰𞓱]:[m𞓰𞓱]:[s𞓰𞓱].[f𞓰𞓰𞓱][Z𞓰𞓱:𞓰𞓱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-124144",
+      "expr": "$formatInteger(21,\"𞓱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞓲𞓱st\""
+    },
+    {
+      "id": "digits-zone-short-124144",
+      "expr": "$fromMillis(0,\"[Z𞓰𞓱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𞓰𞓰:𞓳𞓰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-124144",
+      "expr": "$toMillis(\"𞓱𞓹𞓷𞓰-𞓰𞓱-𞓲𞓱st\",\"[Y𞓰𞓰𞓰𞓱]-[M𞓰𞓱]-[D𞓱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-124401",
+      "expr": "$formatInteger(1234567,\"𞗱,𞗱𞗱𞗲\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞗲,𞗳𞗴𞗵,𞗶𞗷𞗸\""
+    },
+    {
+      "id": "digits-parse-integer-124401",
+      "expr": "$parseInteger(\"𞗲,𞗳𞗴𞗵,𞗶𞗷𞗸\",\"𞗱,𞗱𞗱𞗲\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-124401",
+      "expr": "$fromMillis(789,\"[Y𞗱𞗱𞗱𞗲]-[M𞗱𞗲]-[D𞗱𞗲]T[H𞗱𞗲]:[m𞗱𞗲]:[s𞗱𞗲].[f𞗱𞗱𞗲][Z𞗱𞗲:𞗱𞗲]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞗲𞗺𞗸𞗱-𞗱𞗲-𞗱𞗲T𞗱𞗶:𞗴𞗱:𞗱𞗱.𞗸𞗹𞗺+𞗱𞗶:𞗴𞗱\""
+    },
+    {
+      "id": "digits-date-parse-124401",
+      "expr": "$toMillis(\"𞗲𞗺𞗸𞗱-𞗱𞗲-𞗱𞗲T𞗱𞗶:𞗴𞗱:𞗱𞗱.𞗸𞗹𞗺+𞗱𞗶:𞗴𞗱\",\"[Y𞗱𞗱𞗱𞗲]-[M𞗱𞗲]-[D𞗱𞗲]T[H𞗱𞗲]:[m𞗱𞗲]:[s𞗱𞗲].[f𞗱𞗱𞗲][Z𞗱𞗲:𞗱𞗲]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-124401",
+      "expr": "$formatInteger(21,\"𞗲;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞗳𞗲st\""
+    },
+    {
+      "id": "digits-zone-short-124401",
+      "expr": "$fromMillis(0,\"[Z𞗱𞗲]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𞗱𞗱:𞗴𞗱\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-124401",
+      "expr": "$toMillis(\"𞗲𞗺𞗸𞗱-𞗱𞗲-𞗳𞗲st\",\"[Y𞗱𞗱𞗱𞗲]-[M𞗱𞗲]-[D𞗲o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-125264",
+      "expr": "$formatInteger(1234567,\"𞥐,𞥐𞥐𞥑\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞥑,𞥒𞥓𞥔,𞥕𞥖𞥗\""
+    },
+    {
+      "id": "digits-parse-integer-125264",
+      "expr": "$parseInteger(\"𞥑,𞥒𞥓𞥔,𞥕𞥖𞥗\",\"𞥐,𞥐𞥐𞥑\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-125264",
+      "expr": "$fromMillis(789,\"[Y𞥐𞥐𞥐𞥑]-[M𞥐𞥑]-[D𞥐𞥑]T[H𞥐𞥑]:[m𞥐𞥑]:[s𞥐𞥑].[f𞥐𞥐𞥑][Z𞥐𞥑:𞥐𞥑]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞥑𞥙𞥗𞥐-𞥐𞥑-𞥐𞥑T𞥐𞥕:𞥓𞥐:𞥐𞥐.𞥗𞥘𞥙+𞥐𞥕:𞥓𞥐\""
+    },
+    {
+      "id": "digits-date-parse-125264",
+      "expr": "$toMillis(\"𞥑𞥙𞥗𞥐-𞥐𞥑-𞥐𞥑T𞥐𞥕:𞥓𞥐:𞥐𞥐.𞥗𞥘𞥙+𞥐𞥕:𞥓𞥐\",\"[Y𞥐𞥐𞥐𞥑]-[M𞥐𞥑]-[D𞥐𞥑]T[H𞥐𞥑]:[m𞥐𞥑]:[s𞥐𞥑].[f𞥐𞥐𞥑][Z𞥐𞥑:𞥐𞥑]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-125264",
+      "expr": "$formatInteger(21,\"𞥑;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"𞥒𞥑st\""
+    },
+    {
+      "id": "digits-zone-short-125264",
+      "expr": "$fromMillis(0,\"[Z𞥐𞥑]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-𞥐𞥐:𞥓𞥐\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-125264",
+      "expr": "$toMillis(\"𞥑𞥙𞥗𞥐-𞥐𞥑-𞥒𞥑st\",\"[Y𞥐𞥐𞥐𞥑]-[M𞥐𞥑]-[D𞥑o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    },
+    {
+      "id": "digits-integer-130032",
+      "expr": "$formatInteger(1234567,\"🯰,🯰🯰🯱\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"🯱,🯲🯳🯴,🯵🯶🯷\""
+    },
+    {
+      "id": "digits-parse-integer-130032",
+      "expr": "$parseInteger(\"🯱,🯲🯳🯴,🯵🯶🯷\",\"🯰,🯰🯰🯱\")",
+      "inputJSON": "{}",
+      "resultJSON": "1234567"
+    },
+    {
+      "id": "digits-date-format-130032",
+      "expr": "$fromMillis(789,\"[Y🯰🯰🯰🯱]-[M🯰🯱]-[D🯰🯱]T[H🯰🯱]:[m🯰🯱]:[s🯰🯱].[f🯰🯰🯱][Z🯰🯱:🯰🯱]\",\"+0530\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"🯱🯹🯷🯰-🯰🯱-🯰🯱T🯰🯵:🯳🯰:🯰🯰.🯷🯸🯹+🯰🯵:🯳🯰\""
+    },
+    {
+      "id": "digits-date-parse-130032",
+      "expr": "$toMillis(\"🯱🯹🯷🯰-🯰🯱-🯰🯱T🯰🯵:🯳🯰:🯰🯰.🯷🯸🯹+🯰🯵:🯳🯰\",\"[Y🯰🯰🯰🯱]-[M🯰🯱]-[D🯰🯱]T[H🯰🯱]:[m🯰🯱]:[s🯰🯱].[f🯰🯰🯱][Z🯰🯱:🯰🯱]\")",
+      "inputJSON": "{}",
+      "resultJSON": "789"
+    },
+    {
+      "id": "digits-ordinal-130032",
+      "expr": "$formatInteger(21,\"🯱;o\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"🯲🯱st\""
+    },
+    {
+      "id": "digits-zone-short-130032",
+      "expr": "$fromMillis(0,\"[Z🯰🯱]\",\"-0030\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"-🯰🯰:🯳🯰\""
+    },
+    {
+      "id": "digits-date-ordinal-parse-130032",
+      "expr": "$toMillis(\"🯱🯹🯷🯰-🯰🯱-🯲🯱st\",\"[Y🯰🯰🯰🯱]-[M🯰🯱]-[D🯱o]\")",
+      "inputJSON": "{}",
+      "resultJSON": "1728000000"
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "description": "Independent JSONata matcher, UTF-16, validation and replacement witnesses. No Core requirements.",
+  "cases": [
+    {
+      "id": "lookahead",
+      "expr": "$match(\"ab ac\",/a(?=b)/).match",
+      "inputJSON": "{}",
+      "resultJSON": "\"a\""
+    },
+    {
+      "id": "lookbehind",
+      "expr": "$match(\"ab cb\",/(?<=a)b/).index",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "backref",
+      "expr": "$match(\"aab ab\",/(a)\\1b/).match",
+      "inputJSON": "{}",
+      "resultJSON": "\"aab\""
+    },
+    {
+      "id": "identity-escape",
+      "expr": "$contains(\"a\",/\\a/)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "unicode-whitespace",
+      "expr": "$contains(\"\\uFEFF\",/\\s/)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "non-unicode-word",
+      "expr": "$contains(\"K\",/\\w/i)",
+      "inputJSON": "{}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "non-unicode-dot",
+      "expr": "$match(s,/(.)/)",
+      "inputJSON": "{\"s\":\"😀\"}",
+      "resultJSON": "[{\"match\":\"\\ud83d\",\"index\":0,\"groups\":[\"\\ud83d\"]},{\"match\":\"\\ude00\",\"index\":1,\"groups\":[\"\\ude00\"]}]"
+    },
+    {
+      "id": "astral-class",
+      "expr": "$match(s,/[😀]/).match",
+      "inputJSON": "{\"s\":\"😀\"}",
+      "resultJSON": "[\"\\ud83d\",\"\\ude00\"]"
+    },
+    {
+      "id": "astral-offset",
+      "expr": "$match(s,/x/).index",
+      "inputJSON": "{\"s\":\"😀x\"}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "lone-unit",
+      "expr": "$match(s,/(.)/).groups",
+      "inputJSON": "{\"s\":\"\\ud800\"}",
+      "resultJSON": "[\"\\ud800\"]"
+    },
+    {
+      "id": "missing-group",
+      "expr": "($m:=/(a)?b/(\"b\");[$exists($m.groups[0]),$count($m.groups)])",
+      "inputJSON": "{}",
+      "resultJSON": "[false,1]"
+    },
+    {
+      "id": "empty-group",
+      "expr": "($m:=/(a*)b/(\"b\");[$exists($m.groups[0]),$count($m.groups)])",
+      "inputJSON": "{}",
+      "resultJSON": "[true,1]"
+    },
+    {
+      "id": "direct-next",
+      "expr": "($m:=/a/(\"a a\");[$m.start,$m.end,$m.next().start,$type($m.next)])",
+      "inputJSON": "{}",
+      "resultJSON": "[0,1,2,\"function\"]"
+    },
+    {
+      "id": "cursor-isolation",
+      "expr": "($r:=/a/;$m:=$r(\"a a\");$other:=$r(\"aaaa\",3);$m.next().start)",
+      "inputJSON": "{}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "direct-start",
+      "expr": "($r:=/a/;$r(\"aaa\",1).start)",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "direct-huge-start",
+      "expr": "($r:=/a/;$exists($r(\"aaa\",1e1000)))",
+      "inputJSON": "{}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "custom-contains",
+      "expr": "$contains(\"ab\",function($s){/a/($s)})",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "custom-match",
+      "expr": "$match(\"aba\",function($s){/a/($s)}).index",
+      "inputJSON": "{}",
+      "resultJSON": "[0,2]"
+    },
+    {
+      "id": "custom-split",
+      "expr": "$split(\"aba\",function($s){/b/($s)})",
+      "inputJSON": "{}",
+      "resultJSON": "[\"a\",\"a\"]"
+    },
+    {
+      "id": "custom-replace",
+      "expr": "$replace(\"aba\",function($s){/b/($s)},\"x\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"axa\""
+    },
+    {
+      "id": "custom-replace-function",
+      "expr": "$replace(\"aba\",function($s){/b/($s)},function($m){$uppercase($m.match)})",
+      "inputJSON": "{}",
+      "resultJSON": "\"aBa\""
+    },
+    {
+      "id": "pure-custom",
+      "expr": "$replace(\"abc\",function($s){{\"match\":\"b\",\"start\":1,\"end\":2,\"groups\":[],\"next\":function(){missing}}},\"X\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"aXc\""
+    },
+    {
+      "id": "zero-limit-no-call",
+      "expr": "$count($match(\"a\",function($s){$error(\"called\")},0))",
+      "inputJSON": "{}",
+      "resultJSON": "0"
+    },
+    {
+      "id": "replace-zero-no-call",
+      "expr": "$replace(\"a\",function($s){$error(\"called\")},\"x\",0)",
+      "inputJSON": "{}",
+      "resultJSON": "\"a\""
+    },
+    {
+      "id": "split-zero-no-call",
+      "expr": "$split(\"a\",function($s){$error(\"called\")},0)",
+      "inputJSON": "{}",
+      "resultJSON": "[]"
+    },
+    {
+      "id": "zero-length-loop",
+      "expr": "$match(\"a\",/(?:)/)",
+      "inputJSON": "{}",
+      "error": "D1004"
+    },
+    {
+      "id": "zero-length-at-end",
+      "expr": "$replace(\"ab\",/$/,\"#\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"ab#\""
+    },
+    {
+      "id": "zero-length-contains",
+      "expr": "$contains(\"\",/(?:)/)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "regex-replacement-half",
+      "expr": "$replace(s,/./,\"x\",1)",
+      "inputJSON": "{\"s\":\"😀\"}",
+      "resultJSON": "\"x\\ude00\""
+    },
+    {
+      "id": "regex-split-half",
+      "expr": "$split(s,/./,2)",
+      "inputJSON": "{\"s\":\"😀\"}",
+      "resultJSON": "[\"\",\"\"]"
+    },
+    {
+      "id": "literal-contains-half",
+      "expr": "$contains(s,\"\\uD83D\")",
+      "inputJSON": "{\"s\":\"😀\"}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "literal-replace-half",
+      "expr": "$replace(s,\"\\uD83D\",\"x\")",
+      "inputJSON": "{\"s\":\"😀\"}",
+      "resultJSON": "\"x\\ude00\""
+    },
+    {
+      "id": "literal-split-half",
+      "expr": "$split(s,\"\\uD83D\")",
+      "inputJSON": "{\"s\":\"😀\"}",
+      "resultJSON": "[\"\",\"\\ude00\"]"
+    },
+    {
+      "id": "literal-split-empty",
+      "expr": "$split(s,\"\")",
+      "inputJSON": "{\"s\":\"😀\"}",
+      "resultJSON": "[\"\\ud83d\",\"\\ude00\"]"
+    },
+    {
+      "id": "literal-split-empty-input",
+      "expr": "$split(\"\",\"\")",
+      "inputJSON": "{}",
+      "resultJSON": "[]"
+    },
+    {
+      "id": "replacement-zero-prefix",
+      "expr": "$replace(\"ab\",/(a)b/,\"$01\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"ab1\""
+    },
+    {
+      "id": "replacement-long-number",
+      "expr": "$replace(\"ab\",/(a)b/,\"$12345678901234567890\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"a2345678901234567890\""
+    },
+    {
+      "id": "replacement-unmatched",
+      "expr": "$replace(\"b\",/(a)?b/,\"<$1>\")",
+      "inputJSON": "{}",
+      "resultJSON": "\"<>\""
+    },
+    {
+      "id": "array-contains-type",
+      "expr": "$contains([\"a\",\"b\"],\"a\")",
+      "inputJSON": "{}",
+      "error": "T0410"
+    },
+    {
+      "id": "one-array-contains-type",
+      "expr": "$contains([\"a\"],\"a\")",
+      "inputJSON": "{}",
+      "error": "T0410"
+    },
+    {
+      "id": "keys-contains-type",
+      "expr": "$contains($keys($),\"Endpoint\")",
+      "inputJSON": "{\"Foo\":1,\"RemoteEndpoint\":2,\"Bar\":3}",
+      "error": "T0410"
+    },
+    {
+      "id": "invalid-pattern-type",
+      "expr": "$contains(\"a\",5)",
+      "inputJSON": "{}",
+      "error": "T0410"
+    },
+    {
+      "id": "invalid-split-type",
+      "expr": "$split(\"a\",true)",
+      "inputJSON": "{}",
+      "error": "T0410"
+    },
+    {
+      "id": "invalid-matcher-result",
+      "expr": "$match(\"a\",function($s){1})",
+      "inputJSON": "{}",
+      "error": "T1010"
+    },
+    {
+      "id": "invalid-matcher-missing-next",
+      "expr": "$match(\"a\",function($s){{\"match\":\"a\",\"start\":0,\"end\":1,\"groups\":[]}})",
+      "inputJSON": "{}",
+      "error": "T1010"
+    },
+    {
+      "id": "invalid-matcher-fractional",
+      "expr": "$match(\"a\",function($s){{\"match\":\"a\",\"start\":0.1,\"end\":1,\"groups\":[],\"next\":function(){missing}}})",
+      "inputJSON": "{}",
+      "error": "T1010"
+    },
+    {
+      "id": "escaped-paren",
+      "expr": "$contains(\"(\",/\\(/)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "duplicate-flags",
+      "expr": "$contains(\"a\",/a/ii)",
+      "inputJSON": "{}",
+      "error": "syntax"
+    },
+    {
+      "id": "extra-flag",
+      "expr": "$contains(\"a\",/a/s)",
+      "inputJSON": "{}",
+      "error": "syntax"
+    },
+    {
+      "id": "atomic-group",
+      "expr": "$contains(\"a\",/(?>a)/)",
+      "inputJSON": "{}",
+      "error": "syntax"
+    },
+    {
+      "id": "named-numbering",
+      "expr": "$match(\"ab\",/(a)(?<n>b)/).groups",
+      "inputJSON": "{}",
+      "resultJSON": "[\"a\",\"b\"]"
+    },
+    {
+      "id": "multiline",
+      "expr": "$match(\"a\\nb\",/^b/m).index",
+      "inputJSON": "{}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "line-terminator",
+      "expr": "$contains(\"\\u2028\",/./)",
+      "inputJSON": "{}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "parenthesized-regex",
+      "expr": "(/a/)(\"a\").match",
+      "inputJSON": "{}",
+      "resultJSON": "\"a\""
+    },
+    {
+      "id": "array-regex",
+      "expr": "$map([/a/,/b/],$type)",
+      "inputJSON": "{}",
+      "resultJSON": "[\"function\",\"function\"]"
+    },
+    {
+      "id": "class-close-paren",
+      "expr": "$contains(\")\",/[)]/)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "class-open-paren",
+      "expr": "$contains(\"(\",/[(]/)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "literal-brace",
+      "expr": "$contains(\"{\",/{/)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "class-slash",
+      "expr": "$contains(\"/\",/[/]/)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "scope": "Candidate value-model and consumer witnesses. Composite membership is a compatibility choice, not a Core floor.",
+  "cases": [
+    {
+      "id": "literal-structure",
+      "expr": "[[],[1],[[2,3]],null]",
+      "inputJSON": "{}",
+      "resultJSON": "[[],[1],[[2,3]],null]"
+    },
+    {
+      "id": "variable-carriage",
+      "expr": "($a:=x; $a)",
+      "inputJSON": "{\"x\":[[],[1],[[2,3]],null]}",
+      "resultJSON": "[[],[1],[[2,3]],null]"
+    },
+    {
+      "id": "lambda-carriage",
+      "expr": "($f:=function($x){$x};$f(x))",
+      "inputJSON": "{\"x\":[[],[1],[[2,3]],null]}",
+      "resultJSON": "[[],[1],[[2,3]],null]"
+    },
+    {
+      "id": "distinct-explicit",
+      "expr": "$distinct([1,1])",
+      "inputJSON": "{}",
+      "resultJSON": "[1]"
+    },
+    {
+      "id": "distinct-variable",
+      "expr": "($a:=[1,1];$distinct($a))",
+      "inputJSON": "{}",
+      "resultJSON": "[1]"
+    },
+    {
+      "id": "distinct-lambda",
+      "expr": "($f:=function($x){$distinct($x)};$f([1,1]))",
+      "inputJSON": "{}",
+      "resultJSON": "[1]"
+    },
+    {
+      "id": "distinct-sequence",
+      "expr": "$distinct(rows.x)",
+      "inputJSON": "{\"rows\":[{\"x\":1},{\"x\":1}]}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "distinct-sequence-variable",
+      "expr": "($a:=rows.x;$distinct($a))",
+      "inputJSON": "{\"rows\":[{\"x\":1},{\"x\":1}]}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "distinct-sequence-lambda",
+      "expr": "($f:=function($x){$distinct($x)};$f(rows.x))",
+      "inputJSON": "{\"rows\":[{\"x\":1},{\"x\":1}]}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "map-returned-array",
+      "expr": "$map([1,2],function($x){[$x]})",
+      "inputJSON": "{}",
+      "resultJSON": "[[1],[2]]"
+    },
+    {
+      "id": "map-variable-array",
+      "expr": "($a:=[1];$map([1,2],function($x){$a}))",
+      "inputJSON": "{}",
+      "resultJSON": "[[1],[1]]"
+    },
+    {
+      "id": "map-empty-array",
+      "expr": "$map([1,2],function($x){[]})",
+      "inputJSON": "{}",
+      "resultJSON": "[[],[]]"
+    },
+    {
+      "id": "map-empty-result",
+      "expr": "$exists($map([1,2],function($x){missing}))",
+      "inputJSON": "{}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "empty-identity-selected",
+      "expr": "arr[0] in arr",
+      "inputJSON": "{\"arr\":[[],[]]}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "empty-identity-distinct",
+      "expr": "[] in arr",
+      "inputJSON": "{\"arr\":[[],[]]}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "empty-identity-clone",
+      "expr": "$clone(arr)[0] in arr",
+      "inputJSON": "{\"arr\":[[],[]]}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "array-identity-selected",
+      "expr": "arr[0] in arr",
+      "inputJSON": "{\"arr\":[[1],[1]]}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "array-identity-distinct",
+      "expr": "[1] in arr",
+      "inputJSON": "{\"arr\":[[1],[1]]}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "array-identity-lambda",
+      "expr": "($f:=function($x){$x};$f(arr[0]) in arr)",
+      "inputJSON": "{\"arr\":[[1],[1]]}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "array-identity-clone",
+      "expr": "$clone(arr)[0] in arr",
+      "inputJSON": "{\"arr\":[[1],[1]]}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "object-identity-selected",
+      "expr": "arr[0] in arr",
+      "inputJSON": "{\"arr\":[{},{}]}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "object-identity-distinct",
+      "expr": "{} in arr",
+      "inputJSON": "{\"arr\":[{},{}]}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "object-identity-clone",
+      "expr": "$clone(arr)[0] in arr",
+      "inputJSON": "{\"arr\":[{},{}]}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "object-identity-variable",
+      "expr": "($a:={};$a in [$a])",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "object-deep-equality",
+      "expr": "{} = {}",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "array-deep-equality",
+      "expr": "[1] = [1]",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "array-distinct-deep-equality",
+      "expr": "$count($distinct([[1],[1]]))",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "null-versus-missing",
+      "expr": "{\"a\":null,\"b\":missing,\"c\":false,\"d\":0,\"e\":\"\",\"f\":[],\"g\":{}}",
+      "inputJSON": "{}",
+      "resultJSON": "{\"a\":null,\"c\":false,\"d\":0,\"e\":\"\",\"f\":[],\"g\":{}}"
+    },
+    {
+      "id": "spread-number-is-scalar",
+      "expr": "$spread(9007199254740993)=9007199254740993",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "literal-split-limit",
+      "expr": "$count($split(\"a,b,c\",\",\",1.00000000000000000001))",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "literal-split-huge-limit",
+      "expr": "$count($split(\"a,b,c\",\",\",1e1000))",
+      "inputJSON": "{}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "regex-match-fractional-limit",
+      "expr": "$count($match(\"aaa\",/a/,1.00000000000000000001))",
+      "inputJSON": "{}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "regex-match-tiny-limit",
+      "expr": "$count($match(\"aaa\",/a/,1e-1000))",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "regex-match-huge-limit",
+      "expr": "$count($match(\"aaa\",/a/,1e1000))",
+      "inputJSON": "{}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "regex-replace-fractional-limit",
+      "expr": "$replace(\"aaa\",/a/,\"x\",1.00000000000000000001)",
+      "inputJSON": "{}",
+      "resultJSON": "\"xxa\""
+    },
+    {
+      "id": "regex-split-fractional-limit",
+      "expr": "$split(\"a,b,c\",/,/,1.00000000000000000001)",
+      "inputJSON": "{}",
+      "resultJSON": "[\"a\",\"b\"]"
+    },
+    {
+      "id": "mapped-sequence-variable",
+      "expr": "($a:=$map([1,2],function($x){1});$distinct($a))",
+      "inputJSON": "{}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "hof-array-identity",
+      "expr": "($source:=arr; $map($source,function($x,$i,$a){$a in $map([0,1],function(){ $source })}))",
+      "inputJSON": "{\"arr\":[[1],[2]]}",
+      "resultJSON": "[true,true]"
+    },
+    {
+      "id": "filter-array-identity",
+      "expr": "($source:=arr;$count($filter($source,function($x,$i,$a){$a in $map([0,1],function(){ $source })})))",
+      "inputJSON": "{\"arr\":[[1],[2]]}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "reduce-array-identity",
+      "expr": "($source:=arr;$reduce($source,function($a,$x,$i,$s){$a and ($s in $map([0,1],function(){$source}))},true))",
+      "inputJSON": "{\"arr\":[1,2]}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "reverse-singleton-identity",
+      "expr": "($a:=[1];$b:=$map([0,1],function(){ $a });$reverse($a) in $b)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "sort-singleton-identity",
+      "expr": "($a:=[1];$b:=$map([0,1],function(){ $a });$sort($a) in $b)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "shuffle-singleton-identity",
+      "expr": "($a:=[1];$b:=$map([0,1],function(){ $a });$shuffle($a) in $b)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "distinct-singleton-identity",
+      "expr": "($a:=[1];$b:=$map([0,1],function(){ $a });$distinct($a) in $b)",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "builtin-identity",
+      "expr": "($f:=$sum;$f in [$sum])",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "builtin-distinct-identity",
+      "expr": "$sum in [$max]",
+      "inputJSON": "{}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "signed-builtin-identity",
+      "expr": "$uppercase in [$uppercase]",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "lambda-identity",
+      "expr": "($a:=function(){1};$a in [$a])",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "lambda-distinct-identity",
+      "expr": "($a:=function(){1};$a in [function(){1}])",
+      "inputJSON": "{}",
+      "resultJSON": "false"
+    },
+    {
+      "id": "partial-identity",
+      "expr": "($a:=$append(?,[1]);$a in [$a])",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    },
+    {
+      "id": "regex-type",
+      "expr": "$type(/a/)",
+      "inputJSON": "{}",
+      "resultJSON": "\"function\""
+    },
+    {
+      "id": "regex-call",
+      "expr": "/a/(\"abc\").match",
+      "inputJSON": "{}",
+      "resultJSON": "\"a\""
+    },
+    {
+      "id": "regex-identity",
+      "expr": "($r:=/a/;$r in [$r])",
+      "inputJSON": "{}",
+      "resultJSON": "true"
+    }
+  ]
+}

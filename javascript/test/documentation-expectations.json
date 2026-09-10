@@ -1,0 +1,32 @@
+{
+  "classification": "Documentation-backed correction; not official numerical policy.",
+  "cases": [
+    {
+      "file": "function-fromMillis/formatDateTime.json",
+      "index": 39,
+      "expression": "$fromMillis(1521801216617, '[FNn], the [Dwo] of [MNn] [Y] [E]')",
+      "sourceSHA256": "5f2ced20a47b8d7e3412d08f298072adf60f2d9ff9ba893c114bd25c4cab6611",
+      "resultJSON": "\"Friday, the twenty-third of March 2018 \"",
+      "authority": "https://www.w3.org/TR/xpath-functions-31/#dateformatfunc",
+      "reason": "ISO E is a sign or empty; C is the calendar designator."
+    },
+    {
+      "file": "function-fromMillis/formatDateTime.json",
+      "index": 69,
+      "expression": "$fromMillis(1419940800000, '[YN]-[M]-[D]')",
+      "sourceSHA256": "5f2ced20a47b8d7e3412d08f298072adf60f2d9ff9ba893c114bd25c4cab6611",
+      "resultJSON": "\"2014-12-30\"",
+      "authority": "https://www.w3.org/TR/xpath-functions-31/#dateformatfunc",
+      "reason": "Unsupported year name presentation falls back to the default numeric year (section 9.8.4.8)."
+    },
+    {
+      "file": "function-tomillis/parseDateTime.json",
+      "index": 36,
+      "expression": "$toMillis('2018-05-22', '[YN]-[M]-[D]')",
+      "sourceSHA256": "f4fbf653d25fadf3b093491927431a8e12031922821c009ffe4b5735f4cde4fa",
+      "resultJSON": "1526947200000",
+      "authority": "https://www.w3.org/TR/xpath-functions-31/#dateformatfunc",
+      "reason": "Parse the same default numeric presentation used by the formatter (section 9.8.4.8)."
+    }
+  ]
+}

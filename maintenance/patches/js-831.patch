@@ -1,0 +1,46 @@
+diff --git a/src/functions.js b/src/functions.js
+index da0479e..55af12a 100644
+--- a/src/functions.js
++++ b/src/functions.js
+@@ -412,7 +412,7 @@ const functions = (() => {
+      */
+     async function replace(str, pattern, replacement, limit) {
+         // undefined inputs always return undefined
+-        if (typeof str === 'undefined') {
++        if (typeof str === 'undefined' || typeof pattern === 'undefined') {
+             return undefined;
+         }
+ 
+@@ -701,7 +701,7 @@ const functions = (() => {
+      */
+     async function split(str, separator, limit) {
+         // undefined inputs always return undefined
+-        if (typeof str === 'undefined') {
++        if (typeof str === 'undefined' || typeof separator === 'undefined') {
+             return undefined;
+         }
+ 
+diff --git a/test/test-suite/groups/function-replace/case012.json b/test/test-suite/groups/function-replace/case012.json
+new file mode 100644
+index 0000000..a2d83d7
+--- /dev/null
++++ b/test/test-suite/groups/function-replace/case012.json
+@@ -0,0 +1,6 @@
++{
++    "expr": "$replace(\"Hello World\", nothing, \"Earth\")",
++    "dataset": null,
++    "bindings": {},
++    "undefinedResult": true
++}
+diff --git a/test/test-suite/groups/function-split/case019.json b/test/test-suite/groups/function-split/case019.json
+new file mode 100644
+index 0000000..c1b0a38
+--- /dev/null
++++ b/test/test-suite/groups/function-split/case019.json
+@@ -0,0 +1,6 @@
++{
++    "expr": "$split(\"Hello World\", nothing)",
++    "dataset": null,
++    "bindings": {},
++    "undefinedResult": true
++}

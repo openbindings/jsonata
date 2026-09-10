@@ -1,0 +1,77 @@
+diff --git a/internal/evaluator/path.go b/internal/evaluator/path.go
+index 4f54b4a..5f0f4a1 100644
+--- a/internal/evaluator/path.go
++++ b/internal/evaluator/path.go
+@@ -269,7 +269,7 @@ func evalPathTuple(node *parser.Node, input any, env *Environment) (any, error)
+ 			}
+ 			ctxs = nextCtxs
+ 			if len(ctxs) == 0 {
+-				return nil, nil
++				break
+ 			}
+ 			continue
+ 		}
+@@ -300,7 +300,7 @@ func evalPathTuple(node *parser.Node, input any, env *Environment) (any, error)
+ 			}
+ 			ctxs = nextCtxs
+ 			if len(ctxs) == 0 {
+-				return nil, nil
++				break
+ 			}
+ 			continue
+ 		}
+@@ -355,7 +355,7 @@ func evalPathTuple(node *parser.Node, input any, env *Environment) (any, error)
+ 			}
+ 			ctxs = nextCtxs
+ 			if len(ctxs) == 0 {
+-				return nil, nil
++				break
+ 			}
+ 			continue
+ 		}
+@@ -373,7 +373,7 @@ func evalPathTuple(node *parser.Node, input any, env *Environment) (any, error)
+ 			}
+ 			ctxs = nextCtxs
+ 			if len(ctxs) == 0 {
+-				return nil, nil
++				break
+ 			}
+ 			continue
+ 		}
+@@ -400,7 +400,7 @@ func evalPathTuple(node *parser.Node, input any, env *Environment) (any, error)
+ 			}
+ 			ctxs = nextCtxs
+ 			if len(ctxs) == 0 {
+-				return nil, nil
++				break
+ 			}
+ 			continue
+ 		}
+@@ -445,7 +445,7 @@ func evalPathTuple(node *parser.Node, input any, env *Environment) (any, error)
+ 
+ 			ctxs = nextCtxs
+ 			if len(ctxs) == 0 {
+-				return nil, nil
++				break
+ 			}
+ 			continue
+ 		}
+@@ -489,7 +489,7 @@ func evalPathTuple(node *parser.Node, input any, env *Environment) (any, error)
+ 
+ 		ctxs = nextCtxs
+ 		if len(ctxs) == 0 {
+-			return nil, nil
++			break
+ 		}
+ 	}
+ 
+@@ -943,9 +943,6 @@ func evalTupleGroup(group *parser.GroupExpr, ctxs []pathCtx) (any, error) {
+ 		}
+ 	}
+ 
+-	if result.Len() == 0 {
+-		return nil, nil
+-	}
+ 	return result, nil
+ }
+ 

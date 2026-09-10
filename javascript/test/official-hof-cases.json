@@ -1,0 +1,161 @@
+{
+  "purpose": "Callback arity/positions; language and recorded reference conventions",
+  "cases": [
+    {
+      "id": "builtin-power-index",
+      "expr": "$map([2,3,4],$power)",
+      "inputJSON": "{}",
+      "resultJSON": "[1,3,16]"
+    },
+    {
+      "id": "builtin-round-index",
+      "expr": "$map([1.2345,1.2345,1.2345],$round)",
+      "inputJSON": "{}",
+      "resultJSON": "[1,1.2,1.23]"
+    },
+    {
+      "id": "aliased-power-index",
+      "expr": "($f := $power; $map([2,3,4],$f))",
+      "inputJSON": "{}",
+      "resultJSON": "[1,3,16]"
+    },
+    {
+      "id": "stored-power-index",
+      "expr": "($f := {\"callback\":$power}; $map([2,3,4],$f.callback))",
+      "inputJSON": "{}",
+      "resultJSON": "[1,3,16]"
+    },
+    {
+      "id": "eval-power-index",
+      "expr": "$eval(\"$map([2,3,4],$power)\")",
+      "inputJSON": "{}",
+      "resultJSON": "[1,3,16]"
+    },
+    {
+      "id": "reduce-builtin-power",
+      "expr": "$reduce([2,3,2],$power)",
+      "inputJSON": "{}",
+      "resultJSON": "64"
+    },
+    {
+      "id": "reduce-unary-singleton",
+      "expr": "$reduce([2],$abs)",
+      "inputJSON": "{}",
+      "errorCode": "D3050"
+    },
+    {
+      "id": "reduce-unary-empty",
+      "expr": "$reduce([],$abs)",
+      "inputJSON": "{}",
+      "errorCode": "D3050"
+    },
+    {
+      "id": "reduce-unary-with-init",
+      "expr": "$reduce([], $abs, 7)",
+      "inputJSON": "{}",
+      "errorCode": "D3050"
+    },
+    {
+      "id": "reduce-random",
+      "expr": "$reduce([2],$random)",
+      "inputJSON": "{}",
+      "errorCode": "D3050"
+    },
+    {
+      "id": "reduce-signed-builtin",
+      "expr": "$reduce([\"a\"],$uppercase)",
+      "inputJSON": "{}",
+      "errorCode": "D3050"
+    },
+    {
+      "id": "reduce-partial-binary",
+      "expr": "($f := $power(?,?); $reduce([2,3,2],$f))",
+      "inputJSON": "{}",
+      "resultJSON": "64"
+    },
+    {
+      "id": "reduce-partial-unary",
+      "expr": "($f := $power(?,2); $reduce([2],$f))",
+      "inputJSON": "{}",
+      "errorCode": "D3050"
+    },
+    {
+      "id": "map-partial-binary",
+      "expr": "($f := $power(?,?); $map([2,3,4],$f))",
+      "inputJSON": "{}",
+      "resultJSON": "[1,3,16]"
+    },
+    {
+      "id": "map-partial-unary",
+      "expr": "($f := $power(?,2); $map([2,3,4],$f))",
+      "inputJSON": "{}",
+      "resultJSON": "[4,9,16]"
+    },
+    {
+      "id": "map-lambda-positions",
+      "expr": "$map([2,3],function($v,$i,$a){[$v,$i,$count($a)]})",
+      "inputJSON": "{}",
+      "resultJSON": "[[2,0,2],[3,1,2]]"
+    },
+    {
+      "id": "filter-lambda-positions",
+      "expr": "$filter([2,3],function($v,$i,$a){$i=1 and $count($a)=2})",
+      "inputJSON": "{}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "single-lambda-positions",
+      "expr": "$single([2,3],function($v,$i,$a){$i=1 and $count($a)=2})",
+      "inputJSON": "{}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "reduce-lambda-positions",
+      "expr": "$reduce([2,3],function($acc,$v,$i,$a){$acc+$v+$i+$count($a)},0)",
+      "inputJSON": "{}",
+      "resultJSON": "10"
+    },
+    {
+      "id": "sift-lambda-positions",
+      "expr": "$sift({\"a\":2,\"b\":3},function($v,$k,$o){$k=\"b\" and $o.a=2})",
+      "inputJSON": "{}",
+      "resultJSON": "{\"b\":3}"
+    },
+    {
+      "id": "each-builtin-lookup",
+      "expr": "$each({\"a\":{\"a\":2},\"b\":{\"b\":3}},$lookup)",
+      "inputJSON": "{}",
+      "resultJSON": "[2,3]"
+    },
+    {
+      "id": "map-unary-string",
+      "expr": "$map([1,2,3],$string)",
+      "inputJSON": "{}",
+      "resultJSON": "[\"1\",\"2\",\"3\"]"
+    },
+    {
+      "id": "each-unary-number",
+      "expr": "$each({\"a\":\"2\",\"b\":\"3\"},$number)",
+      "inputJSON": "{}",
+      "resultJSON": "[2,3]"
+    },
+    {
+      "id": "each-unary-boolean",
+      "expr": "$each({\"a\":0,\"b\":1},$boolean)",
+      "inputJSON": "{}",
+      "resultJSON": "[false,true]"
+    },
+    {
+      "id": "reduce-variadic",
+      "expr": "$reduce([1],$zip)",
+      "inputJSON": "{}",
+      "errorCode": "D3050"
+    },
+    {
+      "id": "map-extra-lambda-param",
+      "expr": "$map([1,2],function($v,$i,$a,$extra){$v+$i+$count($a)+($exists($extra)?100:0)})",
+      "inputJSON": "{}",
+      "resultJSON": "[3,5]"
+    }
+  ]
+}

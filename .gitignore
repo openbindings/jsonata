@@ -1,0 +1,12 @@
+javascript/node_modules/
+javascript/coverage/
+javascript/.nyc_output/
+javascript/BUILD.json
+javascript/THIRD_PARTY_NOTICES.md
+javascript/jsonata*.js
+javascript/json-executor*.js
+javascript/node-executor.js
+javascript/json-worker.js
+javascript/execution-options.js
+*.tgz
+.DS_Store

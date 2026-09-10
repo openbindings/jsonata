@@ -1,0 +1,125 @@
+{
+  "scope": "Documented Unicode codepoint ordering; no locale tailoring or normalization",
+  "cases": [
+    {
+      "id": "string-codepoint-builtin-0",
+      "expr": "$sort($)",
+      "inputJSON": "[\"\",\"𐀀\",\"\\ud800\",\"\\udc00\",\"\",\"a\",\"aa\",\"a😀\",\"a\"]",
+      "resultJSON": "[\"\",\"a\",\"aa\",\"a\",\"a😀\",\"\\ud800\",\"\\udc00\",\"\",\"𐀀\"]"
+    },
+    {
+      "id": "string-codepoint-orderby-0",
+      "expr": "$^(<$)",
+      "inputJSON": "[\"\",\"𐀀\",\"\\ud800\",\"\\udc00\",\"\",\"a\",\"aa\",\"a😀\",\"a\"]",
+      "resultJSON": "[\"\",\"a\",\"aa\",\"a\",\"a😀\",\"\\ud800\",\"\\udc00\",\"\",\"𐀀\"]"
+    },
+    {
+      "id": "string-codepoint-comparator-0",
+      "expr": "$sort($,function($l,$r){$l>$r})",
+      "inputJSON": "[\"\",\"𐀀\",\"\\ud800\",\"\\udc00\",\"\",\"a\",\"aa\",\"a😀\",\"a\"]",
+      "resultJSON": "[\"\",\"a\",\"aa\",\"a\",\"a😀\",\"\\ud800\",\"\\udc00\",\"\",\"𐀀\"]"
+    },
+    {
+      "id": "string-codepoint-builtin-1",
+      "expr": "$sort($)",
+      "inputJSON": "[\"😀\",\"￿\",\"􏿿\",\"𐀀\",\"￿\",\"😀\"]",
+      "resultJSON": "[\"￿\",\"￿\",\"𐀀\",\"😀\",\"😀\",\"􏿿\"]"
+    },
+    {
+      "id": "string-codepoint-orderby-1",
+      "expr": "$^(<$)",
+      "inputJSON": "[\"😀\",\"￿\",\"􏿿\",\"𐀀\",\"￿\",\"😀\"]",
+      "resultJSON": "[\"￿\",\"￿\",\"𐀀\",\"😀\",\"😀\",\"􏿿\"]"
+    },
+    {
+      "id": "string-codepoint-comparator-1",
+      "expr": "$sort($,function($l,$r){$l>$r})",
+      "inputJSON": "[\"😀\",\"￿\",\"􏿿\",\"𐀀\",\"￿\",\"😀\"]",
+      "resultJSON": "[\"￿\",\"￿\",\"𐀀\",\"😀\",\"😀\",\"􏿿\"]"
+    },
+    {
+      "id": "string-codepoint-builtin-2",
+      "expr": "$sort($)",
+      "inputJSON": "[\"same\",\"same\",\"same\"]",
+      "resultJSON": "[\"same\",\"same\",\"same\"]"
+    },
+    {
+      "id": "string-codepoint-orderby-2",
+      "expr": "$^(<$)",
+      "inputJSON": "[\"same\",\"same\",\"same\"]",
+      "resultJSON": "[\"same\",\"same\",\"same\"]"
+    },
+    {
+      "id": "string-codepoint-comparator-2",
+      "expr": "$sort($,function($l,$r){$l>$r})",
+      "inputJSON": "[\"same\",\"same\",\"same\"]",
+      "resultJSON": "[\"same\",\"same\",\"same\"]"
+    },
+    {
+      "id": "string-codepoint-builtin-3",
+      "expr": "$sort($)",
+      "inputJSON": "[\"prefix-long\",\"prefix\",\"pre\",\"\"]",
+      "resultJSON": "[\"\",\"pre\",\"prefix\",\"prefix-long\"]"
+    },
+    {
+      "id": "string-codepoint-orderby-3",
+      "expr": "$^(<$)",
+      "inputJSON": "[\"prefix-long\",\"prefix\",\"pre\",\"\"]",
+      "resultJSON": "[\"\",\"pre\",\"prefix\",\"prefix-long\"]"
+    },
+    {
+      "id": "string-codepoint-comparator-3",
+      "expr": "$sort($,function($l,$r){$l>$r})",
+      "inputJSON": "[\"prefix-long\",\"prefix\",\"pre\",\"\"]",
+      "resultJSON": "[\"\",\"pre\",\"prefix\",\"prefix-long\"]"
+    },
+    {
+      "id": "string-codepoint-builtin-4",
+      "expr": "$sort($)",
+      "inputJSON": "[\"😀x\",\"😀\",\"😀😀\",\"😀a\"]",
+      "resultJSON": "[\"😀\",\"😀a\",\"😀x\",\"😀😀\"]"
+    },
+    {
+      "id": "string-codepoint-orderby-4",
+      "expr": "$^(<$)",
+      "inputJSON": "[\"😀x\",\"😀\",\"😀😀\",\"😀a\"]",
+      "resultJSON": "[\"😀\",\"😀a\",\"😀x\",\"😀😀\"]"
+    },
+    {
+      "id": "string-codepoint-comparator-4",
+      "expr": "$sort($,function($l,$r){$l>$r})",
+      "inputJSON": "[\"😀x\",\"😀\",\"😀😀\",\"😀a\"]",
+      "resultJSON": "[\"😀\",\"😀a\",\"😀x\",\"😀😀\"]"
+    },
+    {
+      "id": "string-codepoint-builtin-5",
+      "expr": "$sort($)",
+      "inputJSON": "[\"z\",\"A\",\"a\",\"Z\"]",
+      "resultJSON": "[\"A\",\"Z\",\"a\",\"z\"]"
+    },
+    {
+      "id": "string-codepoint-orderby-5",
+      "expr": "$^(<$)",
+      "inputJSON": "[\"z\",\"A\",\"a\",\"Z\"]",
+      "resultJSON": "[\"A\",\"Z\",\"a\",\"z\"]"
+    },
+    {
+      "id": "string-codepoint-comparator-5",
+      "expr": "$sort($,function($l,$r){$l>$r})",
+      "inputJSON": "[\"z\",\"A\",\"a\",\"Z\"]",
+      "resultJSON": "[\"A\",\"Z\",\"a\",\"z\"]"
+    },
+    {
+      "id": "string-order-stability",
+      "expr": "$^(<key).id",
+      "inputJSON": "[{\"key\":\"😀\",\"id\":0},{\"key\":\"￿\",\"id\":1},{\"key\":\"😀\",\"id\":2},{\"key\":\"\",\"id\":3},{\"key\":\"￿\",\"id\":4}]",
+      "resultJSON": "[3,1,4,0,2]"
+    },
+    {
+      "id": "string-order-descending",
+      "expr": "$^(>key).id",
+      "inputJSON": "[{\"key\":\"😀\",\"id\":0},{\"key\":\"￿\",\"id\":1},{\"key\":\"😀\",\"id\":2},{\"key\":\"\",\"id\":3},{\"key\":\"￿\",\"id\":4}]",
+      "resultJSON": "[0,2,1,4,3]"
+    }
+  ]
+}

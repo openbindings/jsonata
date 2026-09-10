@@ -1,0 +1,25 @@
+{
+  "module": "github.com/auvred/regonaut",
+  "version": "v0.0.1",
+  "sum": "h1:308+62qAZlIJ9Uq8R9KeLscLFBu/gENl1ZlgdlwWM1E=",
+  "license": "MIT",
+  "changes": "Seven instrumentation anchors only; bounded.go supplies private resource controls. Regex grammar and matching rules unchanged.",
+  "hashes": {
+    "regonaut.go": {
+      "source": "d2b14f0536fee6cbc3e003c657166309fde55f3b4b89f57fdc2c8aca2c1076c5",
+      "relocated": "71bacb1a6107a4d9b7652fcaa6228e625e7a5c5b6c559aad02bbd3c581566ba8"
+    },
+    "unicode_generated.go": {
+      "source": "c83a29a57bceb0fd64d0b818e8191e67c0f7352a480958c1aca61f71e28f8529",
+      "relocated": "c83a29a57bceb0fd64d0b818e8191e67c0f7352a480958c1aca61f71e28f8529"
+    },
+    "LICENSE": {
+      "source": "ffaeebcd807e4743e606a8d9014b11b08be925a619770e20682c8757d5144bca",
+      "relocated": "ffaeebcd807e4743e606a8d9014b11b08be925a619770e20682c8757d5144bca"
+    },
+    "README.md": {
+      "source": "51b2aabd4c739063d6065832b12e7c074e21957a6c620ba140dd35ca189696df",
+      "relocated": "51b2aabd4c739063d6065832b12e7c074e21957a6c620ba140dd35ca189696df"
+    }
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "description": "Non-regex string semantics; explicit Unicode runs and JSONata trim set.",
+  "cases": [
+    {
+      "id": "uppercase-0",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"Straße\"}",
+      "resultJSON": "\"STRASSE\""
+    },
+    {
+      "id": "lowercase-0",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"Straße\"}",
+      "resultJSON": "\"straße\""
+    },
+    {
+      "id": "length-0",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"Straße\"}",
+      "resultJSON": "6"
+    },
+    {
+      "id": "trim-0",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"Straße\"}",
+      "resultJSON": "\"Straße\""
+    },
+    {
+      "id": "uppercase-1",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"İ\"}",
+      "resultJSON": "\"İ\""
+    },
+    {
+      "id": "lowercase-1",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"İ\"}",
+      "resultJSON": "\"i̇\""
+    },
+    {
+      "id": "length-1",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"İ\"}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "trim-1",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"İ\"}",
+      "resultJSON": "\"İ\""
+    },
+    {
+      "id": "uppercase-2",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"ΟΣ\"}",
+      "resultJSON": "\"ΟΣ\""
+    },
+    {
+      "id": "lowercase-2",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"ΟΣ\"}",
+      "resultJSON": "\"ος\""
+    },
+    {
+      "id": "length-2",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"ΟΣ\"}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "trim-2",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"ΟΣ\"}",
+      "resultJSON": "\"ΟΣ\""
+    },
+    {
+      "id": "uppercase-3",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"ΟΣΑ\"}",
+      "resultJSON": "\"ΟΣΑ\""
+    },
+    {
+      "id": "lowercase-3",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"ΟΣΑ\"}",
+      "resultJSON": "\"οσα\""
+    },
+    {
+      "id": "length-3",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"ΟΣΑ\"}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "trim-3",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"ΟΣΑ\"}",
+      "resultJSON": "\"ΟΣΑ\""
+    },
+    {
+      "id": "uppercase-4",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"ΟΣ\\ud800\"}",
+      "resultJSON": "\"ΟΣ\\ud800\""
+    },
+    {
+      "id": "lowercase-4",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"ΟΣ\\ud800\"}",
+      "resultJSON": "\"ος\\ud800\""
+    },
+    {
+      "id": "length-4",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"ΟΣ\\ud800\"}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "trim-4",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"ΟΣ\\ud800\"}",
+      "resultJSON": "\"ΟΣ\\ud800\""
+    },
+    {
+      "id": "uppercase-5",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"\\ud800ΟΣ\"}",
+      "resultJSON": "\"\\ud800ΟΣ\""
+    },
+    {
+      "id": "lowercase-5",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"\\ud800ΟΣ\"}",
+      "resultJSON": "\"\\ud800ος\""
+    },
+    {
+      "id": "length-5",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"\\ud800ΟΣ\"}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "trim-5",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"\\ud800ΟΣ\"}",
+      "resultJSON": "\"\\ud800ΟΣ\""
+    },
+    {
+      "id": "uppercase-6",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"\\ud800İ\\udfff\"}",
+      "resultJSON": "\"\\ud800İ\\udfff\""
+    },
+    {
+      "id": "lowercase-6",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"\\ud800İ\\udfff\"}",
+      "resultJSON": "\"\\ud800i̇\\udfff\""
+    },
+    {
+      "id": "length-6",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"\\ud800İ\\udfff\"}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "trim-6",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"\\ud800İ\\udfff\"}",
+      "resultJSON": "\"\\ud800İ\\udfff\""
+    },
+    {
+      "id": "uppercase-7",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"ﬃ\"}",
+      "resultJSON": "\"FFI\""
+    },
+    {
+      "id": "lowercase-7",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"ﬃ\"}",
+      "resultJSON": "\"ﬃ\""
+    },
+    {
+      "id": "length-7",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"ﬃ\"}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "trim-7",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"ﬃ\"}",
+      "resultJSON": "\"ﬃ\""
+    },
+    {
+      "id": "uppercase-8",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"ǰ\"}",
+      "resultJSON": "\"J̌\""
+    },
+    {
+      "id": "lowercase-8",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"ǰ\"}",
+      "resultJSON": "\"ǰ\""
+    },
+    {
+      "id": "length-8",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"ǰ\"}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "trim-8",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"ǰ\"}",
+      "resultJSON": "\"ǰ\""
+    },
+    {
+      "id": "uppercase-9",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"i̇\"}",
+      "resultJSON": "\"İ\""
+    },
+    {
+      "id": "lowercase-9",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"i̇\"}",
+      "resultJSON": "\"i̇\""
+    },
+    {
+      "id": "length-9",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"i̇\"}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "trim-9",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"i̇\"}",
+      "resultJSON": "\"i̇\""
+    },
+    {
+      "id": "uppercase-10",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"Å\"}",
+      "resultJSON": "\"Å\""
+    },
+    {
+      "id": "lowercase-10",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"Å\"}",
+      "resultJSON": "\"å\""
+    },
+    {
+      "id": "length-10",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"Å\"}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "trim-10",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"Å\"}",
+      "resultJSON": "\"Å\""
+    },
+    {
+      "id": "uppercase-11",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"😀\\ud800\"}",
+      "resultJSON": "\"😀\\ud800\""
+    },
+    {
+      "id": "lowercase-11",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"😀\\ud800\"}",
+      "resultJSON": "\"😀\\ud800\""
+    },
+    {
+      "id": "length-11",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"😀\\ud800\"}",
+      "resultJSON": "2"
+    },
+    {
+      "id": "trim-11",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"😀\\ud800\"}",
+      "resultJSON": "\"😀\\ud800\""
+    },
+    {
+      "id": "uppercase-12",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\" \\t a\\r\\nb \\n\"}",
+      "resultJSON": "\" \\t A\\r\\nB \\n\""
+    },
+    {
+      "id": "lowercase-12",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\" \\t a\\r\\nb \\n\"}",
+      "resultJSON": "\" \\t a\\r\\nb \\n\""
+    },
+    {
+      "id": "length-12",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\" \\t a\\r\\nb \\n\"}",
+      "resultJSON": "9"
+    },
+    {
+      "id": "trim-12",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\" \\t a\\r\\nb \\n\"}",
+      "resultJSON": "\"a b\""
+    },
+    {
+      "id": "uppercase-13",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"\\u000b a \\f\"}",
+      "resultJSON": "\"\\u000b A \\f\""
+    },
+    {
+      "id": "lowercase-13",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"\\u000b a \\f\"}",
+      "resultJSON": "\"\\u000b a \\f\""
+    },
+    {
+      "id": "length-13",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"\\u000b a \\f\"}",
+      "resultJSON": "5"
+    },
+    {
+      "id": "trim-13",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"\\u000b a \\f\"}",
+      "resultJSON": "\"\\u000b a \\f\""
+    },
+    {
+      "id": "uppercase-14",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"  a ﻿\"}",
+      "resultJSON": "\"  A ﻿\""
+    },
+    {
+      "id": "lowercase-14",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"  a ﻿\"}",
+      "resultJSON": "\"  a ﻿\""
+    },
+    {
+      "id": "length-14",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"  a ﻿\"}",
+      "resultJSON": "5"
+    },
+    {
+      "id": "trim-14",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"  a ﻿\"}",
+      "resultJSON": "\"  a ﻿\""
+    },
+    {
+      "id": "uppercase-15",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"A\\u0000B\"}",
+      "resultJSON": "\"A\\u0000B\""
+    },
+    {
+      "id": "lowercase-15",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"A\\u0000B\"}",
+      "resultJSON": "\"a\\u0000b\""
+    },
+    {
+      "id": "length-15",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"A\\u0000B\"}",
+      "resultJSON": "3"
+    },
+    {
+      "id": "trim-15",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"A\\u0000B\"}",
+      "resultJSON": "\"A\\u0000B\""
+    },
+    {
+      "id": "uppercase-16",
+      "expr": "$uppercase(s)",
+      "inputJSON": "{\"s\":\"\\ud800\"}",
+      "resultJSON": "\"\\ud800\""
+    },
+    {
+      "id": "lowercase-16",
+      "expr": "$lowercase(s)",
+      "inputJSON": "{\"s\":\"\\ud800\"}",
+      "resultJSON": "\"\\ud800\""
+    },
+    {
+      "id": "length-16",
+      "expr": "$length(s)",
+      "inputJSON": "{\"s\":\"\\ud800\"}",
+      "resultJSON": "1"
+    },
+    {
+      "id": "trim-16",
+      "expr": "$trim(s)",
+      "inputJSON": "{\"s\":\"\\ud800\"}",
+      "resultJSON": "\"\\ud800\""
+    },
+    {
+      "id": "substringBefore-55357",
+      "expr": "$substringBefore(s,\"\\ud83d\")",
+      "inputJSON": "{\"s\":\"a😀b\"}",
+      "resultJSON": "\"a\""
+    },
+    {
+      "id": "substringAfter-55357",
+      "expr": "$substringAfter(s,\"\\ud83d\")",
+      "inputJSON": "{\"s\":\"a😀b\"}",
+      "resultJSON": "\"\\ude00b\""
+    },
+    {
+      "id": "substringBefore-56832",
+      "expr": "$substringBefore(s,\"\\ude00\")",
+      "inputJSON": "{\"s\":\"a😀b\"}",
+      "resultJSON": "\"a\\ud83d\""
+    },
+    {
+      "id": "substringAfter-56832",
+      "expr": "$substringAfter(s,\"\\ude00\")",
+      "inputJSON": "{\"s\":\"a😀b\"}",
+      "resultJSON": "\"b\""
+    }
+  ]
+}
