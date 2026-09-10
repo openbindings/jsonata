@@ -32,9 +32,9 @@ disabled in the development manifest.
 Save this as `example.mjs` and run `node example.mjs`:
 
 ```javascript
-import { createJSONExecutor } from "@openbindings/jsonata";
+import { createJSONataExecutor } from "@openbindings/jsonata";
 
-const executor = createJSONExecutor();
+const executor = createJSONataExecutor();
 const outputJSON = await executor.evaluate(
   '{"id":id,"total":price * quantity}',
   '{"id":9007199254740993,"price":0.1,"quantity":3}',
@@ -45,7 +45,7 @@ console.log(outputJSON);
 ```
 
 The same import works in TypeScript. CommonJS applications can use
-`const { createJSONExecutor } = require("@openbindings/jsonata")` inside an
+`const { createJSONataExecutor } = require("@openbindings/jsonata")` inside an
 async function. Reuse the executor across calls.
 
 ## Bindings and results
@@ -55,6 +55,11 @@ optional `bindingsJSON`, and successful output remain ordinary JSON. Variable
 names in bindings omit the dollar sign. No host functions or callback objects
 are admitted. Undefined, invalid nested results and insufficient budgets reject
 the promise. `null` is a successful JSON result, not undefined.
+
+Input and bindings must contain no duplicate decoded object-member names, even
+equal-valued duplicates. This pre-release admission tightening replaces inconsistent
+duplicate handling. Dollar-prefixed external binding names are rejected; dollar-named
+data fields and language-local variable shadowing remain available.
 
 Value preservation does not mean preserving whitespace or number spelling, and
 does not make every arithmetic operation exact. See the numerical assignments in
@@ -95,18 +100,21 @@ combined input/bindings/output text limits (each text limit counts UTF-16 code
 units), stack depth 100, sequence bound 10000000, and numeric work 4096
 digits/exponent magnitude. See [IMPLEMENTATION.md](IMPLEMENTATION.md).
 
+The Node worker pool accepts timeouts from 1 through 2147483647 milliseconds.
+Larger values are rejected at construction, before workers or timers are created.
+
 ## Browser use and public exports
 
 Exports are the closed executor at the package root and the optional `/node`
 executor. Private engine helpers, host-function registration and raw upstream
 APIs are not supported package exports. Browser bundles expose
-`jsonataExecutor.createJSONExecutor`; modern, minified and ES5-syntax variants
+`jsonataExecutor.createJSONataExecutor`; modern, minified and ES5-syntax variants
 are included. ES5 syntax alone is not proof of support for every legacy host:
 required built-ins, including Promise, must be available.
 
 For a script-tag application, serve the installed package's `json-executor.js`
 or `json-executor.min.js` as a static asset and use
-`jsonataExecutor.createJSONExecutor()` in your browser code. The matching
+`jsonataExecutor.createJSONataExecutor()` in your browser code. The matching
 `json-executor-es5.js` and `json-executor-es5.min.js` variants use ES5 syntax.
 Do not load the Node worker entry in a browser. Use maintained hosts in
 production; legacy compatibility is not a security support promise.

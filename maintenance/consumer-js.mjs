@@ -21,10 +21,10 @@ const cjs=require('@openbindings/jsonata');
 const esmConsumer=path.join(temporary,'esm-consumer.mjs');
 fs.writeFileSync(esmConsumer,"import * as api from '@openbindings/jsonata'; export default api;\n");
 const esm=(await import(pathToFileURL(esmConsumer))).default;
-assert.equal(typeof esm.createJSONExecutor,'function');
-assert.deepEqual(Object.keys(cjs),['createJSONExecutor']);
+assert.equal(typeof esm.createJSONataExecutor,'function');
+assert.deepEqual(Object.keys(cjs),['createJSONataExecutor']);
 for(const api of [cjs,esm]){
-  const executor=api.createJSONExecutor();
+  const executor=api.createJSONataExecutor();
   assert.equal(await executor.evaluate('id','{"id":9007199254740993}'),'9007199254740993');
   await assert.rejects(executor.evaluate('function(){1}','null'));
   await assert.rejects(executor.evaluate('"\\u-001"','null'));

@@ -14,6 +14,7 @@
         if (!Number.isSafeInteger(workers) || workers < 1 || workers > 32 || !Number.isSafeInteger(maxPending) || maxPending < 1) throw new TypeError('Invalid worker or queue budget');
         if (!Number.isSafeInteger(maxWorkerHeapMB) || maxWorkerHeapMB < 16) throw new TypeError('Worker heap budget must be an integer of at least 16 MiB');
         const limits = optionsFor(options);
+        if (limits.timeout > 2147483647) throw new RangeError('Node JSONata timeout exceeds the timer limit of 2147483647 milliseconds');
         const slots = new Set(), queue = [], tasks = new Set();
         let closed = false, nextID = 0;
         /** Complete a task once and release its queue, timer and signal references.

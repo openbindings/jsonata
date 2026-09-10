@@ -34,6 +34,7 @@ func New(options Options) (*Executor, error) {
 
 // Evaluate accepts one JSON value and returns one JSON value. Bindings are
 // omitted with nil or supplied as a JSON object whose names omit the '$' prefix.
+// Duplicate decoded member names are rejected, including equal-valued duplicates.
 // No host functions or objects can cross this boundary. Cancellation is
 // cooperative; parsing, serialization and individual library calls are checked
 // at their boundaries, not forcibly preempted. Returned bytes are caller-owned.

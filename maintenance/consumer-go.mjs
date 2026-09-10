@@ -21,6 +21,8 @@ func main(){
  if err!=nil||!strings.Contains(string(output),"9007199254740993")||!strings.Contains(string(output),"0.3"){panic(fmt.Sprintf("%s %v",output,err))}
  if _,err=e.Evaluate(context.Background(),"missing",[]byte("null"),nil);!errors.Is(err,jsonata.ErrUndefined){panic("undefined")}
  if _,err=e.Evaluate(context.Background(),"function(){1}",[]byte("null"),nil);err==nil{panic("function result")}
+ for _,input:=range []string{${JSON.stringify('{"id":7')},${JSON.stringify('{"id":7,"id":7}')}}{if _,err=e.Evaluate(context.Background(),"id",[]byte(input),nil);err==nil{panic("input admission")}}
+ equality,err:=e.Evaluate(context.Background(),"a = b",[]byte(${JSON.stringify('{"a":{"length":0},"b":[]}')}),nil);if err!=nil||string(equality)!="false"{panic("container equality")}
  ctx,cancel:=context.WithCancel(context.Background());cancel();if _,err=e.Evaluate(ctx,"$",[]byte("null"),nil);!errors.Is(err,context.Canceled){panic("cancellation")}
  fmt.Println(string(output))
 }

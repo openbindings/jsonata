@@ -11,9 +11,10 @@ export interface JSONExecutorOptions {
   readonly maxOutputLength?: number;
   readonly numericWork?: NumericWorkLimits;
 }
+/** Bindings use unprefixed variable names; duplicate object members are rejected. */
 export interface EvaluationOptions { readonly bindingsJSON?: string; readonly signal?: AbortSignal }
 export interface JSONExecutor {
   evaluate(expression: string, inputJSON: string, options?: EvaluationOptions): Promise<string>;
 }
 /** Closed text boundary; in-process cancellation is cooperative. */
-export function createJSONExecutor(options?: JSONExecutorOptions): JSONExecutor;
+export function createJSONataExecutor(options?: JSONExecutorOptions): JSONExecutor;

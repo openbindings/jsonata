@@ -19,6 +19,12 @@ from null. Functions, regex/matcher values and invalid nested values cannot be
 disguised as objects/null or silently omitted by serialization. Language-defined
 sequence flattening and deliberate field omission remain language operations.
 
+Admission consumes the complete JSON text and rejects duplicate decoded member
+names within an object, even when their values are equal, recursively in input
+and bindings. External binding names beginning with `$` are rejected; dollar-named
+data fields and language-local variable shadowing remain available. These are
+this runtime family's admission rules, not additional Core or JSONata requirements.
+
 Preserve numerical value, admitted string code units, type, presence and array
 order when selecting/copying/rearranging values. This is not preservation of
 JSON spelling, whitespace, object-member order, discarded fields, or digits

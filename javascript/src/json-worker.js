@@ -1,8 +1,8 @@
 (function () {
     'use strict';
     const {parentPort, workerData} = require('worker_threads');
-    const {createJSONExecutor} = require('./json-executor');
-    const executor = createJSONExecutor(workerData);
+    const {createJSONataExecutor} = require('./json-executor');
+    const executor = createJSONataExecutor(workerData);
     parentPort.on('message', async message => {
         try {
             const value = await executor.evaluate(message.expression, message.inputJSON, {bindingsJSON:message.bindingsJSON});

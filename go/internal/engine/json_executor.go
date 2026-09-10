@@ -110,22 +110,14 @@ func (e *JSONExecutor) Evaluate(ctx context.Context, expression string, inputJSO
 	if err := ctx.Err(); err != nil {
 		return nil, err
 	}
-	var bound map[string]any
-	if bindingsJSON != nil {
-		value, err := DecodeJSON(bindingsJSON)
-		if err != nil {
-			return nil, fmt.Errorf("JSONata bindings: %w", err)
-		}
-		object, ok := value.(*evaluator.OrderedMap)
-		if !ok {
-			return nil, fmt.Errorf("JSONata bindings must be a JSON object")
-		}
-		bound = object.ToMap()
+	bound, err := decodeJSONBindings(bindingsJSON)
+	if err != nil {
+		return nil, err
 	}
 	if err := ctx.Err(); err != nil {
 		return nil, err
 	}
-	raw, err := compiled.EvalBytesWithVars(ctx, inputJSON, bound)
+	raw, err := compiled.evalJSONWithVars(ctx, inputJSON, bound)
 	if err != nil {
 		return nil, fmt.Errorf("evaluate JSONata: %w", err)
 	}

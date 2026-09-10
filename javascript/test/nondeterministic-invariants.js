@@ -1,7 +1,7 @@
 'use strict';
 const assert = require('assert');
 const jsonata = require('../src/jsonata');
-const {createJSONExecutor} = require('../src/json-executor');
+const {createJSONataExecutor} = require('../src/json-executor');
 
 describe('Nondeterministic function invariants', function() {
     it('preserves random type/range/carriage and shuffle multiplicities under reuse', async function() {
@@ -17,7 +17,7 @@ describe('Nondeterministic function invariants', function() {
             $values = [9007199254740993, 0, 0, 9007199254740992]
         )`;
         const compiled = jsonata(expression);
-        const executor = createJSONExecutor();
+        const executor = createJSONataExecutor();
         await Promise.all(Array.from({length: 8}, async function() {
             for (let sample = 0; sample < 64; sample++) {
                 if (sample % 2 === 0) {
