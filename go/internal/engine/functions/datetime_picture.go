@@ -5,7 +5,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
 )
 
 // parseDatePicture is shared by formatting and parsing: a malformed picture

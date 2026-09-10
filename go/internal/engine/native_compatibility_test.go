@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 // Ordinary-value witnesses against JSONata 2.1.1. Exact numerical operations

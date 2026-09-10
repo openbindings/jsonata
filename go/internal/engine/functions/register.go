@@ -2,8 +2,8 @@
 package functions
 
 import (
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 // EvalFn is a callback used by higher-order functions to invoke a lambda or

@@ -18,7 +18,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f4e3b16f0ca0e4fdf0115f4393e96275e29349ae88dcfb4d6fbb6d8d6a3c7ef0"
+      "fileSHA256": "15990bb94ca9ed763aadb3bf0416c1f74c75d92c3b343a92f8caa9355b7b7183"
     },
     {
       "kind": "lint",
@@ -32,7 +32,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "724ee7aa45a5950078f1a415fb4787aed6f315d8e6010c77279e8c38dcdb93cf"
+      "fileSHA256": "bacd21070a2663c9f690cc5df6f7d5728a5b56a4063482a83472a310af69ca55"
     },
     {
       "kind": "lint",
@@ -46,7 +46,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "71e701f595734940cf92fa6960e9f0f453c736cd15b7afead07c807e03127263"
+      "fileSHA256": "430a5b7976358127ee985739692bf441cef989f9569f502fc5d5616b4b2c0e12"
     },
     {
       "kind": "lint",
@@ -102,7 +102,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0ded92ec58777839a4073329627aed53dab18cdc32af00f220a1b40be45d88fa"
+      "fileSHA256": "2b4e432cce6fc6aeee1a2c6f66085ccfabc03b6f2eaca8a96e471bd92b07646c"
     },
     {
       "kind": "lint",
@@ -116,7 +116,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -130,7 +130,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -144,7 +144,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -158,7 +158,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -172,7 +172,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -186,7 +186,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -200,7 +200,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -214,7 +214,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -228,7 +228,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -242,7 +242,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c634f975f7c873184331e46f9a2ba8f20eb5365d764d7e48654368f8cdecb33d"
+      "fileSHA256": "4861f5abda27d48f32b5c4e197ac85c9d0e10f093ae6edcdda43ba87d02d90cc"
     },
     {
       "kind": "lint",
@@ -256,7 +256,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "a5446d071bfa85b8efead82b7d77f122a295b1ffb79ac052704dbccdd67b05f2"
+      "fileSHA256": "820403aa6f050333aab739101bdf997db2ad8c96a0ed1cce63f9cc2b8e01988b"
     },
     {
       "kind": "lint",
@@ -270,7 +270,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "a5446d071bfa85b8efead82b7d77f122a295b1ffb79ac052704dbccdd67b05f2"
+      "fileSHA256": "820403aa6f050333aab739101bdf997db2ad8c96a0ed1cce63f9cc2b8e01988b"
     },
     {
       "kind": "lint",
@@ -284,7 +284,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "a5446d071bfa85b8efead82b7d77f122a295b1ffb79ac052704dbccdd67b05f2"
+      "fileSHA256": "820403aa6f050333aab739101bdf997db2ad8c96a0ed1cce63f9cc2b8e01988b"
     },
     {
       "kind": "lint",
@@ -298,7 +298,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "a5446d071bfa85b8efead82b7d77f122a295b1ffb79ac052704dbccdd67b05f2"
+      "fileSHA256": "820403aa6f050333aab739101bdf997db2ad8c96a0ed1cce63f9cc2b8e01988b"
     },
     {
       "kind": "lint",
@@ -312,7 +312,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "a5446d071bfa85b8efead82b7d77f122a295b1ffb79ac052704dbccdd67b05f2"
+      "fileSHA256": "820403aa6f050333aab739101bdf997db2ad8c96a0ed1cce63f9cc2b8e01988b"
     },
     {
       "kind": "lint",
@@ -326,7 +326,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "a5446d071bfa85b8efead82b7d77f122a295b1ffb79ac052704dbccdd67b05f2"
+      "fileSHA256": "820403aa6f050333aab739101bdf997db2ad8c96a0ed1cce63f9cc2b8e01988b"
     },
     {
       "kind": "lint",
@@ -340,7 +340,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "579baf33f6874b2180faf27d3e6dd1563e93a932ece861955cb5165ef7650c6e"
+      "fileSHA256": "303f213cf4c4c7666a2da23a6fd070d2b95cb2e4c9d6453e33bbeb69cb067ac3"
     },
     {
       "kind": "lint",
@@ -354,7 +354,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "579baf33f6874b2180faf27d3e6dd1563e93a932ece861955cb5165ef7650c6e"
+      "fileSHA256": "303f213cf4c4c7666a2da23a6fd070d2b95cb2e4c9d6453e33bbeb69cb067ac3"
     },
     {
       "kind": "lint",
@@ -368,7 +368,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "82679a6c5c7354f0d2d38853b18a8bf13c6351ce49ad57ebefb0dcb48ddd3fbe"
+      "fileSHA256": "5a417a768fcce47ed81ac8f0c9761dba6ad2dd68e92dbacdf410a7ae617e6315"
     },
     {
       "kind": "lint",
@@ -382,7 +382,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "82679a6c5c7354f0d2d38853b18a8bf13c6351ce49ad57ebefb0dcb48ddd3fbe"
+      "fileSHA256": "5a417a768fcce47ed81ac8f0c9761dba6ad2dd68e92dbacdf410a7ae617e6315"
     },
     {
       "kind": "lint",
@@ -396,7 +396,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "6911da0dbd5d1c39e841bb2b913829330dc338ededb5535120bb338d4af2aaf6"
+      "fileSHA256": "f8e2558e55c8be6a098de6c78fc947997c51b09ef8c59678be1e35a768ccf3c8"
     },
     {
       "kind": "lint",
@@ -410,7 +410,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "6911da0dbd5d1c39e841bb2b913829330dc338ededb5535120bb338d4af2aaf6"
+      "fileSHA256": "f8e2558e55c8be6a098de6c78fc947997c51b09ef8c59678be1e35a768ccf3c8"
     },
     {
       "kind": "lint",
@@ -424,7 +424,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2bf71eb324f92a61f30e1b50f4c8a52100764a736e90b3378da6ba1b4b34cbe3"
+      "fileSHA256": "23ebfa26a031b6077c7d34a1feedae32b836ad7f6c12927282f48c414aa11cba"
     },
     {
       "kind": "lint",
@@ -438,7 +438,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2bf71eb324f92a61f30e1b50f4c8a52100764a736e90b3378da6ba1b4b34cbe3"
+      "fileSHA256": "23ebfa26a031b6077c7d34a1feedae32b836ad7f6c12927282f48c414aa11cba"
     },
     {
       "kind": "lint",
@@ -452,7 +452,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c3e5da3df4f1cc341882ec4339b945f9f2f3678d267ba4d44f6e3e427e5849eb"
+      "fileSHA256": "ba312e5044e645d7eec363574dfaf85290ce37c7c06933e51f1070b0d9a8ad36"
     },
     {
       "kind": "lint",
@@ -466,7 +466,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -480,7 +480,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -494,7 +494,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -508,7 +508,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -522,7 +522,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -536,7 +536,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -550,7 +550,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -564,7 +564,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -578,7 +578,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -592,7 +592,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -606,7 +606,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -620,7 +620,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -634,7 +634,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -648,7 +648,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -662,7 +662,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -676,7 +676,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -690,7 +690,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -704,7 +704,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -718,7 +718,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -732,7 +732,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -746,7 +746,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -760,7 +760,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -774,7 +774,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -788,7 +788,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -802,7 +802,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -816,7 +816,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -830,7 +830,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -844,7 +844,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -858,7 +858,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -872,7 +872,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -886,7 +886,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -900,7 +900,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -914,7 +914,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -928,7 +928,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "89f7415731a468bdf4a215fc1452117f22f94393b46770ecc0ab92c400bc6e65"
+      "fileSHA256": "ec27880be635c58900005f794dac9947e6a64efa111d55d62e977d899afe7ce7"
     },
     {
       "kind": "lint",
@@ -942,7 +942,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f1e261f4600af975ba992139a9eb77e329e54cabc0cd0bd4eec3fd3bc6258dc3"
+      "fileSHA256": "d8611a18e93459a5024826dcb5254183cdf04d502d4b029e3aa4dc55e9f77b00"
     },
     {
       "kind": "lint",
@@ -956,7 +956,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f1e261f4600af975ba992139a9eb77e329e54cabc0cd0bd4eec3fd3bc6258dc3"
+      "fileSHA256": "d8611a18e93459a5024826dcb5254183cdf04d502d4b029e3aa4dc55e9f77b00"
     },
     {
       "kind": "lint",
@@ -970,7 +970,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f1e261f4600af975ba992139a9eb77e329e54cabc0cd0bd4eec3fd3bc6258dc3"
+      "fileSHA256": "d8611a18e93459a5024826dcb5254183cdf04d502d4b029e3aa4dc55e9f77b00"
     },
     {
       "kind": "lint",
@@ -984,7 +984,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f1e261f4600af975ba992139a9eb77e329e54cabc0cd0bd4eec3fd3bc6258dc3"
+      "fileSHA256": "d8611a18e93459a5024826dcb5254183cdf04d502d4b029e3aa4dc55e9f77b00"
     },
     {
       "kind": "lint",
@@ -998,7 +998,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "ca75339b1623d063b685645e3d78f37c8cdb1036c9a6dcb589c07b4b36234f89"
+      "fileSHA256": "f836b8cca5411462567ffcf7cb23907f5413d59b9f3fe7d7a4922f8696313c69"
     },
     {
       "kind": "lint",
@@ -1012,7 +1012,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "ca75339b1623d063b685645e3d78f37c8cdb1036c9a6dcb589c07b4b36234f89"
+      "fileSHA256": "f836b8cca5411462567ffcf7cb23907f5413d59b9f3fe7d7a4922f8696313c69"
     },
     {
       "kind": "lint",
@@ -1026,7 +1026,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "ca75339b1623d063b685645e3d78f37c8cdb1036c9a6dcb589c07b4b36234f89"
+      "fileSHA256": "f836b8cca5411462567ffcf7cb23907f5413d59b9f3fe7d7a4922f8696313c69"
     },
     {
       "kind": "lint",
@@ -1040,7 +1040,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "209dbd300ff4f02536f6b964e2e470140b6e0f9e568cc0be8e1346153f4aa307"
+      "fileSHA256": "8d058220993bad6494009e5ddf4732f986d67f32c65bd3c8bb2e94f0d011b06e"
     },
     {
       "kind": "lint",
@@ -1054,7 +1054,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "209dbd300ff4f02536f6b964e2e470140b6e0f9e568cc0be8e1346153f4aa307"
+      "fileSHA256": "8d058220993bad6494009e5ddf4732f986d67f32c65bd3c8bb2e94f0d011b06e"
     },
     {
       "kind": "lint",
@@ -1068,7 +1068,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "209dbd300ff4f02536f6b964e2e470140b6e0f9e568cc0be8e1346153f4aa307"
+      "fileSHA256": "8d058220993bad6494009e5ddf4732f986d67f32c65bd3c8bb2e94f0d011b06e"
     },
     {
       "kind": "lint",
@@ -1082,7 +1082,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "209dbd300ff4f02536f6b964e2e470140b6e0f9e568cc0be8e1346153f4aa307"
+      "fileSHA256": "8d058220993bad6494009e5ddf4732f986d67f32c65bd3c8bb2e94f0d011b06e"
     },
     {
       "kind": "lint",
@@ -1096,7 +1096,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "be44b22fb629857fe9fc9a76a09177df33791637039fc40b0e2774679159bcba"
+      "fileSHA256": "a9f197ebc7d0ebf980159656500284f8a52879a14c425fc0f5bfd95539e4e6cf"
     },
     {
       "kind": "lint",
@@ -1110,7 +1110,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "be44b22fb629857fe9fc9a76a09177df33791637039fc40b0e2774679159bcba"
+      "fileSHA256": "a9f197ebc7d0ebf980159656500284f8a52879a14c425fc0f5bfd95539e4e6cf"
     },
     {
       "kind": "lint",
@@ -1124,7 +1124,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "be44b22fb629857fe9fc9a76a09177df33791637039fc40b0e2774679159bcba"
+      "fileSHA256": "a9f197ebc7d0ebf980159656500284f8a52879a14c425fc0f5bfd95539e4e6cf"
     },
     {
       "kind": "lint",
@@ -1138,7 +1138,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "be44b22fb629857fe9fc9a76a09177df33791637039fc40b0e2774679159bcba"
+      "fileSHA256": "a9f197ebc7d0ebf980159656500284f8a52879a14c425fc0f5bfd95539e4e6cf"
     },
     {
       "kind": "lint",
@@ -1152,7 +1152,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1166,7 +1166,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1180,7 +1180,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1194,7 +1194,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1208,7 +1208,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1222,7 +1222,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1236,7 +1236,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1250,7 +1250,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1264,7 +1264,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1278,7 +1278,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1292,7 +1292,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1306,7 +1306,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1320,7 +1320,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1334,7 +1334,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1348,7 +1348,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1362,7 +1362,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1376,7 +1376,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -1390,7 +1390,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "679dd785b4c9e5495690a24de2f1c5a021041fedcb6fc279963a4491544f207b"
+      "fileSHA256": "003997d41c03f50f012c2d1f0218d43081e136b1a59a5574a1e606dcae9cb3b9"
     },
     {
       "kind": "lint",
@@ -1404,7 +1404,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "679dd785b4c9e5495690a24de2f1c5a021041fedcb6fc279963a4491544f207b"
+      "fileSHA256": "003997d41c03f50f012c2d1f0218d43081e136b1a59a5574a1e606dcae9cb3b9"
     },
     {
       "kind": "lint",
@@ -1418,7 +1418,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -1432,7 +1432,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -1446,7 +1446,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -1460,7 +1460,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -1474,7 +1474,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2045aec28d0803df0b808469fd2c93eeb9b9f0ab381311181d6a51326cc0ab27"
+      "fileSHA256": "2d094b089c511fcce1044d32c513d651331f51f6f9d15a91b81efdb215189c9d"
     },
     {
       "kind": "lint",
@@ -1488,7 +1488,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c36e5ce0006a67bc8b2cdb4535333277996cac08963d0def97c7b1329dd4417b"
+      "fileSHA256": "7679e65562259fcaa9f696d5628e7a52dc91d9f271c741c6abaf1a9fa2755420"
     },
     {
       "kind": "lint",
@@ -1502,7 +1502,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7b4cb8774aab15176bcf584e328a1eedfc74e53c802679e29b466aeb13b37454"
+      "fileSHA256": "88894452fe2c1e4fbc6dcd811c3218f5878c63809ab914e287b519504cf3b506"
     },
     {
       "kind": "lint",
@@ -1516,7 +1516,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "3d86f661cffaa6e7a9461060cadadf4213d51b0aaa58c10226ec4b6fd4ef1be6"
+      "fileSHA256": "74d1aa9a2cf51949ae0758f4aeb76639c77f429b733a7d28acb84c64bd33f657"
     },
     {
       "kind": "lint",
@@ -1530,7 +1530,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f4e3b16f0ca0e4fdf0115f4393e96275e29349ae88dcfb4d6fbb6d8d6a3c7ef0"
+      "fileSHA256": "15990bb94ca9ed763aadb3bf0416c1f74c75d92c3b343a92f8caa9355b7b7183"
     },
     {
       "kind": "lint",
@@ -1544,7 +1544,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f4e3b16f0ca0e4fdf0115f4393e96275e29349ae88dcfb4d6fbb6d8d6a3c7ef0"
+      "fileSHA256": "15990bb94ca9ed763aadb3bf0416c1f74c75d92c3b343a92f8caa9355b7b7183"
     },
     {
       "kind": "lint",
@@ -1558,7 +1558,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f4e3b16f0ca0e4fdf0115f4393e96275e29349ae88dcfb4d6fbb6d8d6a3c7ef0"
+      "fileSHA256": "15990bb94ca9ed763aadb3bf0416c1f74c75d92c3b343a92f8caa9355b7b7183"
     },
     {
       "kind": "lint",
@@ -1572,7 +1572,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "e2a92e40e5d4029945de20c2aff83c16dfb3806c57613149e7710e3d5d19f416"
+      "fileSHA256": "3c19f072d4ce6127894b6027c8b994c696f1771d00644d581622532175388597"
     },
     {
       "kind": "lint",
@@ -1586,7 +1586,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "e446328caaa94083230bbd87c2ba818f8823080f5433bee41b7046098a2e9219"
+      "fileSHA256": "79cdb819e2c97b499e104a7d763655cc5aaee9e2a6dc0d640a3f50cf7efb9f3c"
     },
     {
       "kind": "lint",
@@ -1600,7 +1600,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "57691610ccc620c4d5b52feabc68775b5281214a13254f732efb490c20fd1fbc"
+      "fileSHA256": "2703bc0043f70ebd4f159ae0d5dbd5454ba90937d2eef5b3e8b83cda267ca3f5"
     },
     {
       "kind": "lint",
@@ -1614,7 +1614,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7c667c375e8559d41f86b7909942d02e7bcf1b3d8ae466cc1da81a1ca7dc02e3"
+      "fileSHA256": "fd2ec8adc51fddc4c641c132a8b3a17732e5aa51f62e9b7310a154bbd3e82fc8"
     },
     {
       "kind": "lint",
@@ -1628,7 +1628,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "cf4341a1a34ea8eb3fd47deb0e759b9bc16265921abab092f7e3c80c46a0cf80"
+      "fileSHA256": "2d93228c7f54a9ed343b84def0309268844432aea714d6deb01ff0bae8824d87"
     },
     {
       "kind": "lint",
@@ -1642,7 +1642,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "724ee7aa45a5950078f1a415fb4787aed6f315d8e6010c77279e8c38dcdb93cf"
+      "fileSHA256": "bacd21070a2663c9f690cc5df6f7d5728a5b56a4063482a83472a310af69ca55"
     },
     {
       "kind": "lint",
@@ -1656,7 +1656,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "724ee7aa45a5950078f1a415fb4787aed6f315d8e6010c77279e8c38dcdb93cf"
+      "fileSHA256": "bacd21070a2663c9f690cc5df6f7d5728a5b56a4063482a83472a310af69ca55"
     },
     {
       "kind": "lint",
@@ -1670,7 +1670,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c376893ea7a5fff15668bf11c1616eb3e16c1f9b6680f5cd363abbdbba69d93a"
+      "fileSHA256": "e0548bfe62eacb87314ecc3746f7b53ca38503fbc8941e40ef2577605b481453"
     },
     {
       "kind": "lint",
@@ -1684,7 +1684,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2016351018d045d53df3f84dbc4d46b6efffa153db1bcb859c7c5406c683203a"
+      "fileSHA256": "de892bf7bdbc3aed7dcbe8ebd4144dedbe3bd80ad74c262a079a1011646ab489"
     },
     {
       "kind": "lint",
@@ -1698,7 +1698,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2016351018d045d53df3f84dbc4d46b6efffa153db1bcb859c7c5406c683203a"
+      "fileSHA256": "de892bf7bdbc3aed7dcbe8ebd4144dedbe3bd80ad74c262a079a1011646ab489"
     },
     {
       "kind": "lint",
@@ -1712,7 +1712,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2016351018d045d53df3f84dbc4d46b6efffa153db1bcb859c7c5406c683203a"
+      "fileSHA256": "de892bf7bdbc3aed7dcbe8ebd4144dedbe3bd80ad74c262a079a1011646ab489"
     },
     {
       "kind": "lint",
@@ -1726,7 +1726,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2016351018d045d53df3f84dbc4d46b6efffa153db1bcb859c7c5406c683203a"
+      "fileSHA256": "de892bf7bdbc3aed7dcbe8ebd4144dedbe3bd80ad74c262a079a1011646ab489"
     },
     {
       "kind": "lint",
@@ -1838,7 +1838,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "e54eae360c66a36712607d39ff7d81491bf91f5f52bdfc60c798622c119bb6ba"
+      "fileSHA256": "f802cdf982048d6790b9352d8323d94f676397908ee5ff8db8732f1336bbc3d2"
     },
     {
       "kind": "lint",
@@ -1852,7 +1852,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "e54eae360c66a36712607d39ff7d81491bf91f5f52bdfc60c798622c119bb6ba"
+      "fileSHA256": "f802cdf982048d6790b9352d8323d94f676397908ee5ff8db8732f1336bbc3d2"
     },
     {
       "kind": "lint",
@@ -1866,7 +1866,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1880,7 +1880,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1894,7 +1894,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1908,7 +1908,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1922,7 +1922,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1936,7 +1936,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1950,7 +1950,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1964,7 +1964,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1978,7 +1978,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "5e1fd965a2b421d49122e050e0635ac8958bde38d39a38ee58fe25a9d6cb5a32"
+      "fileSHA256": "03fa3be6d9493f7b94aa53b666a14499fcd0f263a0f142f0fd10e90ce0986666"
     },
     {
       "kind": "lint",
@@ -1992,7 +1992,7 @@
       ],
       "reason": "Preserved pinned vendor style/dead-field debt",
       "evidence": "Upstream generated/vendor identity is guarded by verify-generated.mjs; formatting, shortening, naming or deleting an unused field is not a substantive correctness repair.",
-      "fileSHA256": "2faa17bdee3c926cf6c064ea08bc567b5665f2ee085845f35b5d5e0e6959e648"
+      "fileSHA256": "32754ea489a80730b0c7df28c18ce5a89f6acd8ccba3713c5c8980627092fb53"
     },
     {
       "kind": "lint",
@@ -2006,7 +2006,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "cbf02453c48cf2cdfc6672c06394e6c3827fa838766b0711dfa86c5ac2fea7af"
+      "fileSHA256": "b9abc944970c1e1fe63dec83caf163a0dfde37dc43306d63b209ad29814077d7"
     },
     {
       "kind": "lint",
@@ -2020,7 +2020,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "085cd851d206ed774561f58313e2719af0ad9acb96b72cb858eb8794837a721d"
+      "fileSHA256": "2fded5b3387c1d8930cb9dbc468f7c78bf489e3fd649c4c989f29b673b54a73a"
     },
     {
       "kind": "lint",
@@ -2034,7 +2034,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "085cd851d206ed774561f58313e2719af0ad9acb96b72cb858eb8794837a721d"
+      "fileSHA256": "2fded5b3387c1d8930cb9dbc468f7c78bf489e3fd649c4c989f29b673b54a73a"
     },
     {
       "kind": "lint",
@@ -2048,7 +2048,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "085cd851d206ed774561f58313e2719af0ad9acb96b72cb858eb8794837a721d"
+      "fileSHA256": "2fded5b3387c1d8930cb9dbc468f7c78bf489e3fd649c4c989f29b673b54a73a"
     },
     {
       "kind": "lint",
@@ -2062,7 +2062,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "085cd851d206ed774561f58313e2719af0ad9acb96b72cb858eb8794837a721d"
+      "fileSHA256": "2fded5b3387c1d8930cb9dbc468f7c78bf489e3fd649c4c989f29b673b54a73a"
     },
     {
       "kind": "lint",
@@ -2076,7 +2076,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "085cd851d206ed774561f58313e2719af0ad9acb96b72cb858eb8794837a721d"
+      "fileSHA256": "2fded5b3387c1d8930cb9dbc468f7c78bf489e3fd649c4c989f29b673b54a73a"
     },
     {
       "kind": "lint",
@@ -2090,7 +2090,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "1adcd8b9e15d3af63a98b90b14ee46970f7bf6097ffdc5af4fd6011ac0787f59"
+      "fileSHA256": "48ee29a4a98f907c8f24433425106911c84fa106081d7c8aefb5c43ec28fbd3e"
     },
     {
       "kind": "lint",
@@ -2104,7 +2104,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "1adcd8b9e15d3af63a98b90b14ee46970f7bf6097ffdc5af4fd6011ac0787f59"
+      "fileSHA256": "48ee29a4a98f907c8f24433425106911c84fa106081d7c8aefb5c43ec28fbd3e"
     },
     {
       "kind": "lint",
@@ -2118,7 +2118,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "1adcd8b9e15d3af63a98b90b14ee46970f7bf6097ffdc5af4fd6011ac0787f59"
+      "fileSHA256": "48ee29a4a98f907c8f24433425106911c84fa106081d7c8aefb5c43ec28fbd3e"
     },
     {
       "kind": "lint",
@@ -2132,7 +2132,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "1adcd8b9e15d3af63a98b90b14ee46970f7bf6097ffdc5af4fd6011ac0787f59"
+      "fileSHA256": "48ee29a4a98f907c8f24433425106911c84fa106081d7c8aefb5c43ec28fbd3e"
     },
     {
       "kind": "lint",
@@ -2146,7 +2146,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "eb64117cf7665891b3c43bafcf7899ce6b65ac8f72f40df36191ca7d12bc4933"
+      "fileSHA256": "e11e34e394fd669d60aca22b5d232623c2cf6f3c5b4d2c2b648879d553309e33"
     },
     {
       "kind": "lint",
@@ -2160,7 +2160,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "eb64117cf7665891b3c43bafcf7899ce6b65ac8f72f40df36191ca7d12bc4933"
+      "fileSHA256": "e11e34e394fd669d60aca22b5d232623c2cf6f3c5b4d2c2b648879d553309e33"
     },
     {
       "kind": "lint",
@@ -2174,7 +2174,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "eb64117cf7665891b3c43bafcf7899ce6b65ac8f72f40df36191ca7d12bc4933"
+      "fileSHA256": "e11e34e394fd669d60aca22b5d232623c2cf6f3c5b4d2c2b648879d553309e33"
     },
     {
       "kind": "lint",
@@ -2188,7 +2188,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "eb64117cf7665891b3c43bafcf7899ce6b65ac8f72f40df36191ca7d12bc4933"
+      "fileSHA256": "e11e34e394fd669d60aca22b5d232623c2cf6f3c5b4d2c2b648879d553309e33"
     },
     {
       "kind": "lint",
@@ -2202,7 +2202,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "d889d6bda8f86a36e2246d4e1c3c5da114c8eb514422a1977fd40a1af32d970c"
+      "fileSHA256": "4719c005a4f0eff35eff0792130276a168ddc9b34e9dcb78d34fa632885462c3"
     },
     {
       "kind": "lint",
@@ -2216,7 +2216,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "be6049809921a11bd8c57f694cebaeacee1bc8f973bb1e5ed754c898cbdf332b"
+      "fileSHA256": "d160060f6b2ce9deddc964e4e2c515410d6f0fce991a135eafced8109f15aeb7"
     },
     {
       "kind": "lint",
@@ -2230,7 +2230,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "ffd24c6eed40fab92fbf0e8deaa896f4b426d0006ff728097c5a09c31fdbc45d"
+      "fileSHA256": "07083be4fb9891750c3811e1d0ef1da0f2f1bcf385b645800614dc3eb2b6af2c"
     },
     {
       "kind": "lint",
@@ -2244,7 +2244,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "75bcdebf3f04641bce2570cafe15efae193a56387ea90350fb8410ab783de70b"
+      "fileSHA256": "fd90bab8530a365f5e6cdf84cc5a66a608fb645301a363991aef87646809421a"
     },
     {
       "kind": "lint",
@@ -2258,7 +2258,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "75bcdebf3f04641bce2570cafe15efae193a56387ea90350fb8410ab783de70b"
+      "fileSHA256": "fd90bab8530a365f5e6cdf84cc5a66a608fb645301a363991aef87646809421a"
     },
     {
       "kind": "lint",
@@ -2272,7 +2272,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "75bcdebf3f04641bce2570cafe15efae193a56387ea90350fb8410ab783de70b"
+      "fileSHA256": "fd90bab8530a365f5e6cdf84cc5a66a608fb645301a363991aef87646809421a"
     },
     {
       "kind": "lint",
@@ -2286,7 +2286,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "75bcdebf3f04641bce2570cafe15efae193a56387ea90350fb8410ab783de70b"
+      "fileSHA256": "fd90bab8530a365f5e6cdf84cc5a66a608fb645301a363991aef87646809421a"
     },
     {
       "kind": "lint",
@@ -2300,7 +2300,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "75bcdebf3f04641bce2570cafe15efae193a56387ea90350fb8410ab783de70b"
+      "fileSHA256": "fd90bab8530a365f5e6cdf84cc5a66a608fb645301a363991aef87646809421a"
     },
     {
       "kind": "lint",
@@ -2314,7 +2314,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "75bcdebf3f04641bce2570cafe15efae193a56387ea90350fb8410ab783de70b"
+      "fileSHA256": "fd90bab8530a365f5e6cdf84cc5a66a608fb645301a363991aef87646809421a"
     },
     {
       "kind": "lint",
@@ -2328,7 +2328,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "ffd1f605e71b8bdf254c0a3c7e65435139f7caf294872b847077e13dcd0f01d0"
+      "fileSHA256": "43d4ad21207df7bdebee9261850043c37ce84a6171718daf0f71c2b8d175f686"
     },
     {
       "kind": "lint",
@@ -2342,7 +2342,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c13d32ab599084d621550f39c199d9b5cf4625571797ce27915547b9412c804f"
+      "fileSHA256": "6e81c38f3300e9b8370a2a84e520a1eb3ca9d3acb2c515abcbd906fc34d26209"
     },
     {
       "kind": "lint",
@@ -2356,7 +2356,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "d2929e223b76bfeec19e61a991ed07e69d42e952a83bc7af7b568dbed0061670"
+      "fileSHA256": "e44af444680a3619626edd0059879b0aa82bb43047e14cd93c309fc9e186757c"
     },
     {
       "kind": "lint",
@@ -2370,7 +2370,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "b002de392d1f5abbc16bc9793e1a53c1aafa3e14dde3cb1df5ab5269bfbc953d"
+      "fileSHA256": "aa35779fdf80361dc8215f3724c6248e66936e9ed4a5341c295744741c6137e2"
     },
     {
       "kind": "lint",
@@ -2384,7 +2384,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7a79da423462b354be47ce71900e3e71a9081fadcd18b830e6f4a40c888efe95"
+      "fileSHA256": "1f7142e8960f22dc729949c41a90e380703d7412988834f67fc6a53ae6506ca4"
     },
     {
       "kind": "lint",
@@ -2398,7 +2398,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "aa9f573c257c9bdfe1a4fd6effdcb717c49a3fea43dde0087a1417d0f3c2c2ed"
+      "fileSHA256": "954ec401af160d5cf4ddae15ed7d2c11a417dd855ab3171fcab8656b69807cde"
     },
     {
       "kind": "lint",
@@ -2412,7 +2412,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "aa9f573c257c9bdfe1a4fd6effdcb717c49a3fea43dde0087a1417d0f3c2c2ed"
+      "fileSHA256": "954ec401af160d5cf4ddae15ed7d2c11a417dd855ab3171fcab8656b69807cde"
     },
     {
       "kind": "lint",
@@ -2426,7 +2426,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "aa9f573c257c9bdfe1a4fd6effdcb717c49a3fea43dde0087a1417d0f3c2c2ed"
+      "fileSHA256": "954ec401af160d5cf4ddae15ed7d2c11a417dd855ab3171fcab8656b69807cde"
     },
     {
       "kind": "lint",
@@ -2440,7 +2440,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "aa9f573c257c9bdfe1a4fd6effdcb717c49a3fea43dde0087a1417d0f3c2c2ed"
+      "fileSHA256": "954ec401af160d5cf4ddae15ed7d2c11a417dd855ab3171fcab8656b69807cde"
     },
     {
       "kind": "lint",
@@ -2454,7 +2454,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "fda7b369b5eaf9bd8dcd6a783c489b26fd4a2a60859a230a3497444c500aab67"
+      "fileSHA256": "5fe252d20ca1f52a5b4f9e012622d0c9a3f9d431aaa4faa39838aa9039402bea"
     },
     {
       "kind": "lint",
@@ -2468,7 +2468,7 @@
       ],
       "reason": "Correct haystack/needle order",
       "evidence": "strings.Contains tests a delimited presentation token in the fixed allowed-token string; reversing arguments would change correctness.",
-      "fileSHA256": "75afc3b532603ab38c5f8b0026f05be8705602ac64320dea0f2b7bc0997b9a08"
+      "fileSHA256": "3dfdd475b24760a9a9bdbfd2b481920c51e7ba08eedb1348ef40a1f428067197"
     },
     {
       "kind": "lint",
@@ -2482,7 +2482,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "6911da0dbd5d1c39e841bb2b913829330dc338ededb5535120bb338d4af2aaf6"
+      "fileSHA256": "f8e2558e55c8be6a098de6c78fc947997c51b09ef8c59678be1e35a768ccf3c8"
     },
     {
       "kind": "lint",
@@ -2496,7 +2496,7 @@
       ],
       "reason": "Regexp capture count invariant",
       "evidence": "isoCalendar has eight capturing groups; a non-nil FindStringSubmatch result includes each group slot, including empty optional matches. parts[1] is valid.",
-      "fileSHA256": "c3e5da3df4f1cc341882ec4339b945f9f2f3678d267ba4d44f6e3e427e5849eb"
+      "fileSHA256": "ba312e5044e645d7eec363574dfaf85290ce37c7c06933e51f1070b0d9a8ad36"
     },
     {
       "kind": "lint",
@@ -2510,7 +2510,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -2524,7 +2524,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -2538,7 +2538,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -2552,7 +2552,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -2566,7 +2566,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f1e261f4600af975ba992139a9eb77e329e54cabc0cd0bd4eec3fd3bc6258dc3"
+      "fileSHA256": "d8611a18e93459a5024826dcb5254183cdf04d502d4b029e3aa4dc55e9f77b00"
     },
     {
       "kind": "lint",
@@ -2580,7 +2580,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2045aec28d0803df0b808469fd2c93eeb9b9f0ab381311181d6a51326cc0ab27"
+      "fileSHA256": "2d094b089c511fcce1044d32c513d651331f51f6f9d15a91b81efdb215189c9d"
     },
     {
       "kind": "lint",
@@ -3140,7 +3140,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "36fcf2dfa47bed02ae8ecca9f95c0f535035b52b3346c54afce47cb34ff1e41b"
+      "fileSHA256": "70cc18d6ef628b37486ca7bb0bccb1ac5ca05fde887ab4acd0a2a3b648f28f1e"
     },
     {
       "kind": "lint",
@@ -3154,7 +3154,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "75afc3b532603ab38c5f8b0026f05be8705602ac64320dea0f2b7bc0997b9a08"
+      "fileSHA256": "3dfdd475b24760a9a9bdbfd2b481920c51e7ba08eedb1348ef40a1f428067197"
     },
     {
       "kind": "lint",
@@ -3182,7 +3182,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -3294,7 +3294,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "47316a7b82e4dc54a354f000867bf939d70e3fcb57744b66e88c311298fea314"
+      "fileSHA256": "c7a200b10875f20bc106da77780c16d26a1645298d99eeb4774b5affcc9ac8bf"
     },
     {
       "kind": "lint",
@@ -3308,7 +3308,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "47316a7b82e4dc54a354f000867bf939d70e3fcb57744b66e88c311298fea314"
+      "fileSHA256": "c7a200b10875f20bc106da77780c16d26a1645298d99eeb4774b5affcc9ac8bf"
     },
     {
       "kind": "lint",
@@ -3322,7 +3322,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0e121a481c6054371eaf7d8f75cdeee0c5fee7848a408938a1ac9e3330b7db57"
+      "fileSHA256": "bbdf8edd3294b5f158a9592482f0b3aa50e28a427b003655897ba52c9208e75f"
     },
     {
       "kind": "lint",
@@ -3350,7 +3350,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "07b578ad7f7a3a8548d3588e797acb194702f228b38097f489e2759b63b88db5"
+      "fileSHA256": "59eb8614b491b6ebfc36ff01645584a46969d60d545973cc8b247000337d271e"
     },
     {
       "kind": "lint",
@@ -3364,7 +3364,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "9776b4f8f66bb710e21fdbf348fc8d64cad9cd7191781b1492db61591a7f054b"
+      "fileSHA256": "c43661d9a0a236f1fa9058086625e635780e4d67133746232a1401b85bacf470"
     },
     {
       "kind": "lint",
@@ -3378,7 +3378,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "a45d261edd3a3c6b354478b8443d00b5cbaa470822fd91c8514820180298743e"
+      "fileSHA256": "0db933e7060ace7eca9907e3acc37b874e03d358974e98c86863d9b87751edf2"
     },
     {
       "kind": "lint",
@@ -3406,7 +3406,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "9d5892b0e082fe09cbcad962b89028c7d38b653fdabb8df582dfaf71e29b3590"
+      "fileSHA256": "34dfa204a8ea9eea9af3fe73d23b111a611c2d0250d1a9d6bf973fdbfc9bc01e"
     },
     {
       "kind": "lint",
@@ -3420,7 +3420,7 @@
       ],
       "reason": "Preserved pinned vendor style/dead-field debt",
       "evidence": "Upstream generated/vendor identity is guarded by verify-generated.mjs; formatting, shortening, naming or deleting an unused field is not a substantive correctness repair.",
-      "fileSHA256": "2faa17bdee3c926cf6c064ea08bc567b5665f2ee085845f35b5d5e0e6959e648"
+      "fileSHA256": "32754ea489a80730b0c7df28c18ce5a89f6acd8ccba3713c5c8980627092fb53"
     },
     {
       "kind": "lint",
@@ -3476,7 +3476,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "e40f81f5133b1f915394513ece4e7cba2eb1d8d06a3c89852e91afd9d5d42d8f"
+      "fileSHA256": "6d1b4c92387af226060af5e8dd802f482843a44853e8bbac39731d4f28948249"
     },
     {
       "kind": "lint",
@@ -3490,7 +3490,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "e40f81f5133b1f915394513ece4e7cba2eb1d8d06a3c89852e91afd9d5d42d8f"
+      "fileSHA256": "6d1b4c92387af226060af5e8dd802f482843a44853e8bbac39731d4f28948249"
     },
     {
       "kind": "lint",
@@ -3504,7 +3504,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "9634152d6bdf3fe613424c54a0e6a3ef4a125db2cb6485fd47ac2de7950107fc"
+      "fileSHA256": "381bd9e7998021f662bffe3f6e780b26f4ee36164afb5d89bcde4b9d692467aa"
     },
     {
       "kind": "lint",
@@ -3518,7 +3518,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "d2929e223b76bfeec19e61a991ed07e69d42e952a83bc7af7b568dbed0061670"
+      "fileSHA256": "e44af444680a3619626edd0059879b0aa82bb43047e14cd93c309fc9e186757c"
     },
     {
       "kind": "lint",
@@ -3532,7 +3532,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "23466ce8bd8a053332efe325ed2e7a35e049db15680cc035c26dd9f92383ecec"
+      "fileSHA256": "0430cf30768fb014265c290bb404b60ea8d8520874bcc99f2903d6486dee60f4"
     },
     {
       "kind": "lint",
@@ -3546,7 +3546,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "78b22453996b168a51ef498eb6cda120899321a9b7c95e41de5fe6b5466321a7"
+      "fileSHA256": "575ae545ae6670ac140796a53b910ed37e900c74b1cfab95ba6d8bf1b754500f"
     },
     {
       "kind": "lint",
@@ -3560,7 +3560,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "78b22453996b168a51ef498eb6cda120899321a9b7c95e41de5fe6b5466321a7"
+      "fileSHA256": "575ae545ae6670ac140796a53b910ed37e900c74b1cfab95ba6d8bf1b754500f"
     },
     {
       "kind": "lint",
@@ -3574,7 +3574,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0e121a481c6054371eaf7d8f75cdeee0c5fee7848a408938a1ac9e3330b7db57"
+      "fileSHA256": "bbdf8edd3294b5f158a9592482f0b3aa50e28a427b003655897ba52c9208e75f"
     },
     {
       "kind": "lint",
@@ -3588,7 +3588,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "579baf33f6874b2180faf27d3e6dd1563e93a932ece861955cb5165ef7650c6e"
+      "fileSHA256": "303f213cf4c4c7666a2da23a6fd070d2b95cb2e4c9d6453e33bbeb69cb067ac3"
     },
     {
       "kind": "lint",
@@ -3602,7 +3602,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c3e5da3df4f1cc341882ec4339b945f9f2f3678d267ba4d44f6e3e427e5849eb"
+      "fileSHA256": "ba312e5044e645d7eec363574dfaf85290ce37c7c06933e51f1070b0d9a8ad36"
     },
     {
       "kind": "lint",
@@ -3616,7 +3616,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c3e5da3df4f1cc341882ec4339b945f9f2f3678d267ba4d44f6e3e427e5849eb"
+      "fileSHA256": "ba312e5044e645d7eec363574dfaf85290ce37c7c06933e51f1070b0d9a8ad36"
     },
     {
       "kind": "lint",
@@ -3630,7 +3630,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -3644,7 +3644,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -3658,7 +3658,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -3672,7 +3672,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "f1e261f4600af975ba992139a9eb77e329e54cabc0cd0bd4eec3fd3bc6258dc3"
+      "fileSHA256": "d8611a18e93459a5024826dcb5254183cdf04d502d4b029e3aa4dc55e9f77b00"
     },
     {
       "kind": "lint",
@@ -3686,7 +3686,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "ca75339b1623d063b685645e3d78f37c8cdb1036c9a6dcb589c07b4b36234f89"
+      "fileSHA256": "f836b8cca5411462567ffcf7cb23907f5413d59b9f3fe7d7a4922f8696313c69"
     },
     {
       "kind": "lint",
@@ -3700,7 +3700,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -3714,7 +3714,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -3728,7 +3728,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -3742,7 +3742,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -3756,7 +3756,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -3770,7 +3770,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "30de2307458c11e55edf2e33711ab0ed00bc7221e2456e7a532cce766d8ed542"
+      "fileSHA256": "4dc36cf00f8fb435bb7be00607d486d1b00923aa55fb3404cce4a413e3062f3c"
     },
     {
       "kind": "lint",
@@ -3784,7 +3784,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2045aec28d0803df0b808469fd2c93eeb9b9f0ab381311181d6a51326cc0ab27"
+      "fileSHA256": "2d094b089c511fcce1044d32c513d651331f51f6f9d15a91b81efdb215189c9d"
     },
     {
       "kind": "lint",
@@ -3798,7 +3798,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2045aec28d0803df0b808469fd2c93eeb9b9f0ab381311181d6a51326cc0ab27"
+      "fileSHA256": "2d094b089c511fcce1044d32c513d651331f51f6f9d15a91b81efdb215189c9d"
     },
     {
       "kind": "lint",
@@ -3812,7 +3812,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "2045aec28d0803df0b808469fd2c93eeb9b9f0ab381311181d6a51326cc0ab27"
+      "fileSHA256": "2d094b089c511fcce1044d32c513d651331f51f6f9d15a91b81efdb215189c9d"
     },
     {
       "kind": "lint",
@@ -3854,7 +3854,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "9d5892b0e082fe09cbcad962b89028c7d38b653fdabb8df582dfaf71e29b3590"
+      "fileSHA256": "34dfa204a8ea9eea9af3fe73d23b111a611c2d0250d1a9d6bf973fdbfc9bc01e"
     },
     {
       "kind": "lint",
@@ -3868,7 +3868,7 @@
       ],
       "reason": "Preserved pinned vendor style/dead-field debt",
       "evidence": "Upstream generated/vendor identity is guarded by verify-generated.mjs; formatting, shortening, naming or deleting an unused field is not a substantive correctness repair.",
-      "fileSHA256": "2faa17bdee3c926cf6c064ea08bc567b5665f2ee085845f35b5d5e0e6959e648"
+      "fileSHA256": "32754ea489a80730b0c7df28c18ce5a89f6acd8ccba3713c5c8980627092fb53"
     },
     {
       "kind": "lint",
@@ -3896,7 +3896,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "cbf02453c48cf2cdfc6672c06394e6c3827fa838766b0711dfa86c5ac2fea7af"
+      "fileSHA256": "b9abc944970c1e1fe63dec83caf163a0dfde37dc43306d63b209ad29814077d7"
     },
     {
       "kind": "lint",
@@ -3910,7 +3910,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "9634152d6bdf3fe613424c54a0e6a3ef4a125db2cb6485fd47ac2de7950107fc"
+      "fileSHA256": "381bd9e7998021f662bffe3f6e780b26f4ee36164afb5d89bcde4b9d692467aa"
     },
     {
       "kind": "lint",
@@ -3924,7 +3924,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "eb64117cf7665891b3c43bafcf7899ce6b65ac8f72f40df36191ca7d12bc4933"
+      "fileSHA256": "e11e34e394fd669d60aca22b5d232623c2cf6f3c5b4d2c2b648879d553309e33"
     },
     {
       "kind": "lint",
@@ -3938,7 +3938,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "d889d6bda8f86a36e2246d4e1c3c5da114c8eb514422a1977fd40a1af32d970c"
+      "fileSHA256": "4719c005a4f0eff35eff0792130276a168ddc9b34e9dcb78d34fa632885462c3"
     },
     {
       "kind": "lint",
@@ -3952,7 +3952,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "ffd24c6eed40fab92fbf0e8deaa896f4b426d0006ff728097c5a09c31fdbc45d"
+      "fileSHA256": "07083be4fb9891750c3811e1d0ef1da0f2f1bcf385b645800614dc3eb2b6af2c"
     },
     {
       "kind": "lint",
@@ -3966,7 +3966,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c13d32ab599084d621550f39c199d9b5cf4625571797ce27915547b9412c804f"
+      "fileSHA256": "6e81c38f3300e9b8370a2a84e520a1eb3ca9d3acb2c515abcbd906fc34d26209"
     },
     {
       "kind": "lint",
@@ -3980,7 +3980,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c13d32ab599084d621550f39c199d9b5cf4625571797ce27915547b9412c804f"
+      "fileSHA256": "6e81c38f3300e9b8370a2a84e520a1eb3ca9d3acb2c515abcbd906fc34d26209"
     },
     {
       "kind": "lint",
@@ -3994,7 +3994,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "c13d32ab599084d621550f39c199d9b5cf4625571797ce27915547b9412c804f"
+      "fileSHA256": "6e81c38f3300e9b8370a2a84e520a1eb3ca9d3acb2c515abcbd906fc34d26209"
     },
     {
       "kind": "lint",
@@ -4008,7 +4008,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "8e1b6ff19ef4fe2634e3008670329f20e69c171bfa7a8c639e1d7be877a14e83"
+      "fileSHA256": "89f78511c3904155650f8c4282e4e69935e62d7afa2d4d9bc1d5047dbb378e8a"
     },
     {
       "kind": "lint",
@@ -4022,7 +4022,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -4036,7 +4036,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -4050,7 +4050,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "lint",
@@ -4064,7 +4064,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "679dd785b4c9e5495690a24de2f1c5a021041fedcb6fc279963a4491544f207b"
+      "fileSHA256": "003997d41c03f50f012c2d1f0218d43081e136b1a59a5574a1e606dcae9cb3b9"
     },
     {
       "kind": "lint",
@@ -4078,7 +4078,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "9776b4f8f66bb710e21fdbf348fc8d64cad9cd7191781b1492db61591a7f054b"
+      "fileSHA256": "c43661d9a0a236f1fa9058086625e635780e4d67133746232a1401b85bacf470"
     },
     {
       "kind": "lint",
@@ -4092,7 +4092,7 @@
       ],
       "reason": "Preserved pinned vendor style/dead-field debt",
       "evidence": "Upstream generated/vendor identity is guarded by verify-generated.mjs; formatting, shortening, naming or deleting an unused field is not a substantive correctness repair.",
-      "fileSHA256": "2faa17bdee3c926cf6c064ea08bc567b5665f2ee085845f35b5d5e0e6959e648"
+      "fileSHA256": "32754ea489a80730b0c7df28c18ce5a89f6acd8ccba3713c5c8980627092fb53"
     },
     {
       "kind": "lint",
@@ -4120,7 +4120,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "e40f81f5133b1f915394513ece4e7cba2eb1d8d06a3c89852e91afd9d5d42d8f"
+      "fileSHA256": "6d1b4c92387af226060af5e8dd802f482843a44853e8bbac39731d4f28948249"
     },
     {
       "kind": "lint",
@@ -4134,7 +4134,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "9634152d6bdf3fe613424c54a0e6a3ef4a125db2cb6485fd47ac2de7950107fc"
+      "fileSHA256": "381bd9e7998021f662bffe3f6e780b26f4ee36164afb5d89bcde4b9d692467aa"
     },
     {
       "kind": "lint",
@@ -4148,7 +4148,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "9634152d6bdf3fe613424c54a0e6a3ef4a125db2cb6485fd47ac2de7950107fc"
+      "fileSHA256": "381bd9e7998021f662bffe3f6e780b26f4ee36164afb5d89bcde4b9d692467aa"
     },
     {
       "kind": "lint",
@@ -4162,7 +4162,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "75afc3b532603ab38c5f8b0026f05be8705602ac64320dea0f2b7bc0997b9a08"
+      "fileSHA256": "3dfdd475b24760a9a9bdbfd2b481920c51e7ba08eedb1348ef40a1f428067197"
     },
     {
       "kind": "lint",
@@ -4176,7 +4176,7 @@
       ],
       "reason": "Retained readability/style/performance suggestion",
       "evidence": "No proven defect: source and exact diagnostic are recorded, with count and full-file hash guards. Locale-test strings are deliberate fixtures. Scope excludes wholesale style refactoring and syntax modernization.",
-      "fileSHA256": "0d0562c79c1e9511244c471358506b4413522fae6964f108cd54438483974d89"
+      "fileSHA256": "eb9fedf392866b1473d694f5a517cae0ca68a4cb6e67ce055485dc27bbc90c63"
     },
     {
       "kind": "lint",
@@ -4246,7 +4246,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "fda7b369b5eaf9bd8dcd6a783c489b26fd4a2a60859a230a3497444c500aab67"
+      "fileSHA256": "5fe252d20ca1f52a5b4f9e012622d0c9a3f9d431aaa4faa39838aa9039402bea"
     },
     {
       "kind": "security",
@@ -4260,7 +4260,7 @@
       ],
       "reason": "Exact bound checked before narrowing",
       "evidence": "$round checks exact argument integer-ness and +/-MaxExponent; validated MaxExponent is <= apd.MaxExponent (100000), then ClippedTrunc bounds its int result.",
-      "fileSHA256": "ca75339b1623d063b685645e3d78f37c8cdb1036c9a6dcb589c07b4b36234f89"
+      "fileSHA256": "f836b8cca5411462567ffcf7cb23907f5413d59b9f3fe7d7a4922f8696313c69"
     },
     {
       "kind": "security",
@@ -4274,7 +4274,7 @@
       ],
       "reason": "Language random value, not cryptographic randomness",
       "evidence": "fnRandom implements $random via rand.Float64; it is not a token, nonce, authentication or secret-generation API. No cryptographic guarantee is claimed.",
-      "fileSHA256": "ca75339b1623d063b685645e3d78f37c8cdb1036c9a6dcb589c07b4b36234f89"
+      "fileSHA256": "f836b8cca5411462567ffcf7cb23907f5413d59b9f3fe7d7a4922f8696313c69"
     },
     {
       "kind": "security",
@@ -4288,7 +4288,7 @@
       ],
       "reason": "Byte-range checked before narrowing",
       "evidence": "Range over Go strings produces nonnegative Unicode scalars (invalid UTF-8 yields RuneError); values above 255 are rejected before byte conversion.",
-      "fileSHA256": "be44b22fb629857fe9fc9a76a09177df33791637039fc40b0e2774679159bcba"
+      "fileSHA256": "a9f197ebc7d0ebf980159656500284f8a52879a14c425fc0f5bfd95539e4e6cf"
     },
     {
       "kind": "security",
@@ -4302,7 +4302,7 @@
       ],
       "reason": "Remainder range proves conversion",
       "evidence": "Positive big integer alphabetic formatting uses QuoRem by 26 after subtracting one, so remainder is 0..25 before Int64/rune.",
-      "fileSHA256": "7efa326d3a1a2373d740f73a35d5450c7bff3487ba19dec4beb5bd2ca3009cb1"
+      "fileSHA256": "b0cc3d3ac7a4425f76207f8c04d693740d87e4498dd28535aef41d86d00162a3"
     },
     {
       "kind": "security",
@@ -4316,7 +4316,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "a45d261edd3a3c6b354478b8443d00b5cbaa470822fd91c8514820180298743e"
+      "fileSHA256": "0db933e7060ace7eca9907e3acc37b874e03d358974e98c86863d9b87751edf2"
     },
     {
       "kind": "security",
@@ -4330,7 +4330,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "a45d261edd3a3c6b354478b8443d00b5cbaa470822fd91c8514820180298743e"
+      "fileSHA256": "0db933e7060ace7eca9907e3acc37b874e03d358974e98c86863d9b87751edf2"
     },
     {
       "kind": "security",
@@ -4344,7 +4344,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "a45d261edd3a3c6b354478b8443d00b5cbaa470822fd91c8514820180298743e"
+      "fileSHA256": "0db933e7060ace7eca9907e3acc37b874e03d358974e98c86863d9b87751edf2"
     },
     {
       "kind": "security",
@@ -4484,7 +4484,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "9d5892b0e082fe09cbcad962b89028c7d38b653fdabb8df582dfaf71e29b3590"
+      "fileSHA256": "34dfa204a8ea9eea9af3fe73d23b111a611c2d0250d1a9d6bf973fdbfc9bc01e"
     },
     {
       "kind": "security",
@@ -4512,7 +4512,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "9634152d6bdf3fe613424c54a0e6a3ef4a125db2cb6485fd47ac2de7950107fc"
+      "fileSHA256": "381bd9e7998021f662bffe3f6e780b26f4ee36164afb5d89bcde4b9d692467aa"
     },
     {
       "kind": "security",
@@ -4526,7 +4526,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "85b8a7264df347b9af9d1fea62f1ec0210ffe71cbc2ac662fbca2b5ec724bad9"
+      "fileSHA256": "32076da5754853e05601e9184a6c174612bf674e940583329a4b9a4c31e00a09"
     },
     {
       "kind": "security",
@@ -4540,7 +4540,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "ffd1f605e71b8bdf254c0a3c7e65435139f7caf294872b847077e13dcd0f01d0"
+      "fileSHA256": "43d4ad21207df7bdebee9261850043c37ce84a6171718daf0f71c2b8d175f686"
     },
     {
       "kind": "security",
@@ -4554,7 +4554,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "b002de392d1f5abbc16bc9793e1a53c1aafa3e14dde3cb1df5ab5269bfbc953d"
+      "fileSHA256": "aa35779fdf80361dc8215f3724c6248e66936e9ed4a5341c295744741c6137e2"
     },
     {
       "kind": "security",
@@ -4568,7 +4568,7 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "b002de392d1f5abbc16bc9793e1a53c1aafa3e14dde3cb1df5ab5269bfbc953d"
+      "fileSHA256": "aa35779fdf80361dc8215f3724c6248e66936e9ed4a5341c295744741c6137e2"
     },
     {
       "kind": "security",
@@ -4582,7 +4582,13 @@
       ],
       "reason": "Test-only fixture/control input",
       "evidence": "G304 reads repository fixture names selected by the test runner or fixed test calls, not evaluator user paths. G404 uses fixed seeds for deterministic property tests. G115 operands are random.Intn(65536/8) or the literal budget sizes 512/4096.",
-      "fileSHA256": "b002de392d1f5abbc16bc9793e1a53c1aafa3e14dde3cb1df5ab5269bfbc953d"
+      "fileSHA256": "aa35779fdf80361dc8215f3724c6248e66936e9ed4a5341c295744741c6137e2"
     }
-  ]
+  ],
+  "identityMigration": {
+    "date": "2026-09-10",
+    "from": "github.com/openbindings/jsonata-runtime/go",
+    "to": "github.com/openbindings/jsonata/go",
+    "scope": "Exact name-only source substitution; fresh raw scans preserve all 302 lint findings and 25 security diagnostics, with unchanged reasons and source-bound guards"
+  }
 }

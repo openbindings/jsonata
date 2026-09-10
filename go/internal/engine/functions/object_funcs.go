@@ -3,7 +3,7 @@ package functions
 import (
 	"fmt"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
 )
 
 // ── $keys ─────────────────────────────────────────────────────────────────────

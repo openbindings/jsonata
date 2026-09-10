@@ -29,6 +29,6 @@
   ],
   "relocation": {
     "from": "github.com/recolabs/gnata",
-    "to": "github.com/openbindings/jsonata-runtime/go/internal/engine"
+    "to": "github.com/openbindings/jsonata/go/internal/engine"
   }
 }

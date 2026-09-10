@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 // Eval evaluates an AST node against input data in the given environment.

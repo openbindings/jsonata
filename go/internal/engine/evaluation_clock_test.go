@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 // Host barriers deliberately separate wall-clock reads. They are test

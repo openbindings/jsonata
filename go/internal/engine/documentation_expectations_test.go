@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 func applyDocumentationExpectation(t *testing.T, file string, index int, tc *testCase) {

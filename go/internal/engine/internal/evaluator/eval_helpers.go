@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 func appendToSequence(seq *Sequence, v any) {

@@ -22,8 +22,8 @@ for(const overlay of overlays){const c=cases.find(c=>c.id===overlay.id);assert(c
 const output=execFileSync('go',['run','./internal/qualification'],{cwd:path.join(root,'go'),env:{...process.env,GOWORK:'off'},input:cases.map(c=>JSON.stringify(c)).join('\n')+'\n',encoding:'utf8',timeout:120000,maxBuffer:32<<20});
 const go=output.trim().split('\n').map(x=>JSON.parse(x));assert.equal(go.length,cases.length);
 const require=createRequire(path.join(root,'javascript/package.json'));
-const {createJSONExecutor}=require('@openbindings/jsonata-runtime');
-const {createNodeExecutor}=require('@openbindings/jsonata-runtime/node');
+const {createJSONExecutor}=require('@openbindings/jsonata');
+const {createNodeExecutor}=require('@openbindings/jsonata/node');
 const direct=createJSONExecutor({timeout:5000}),worker=createNodeExecutor({timeout:5000,workers:1});
 const failures=[];let observations=0;
 try{for(let i=0;i<cases.length;i++){

@@ -3,7 +3,7 @@ package parser_test
 import (
 	"testing"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 func mustParse(t *testing.T, src string) *parser.Node {

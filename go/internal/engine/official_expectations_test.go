@@ -9,7 +9,7 @@ import (
 	"sync"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 // This is a separate official-policy lane, never an assertion that the stronger

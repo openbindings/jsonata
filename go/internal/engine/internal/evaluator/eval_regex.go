@@ -4,10 +4,10 @@ import (
 	"context"
 	"strings"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/ecmaregex"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
-	re "github.com/openbindings/jsonata-runtime/go/internal/engine/internal/thirdparty/regonaut"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/ecmaregex"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
+	re "github.com/openbindings/jsonata/go/internal/engine/internal/thirdparty/regonaut"
 )
 
 // RegexValue is a callable, never a JSON object with magic member names.

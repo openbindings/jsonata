@@ -7,7 +7,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
 )
 
 func rational(t *testing.T, s string) *big.Rat {

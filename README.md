@@ -1,9 +1,17 @@
-# JSONata runtime family
+# JSONata
+
+Embeddable JSONata execution for Go and JavaScript, maintained by the
+OpenBindings Project. One repository, independently consumable language packages:
+
+- Repository identity: `openbindings/jsonata`.
+- Go module: `github.com/openbindings/jsonata/go`.
+- JavaScript/TypeScript package: `@openbindings/jsonata`.
 
 Private development candidate: two independently consumable artifacts, one
 implementation contract. Nothing here requires OpenBindings documents, SDKs or
 services. The package namespace identifies the publisher, not a dependency.
-Names and `0.0.0-dev` versions are local qualification identities, not releases.
+The selected names and `0.0.0-dev` versions do not imply a repository or registry
+release has been published.
 
 - `go/`: a concurrent, closed JSON-text executor and syntax-only validator.
 - `javascript/`: an in-process executor for JS/TS and browsers, plus an optional

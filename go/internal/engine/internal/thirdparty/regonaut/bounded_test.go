@@ -10,7 +10,7 @@ import (
 	"time"
 	"unicode/utf16"
 
-	re "github.com/openbindings/jsonata-runtime/go/internal/engine/internal/thirdparty/regonaut"
+	re "github.com/openbindings/jsonata/go/internal/engine/internal/thirdparty/regonaut"
 )
 
 func units(s string) []uint16 { return utf16.Encode([]rune(s)) }

@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 // Map/filter/sift supply up to three positional callback arguments. Arity is

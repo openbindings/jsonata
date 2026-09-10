@@ -1,5 +1,5 @@
 {
-  "name": "@openbindings/jsonata-runtime",
+  "name": "@openbindings/jsonata",
   "version": "0.0.0-dev",
   "private": true,
   "description": "Closed, value-preserving JSONata execution for JavaScript and TypeScript",

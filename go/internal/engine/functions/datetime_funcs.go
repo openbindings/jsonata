@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
 )
 
 func fnNow(args []any, _ any, env *evaluator.Environment) (any, error) {

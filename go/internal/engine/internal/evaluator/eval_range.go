@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
 )
 
 func evalRange(left, right any, env *Environment) (any, error) {

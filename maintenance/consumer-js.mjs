@@ -15,11 +15,11 @@ const archive=path.join(artifacts,pack.filename);
 fs.writeFileSync(path.join(temporary,'package.json'),JSON.stringify({private:true,type:'module'}));
 execFileSync('npm',['install','--ignore-scripts','--no-audit','--no-fund',archive],{cwd:temporary,stdio:'inherit',timeout:120000});
 const require=createRequire(path.join(temporary,'package.json'));
-const entry=require.resolve('@openbindings/jsonata-runtime');
+const entry=require.resolve('@openbindings/jsonata');
 assert(entry.startsWith(temporary+path.sep));
-const cjs=require('@openbindings/jsonata-runtime');
+const cjs=require('@openbindings/jsonata');
 const esmConsumer=path.join(temporary,'esm-consumer.mjs');
-fs.writeFileSync(esmConsumer,"import * as api from '@openbindings/jsonata-runtime'; export default api;\n");
+fs.writeFileSync(esmConsumer,"import * as api from '@openbindings/jsonata'; export default api;\n");
 const esm=(await import(pathToFileURL(esmConsumer))).default;
 assert.equal(typeof esm.createJSONExecutor,'function');
 assert.deepEqual(Object.keys(cjs),['createJSONExecutor']);
@@ -29,8 +29,8 @@ for(const api of [cjs,esm]){
   await assert.rejects(executor.evaluate('function(){1}','null'));
   await assert.rejects(executor.evaluate('"\\u-001"','null'));
 }
-for(const target of ['src/jsonata.js','jsonata.js'])assert.throws(()=>require('@openbindings/jsonata-runtime/'+target),{code:'ERR_PACKAGE_PATH_NOT_EXPORTED'});
-const worker=require('@openbindings/jsonata-runtime/node').createNodeExecutor({workers:1});
+for(const target of ['src/jsonata.js','jsonata.js'])assert.throws(()=>require('@openbindings/jsonata/'+target),{code:'ERR_PACKAGE_PATH_NOT_EXPORTED'});
+const worker=require('@openbindings/jsonata/node').createNodeExecutor({workers:1});
 try{assert.equal(await worker.evaluate('0.1+0.2','null'),'0.3');}finally{await worker.close();}
 execFileSync(process.execPath,[path.join(root,'maintenance/platform-consumer.cjs'),path.dirname(entry)],{stdio:'inherit'});
 console.log(JSON.stringify({status:'PASS',temporary,archive,sha256:createHash('sha256').update(fs.readFileSync(archive)).digest('hex'),files:pack.files.length,installedSurface:true,privateExportsDenied:true}));

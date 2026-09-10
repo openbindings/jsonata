@@ -7,7 +7,7 @@ import {createHash} from 'node:crypto';
 const root=path.resolve(path.dirname(new URL(import.meta.url).pathname),'..');
 const output=path.resolve(process.argv[2]);
 if(fs.existsSync(output))throw Error('Fresh artifact destination required');
-const module='github.com/openbindings/jsonata-runtime/go',version='v0.0.0-dev';
+const module='github.com/openbindings/jsonata/go',version='v0.0.0-dev';
 const prefix=module+'@'+version,stage=path.join(output,'stage',prefix),proxy=path.join(output,'proxy',module,'@v');
 fs.mkdirSync(stage,{recursive:true});fs.mkdirSync(proxy,{recursive:true});
 const files=[];

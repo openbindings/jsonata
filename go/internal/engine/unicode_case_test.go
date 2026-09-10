@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
 )
 
 func TestPinnedUnicodeCaseContexts(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
 )
 
 // ISO calendar interchange forms, including signed expanded years and the

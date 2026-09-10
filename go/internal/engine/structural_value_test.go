@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 func TestStructuralValueModel(t *testing.T) {

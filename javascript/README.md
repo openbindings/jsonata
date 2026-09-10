@@ -1,10 +1,10 @@
 # JSONata runtime for JavaScript and TypeScript
 
-Private candidate: `@openbindings/jsonata-runtime`. No registry release is
+Private candidate: `@openbindings/jsonata`. No registry release is
 claimed. This package needs no OpenBindings documents, SDKs or services.
 
 ```typescript
-import { createJSONExecutor } from "@openbindings/jsonata-runtime";
+import { createJSONExecutor } from "@openbindings/jsonata";
 
 const executor = createJSONExecutor();
 const outputJSON = await executor.evaluate(
@@ -21,7 +21,7 @@ are admitted. Undefined, invalid nested results and insufficient budgets reject
 the promise. `null` is a successful JSON result, not undefined.
 
 ```typescript
-import { createNodeExecutor } from "@openbindings/jsonata-runtime/node";
+import { createNodeExecutor } from "@openbindings/jsonata/node";
 
 const executor = createNodeExecutor({ workers: 2, timeout: 1000 });
 const abortController = new AbortController();

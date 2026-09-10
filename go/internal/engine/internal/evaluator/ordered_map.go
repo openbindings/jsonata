@@ -9,7 +9,7 @@ import (
 	"slices"
 	"unicode/utf8"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
 )
 
 // OrderedMap is a map that preserves insertion order for JSON serialization.

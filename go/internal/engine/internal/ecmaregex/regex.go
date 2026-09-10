@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
-	re "github.com/openbindings/jsonata-runtime/go/internal/engine/internal/thirdparty/regonaut"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
+	re "github.com/openbindings/jsonata/go/internal/engine/internal/thirdparty/regonaut"
 )
 
 type Program struct{ compiled *re.RegExpUtf16 }

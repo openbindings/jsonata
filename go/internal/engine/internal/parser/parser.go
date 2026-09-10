@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/lexer"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/lexer"
 )
 
 // bindingPower returns the left-denotation binding power for a token type.

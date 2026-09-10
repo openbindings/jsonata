@@ -14,7 +14,7 @@ fs.writeFileSync(path.join(temporary,'go.mod'),'module consumer.example/jsonata\
 const expression = JSON.stringify('id = 9007199254740993 ? {"id":id,"sum":0.1+0.2} : null');
 const input = JSON.stringify('{"id":9007199254740993}');
 fs.writeFileSync(path.join(temporary,'main.go'),`package main
-import("context";"errors";"fmt";"strings"; jsonata "github.com/openbindings/jsonata-runtime/go")
+import("context";"errors";"fmt";"strings"; jsonata "github.com/openbindings/jsonata/go")
 func main(){
  e,err:=jsonata.New(jsonata.Options{});if err!=nil{panic(err)}
  output,err:=e.Evaluate(context.Background(),${expression},[]byte(${input}),nil)
@@ -28,14 +28,14 @@ func main(){
 run(['mod','tidy']);run(['run','.']);
 assert(!fs.readFileSync(path.join(temporary,'go.mod'),'utf8').includes('replace'));
 const modules=run(['list','-m','-json','all']);
-assert(!modules.includes('openbindings-go'));assert(modules.includes(temporary+'/module-cache/github.com/openbindings/jsonata-runtime/go@'));
+assert(!modules.includes('openbindings-go'));assert(modules.includes(temporary+'/module-cache/github.com/openbindings/jsonata/go@'));
 fs.mkdirSync(path.join(temporary,'syntax'));
-fs.writeFileSync(path.join(temporary,'syntax/main.go'),'package main\nimport "github.com/openbindings/jsonata-runtime/go/syntax"\nfunc main(){if syntax.Validate("1+1")!=nil{panic("syntax")}}\n');
+fs.writeFileSync(path.join(temporary,'syntax/main.go'),'package main\nimport "github.com/openbindings/jsonata/go/syntax"\nfunc main(){if syntax.Validate("1+1")!=nil{panic("syntax")}}\n');
 const syntaxDeps=run(['list','-deps','./syntax']).trim().split('\n');
 assert(!syntaxDeps.some(n=>n===artifact.module+'/internal/engine'||n.includes('/engine/internal/evaluator')||n.includes('/engine/functions')));
 run(['run','./syntax']);
 fs.mkdirSync(path.join(temporary,'private'));
-fs.writeFileSync(path.join(temporary,'private/main.go'),'package main\nimport _ "github.com/openbindings/jsonata-runtime/go/internal/engine"\nfunc main(){}\n');
+fs.writeFileSync(path.join(temporary,'private/main.go'),'package main\nimport _ "github.com/openbindings/jsonata/go/internal/engine"\nfunc main(){}\n');
 const denied=spawnSync('go',['build','./private'],{cwd:temporary,env,encoding:'utf8'});assert.notEqual(denied.status,0);assert.match(denied.stderr,/use of internal package/);
 const record={status:'PASS',temporary,artifact,workspace:'off',sourceReplacements:false,sdkDependencies:false,syntaxLoadsEvaluator:false,privateBackendImportDenied:true,logs};
 fs.writeFileSync(path.join(temporary,'RESULTS.json'),JSON.stringify(record,null,2)+'\n');console.log(JSON.stringify({...record,logs:undefined}));

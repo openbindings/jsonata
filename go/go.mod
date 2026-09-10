@@ -1,4 +1,4 @@
-module github.com/openbindings/jsonata-runtime/go
+module github.com/openbindings/jsonata/go
 
 go 1.25.6
 

@@ -8,11 +8,11 @@ import (
 	"math"
 	"strings"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/unicodecase"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/unicodecase"
 )
 
 // ── $string ──────────────────────────────────────────────────────────────────

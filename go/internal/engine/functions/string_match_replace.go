@@ -4,10 +4,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/ecmaregex"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/ecmaregex"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
 )
 
 func callable(v any) bool {

@@ -7,9 +7,9 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/ecmaregex"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/ecmaregex"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
 )
 
 // Lexer tokenizes a JSONata expression.

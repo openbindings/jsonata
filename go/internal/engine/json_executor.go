@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
 )
 
 var ErrJSONUndefined = errors.New("JSONata expression returned undefined")

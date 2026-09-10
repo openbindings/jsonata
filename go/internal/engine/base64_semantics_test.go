@@ -5,8 +5,8 @@ import (
 	"encoding/base64"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
 )
 
 func TestBase64ByteAndUTF8Domains(t *testing.T) {

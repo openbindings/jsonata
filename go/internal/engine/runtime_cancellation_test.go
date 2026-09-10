@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 func TestRuntimeCancellationNestedEval(t *testing.T) {

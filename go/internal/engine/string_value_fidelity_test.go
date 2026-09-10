@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 // Read values directly: encoding/json's replacement policy is not an oracle

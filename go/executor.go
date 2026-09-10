@@ -5,7 +5,7 @@ package jsonata
 import (
 	"context"
 
-	engine "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	engine "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 // NumericWorkLimits bounds work, not precision. Insufficient budgets reject;

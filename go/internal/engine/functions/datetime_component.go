@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
 )
 
 // Formatting uses the existing integer engine; date components do not have a

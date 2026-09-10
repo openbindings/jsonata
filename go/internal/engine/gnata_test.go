@@ -3,7 +3,7 @@ package gnata_test
 import (
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 func TestCompile(t *testing.T) {

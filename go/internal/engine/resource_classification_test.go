@@ -5,9 +5,9 @@ import (
 	"errors"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
 )
 
 func TestResourceControlErrorClassification(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 func TestWildcardValueBoundaries(t *testing.T) {

@@ -1,7 +1,7 @@
 package evaluator
 
 import (
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 func deepClone(v any) any {

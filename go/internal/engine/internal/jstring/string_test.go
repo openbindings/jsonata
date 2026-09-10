@@ -3,7 +3,7 @@ package jstring_test
 import (
 	"testing"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
 )
 
 func TestCanonicalCodeUnits(t *testing.T) {

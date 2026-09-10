@@ -5,8 +5,8 @@ import (
 	"maps"
 	"time"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 // defaultMaxCallDepth is the maximum recursive call depth before U1001 is returned.

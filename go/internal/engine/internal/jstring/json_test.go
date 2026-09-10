@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/jstring"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/jstring"
 )
 
 func TestJSONCodeUnitRoundTrip(t *testing.T) {

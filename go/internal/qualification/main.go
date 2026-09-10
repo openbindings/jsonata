@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	jsonata "github.com/openbindings/jsonata-runtime/go"
+	jsonata "github.com/openbindings/jsonata/go"
 )
 
 func main() {

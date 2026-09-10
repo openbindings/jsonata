@@ -3,7 +3,7 @@ package syntax_test
 import (
 	"testing"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/syntax"
+	"github.com/openbindings/jsonata/go/internal/engine/syntax"
 )
 
 func TestLanguageMembershipWithoutEvaluation(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
 )
 
 // This is the stronger official implementation gate, not a claim that stock

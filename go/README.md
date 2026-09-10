@@ -1,13 +1,13 @@
 # JSONata runtime for Go
 
-Private candidate module: `github.com/openbindings/jsonata-runtime/go`.
+Private candidate module: `github.com/openbindings/jsonata/go`.
 No release is published by this checkout. The module depends on no OpenBindings
 SDK and accepts/returns JSON text rather than imposing a host number carrier.
 
 ```go
 import (
     "context"
-    jsonata "github.com/openbindings/jsonata-runtime/go"
+    jsonata "github.com/openbindings/jsonata/go"
 )
 
 executor, err := jsonata.New(jsonata.Options{})

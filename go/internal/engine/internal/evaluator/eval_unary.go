@@ -3,7 +3,7 @@ package evaluator
 import (
 	"fmt"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 func evalUnary(node *parser.Node, input any, env *Environment) (any, error) {

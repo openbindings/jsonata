@@ -1,6 +1,6 @@
 package functions
 
-import "github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
+import "github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
 
 // ── $boolean ──────────────────────────────────────────────────────────────────
 

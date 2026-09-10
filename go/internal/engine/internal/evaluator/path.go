@@ -3,8 +3,8 @@ package evaluator
 import (
 	"slices"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/parser"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/parser"
 )
 
 // pathCtx pairs a value with the environment it was produced under.

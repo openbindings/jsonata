@@ -1,8 +1,8 @@
 package gnata
 
 import (
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/evaluator"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/numeric"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/evaluator"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/numeric"
 )
 
 // deepEqualInternal is the external-facing deep equality that normalizes the

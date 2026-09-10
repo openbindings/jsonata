@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/internal/lexer"
+	"github.com/openbindings/jsonata/go/internal/engine/internal/lexer"
 )
 
 // tokenizeAll is a helper that tokenizes a full expression, automatically

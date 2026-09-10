@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	gnata "github.com/openbindings/jsonata-runtime/go/internal/engine"
-	"github.com/openbindings/jsonata-runtime/go/internal/engine/syntax"
+	gnata "github.com/openbindings/jsonata/go/internal/engine"
+	"github.com/openbindings/jsonata/go/internal/engine/syntax"
 )
 
 func TestClosedStandardEnvironment(t *testing.T) {
